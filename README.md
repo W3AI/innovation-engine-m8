@@ -4,7 +4,7 @@
 Global OS is a Web App and Google Apps Scripts system that matches continuously Projects to Services from your Social Network. It aims to find the most performant solution for your Projects and the best deal for your Services within your Business Network. 
 
 ## Cloud Installation
-(during pre-alpha development you can request access to the core Google Apps Scripts file through our meetup links below)
+(during pre-alpha you can request access to the core Google Apps Scripts file through our meetup links below)
 
 The Cloud version of Global OS is a Google Spreadsheet file that contains the the basic commands and data structures for your OS. You just need to make a copy of the core file on your Google Office Suite and configure it under your business name you use in your Social Setwork. Then you add your current Projects and Services using the templates provided. Using the Global OS templates for both projects and services within a social network allows the core DNA algorithm of the OS to search continuously for best solutions and deals for everyone in the network.
 
