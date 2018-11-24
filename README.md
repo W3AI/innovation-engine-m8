@@ -1,4 +1,4 @@
-# Global OS - Your Decentralized Social Network for Cloud and Browser 
+# Global OS - Your Decentralized Social Network for Business
 [Global OS Preview](https://w3ai.net)
 
 Global OS is a Web App and Google Apps Scripts system that matches continuously Projects to Services from your Social Network. It aims to find the most performant solution for your Projects and the best deal for your Services within your Business Network. 
