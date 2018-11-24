@@ -21,21 +21,21 @@ export class AddSessionComponent implements OnInit {
   relations$: Observable<Relation[]>;
   panelOpenState = false;
   defaultName = 'International Education Project Kickoff';
-  defaultEmail = 'GIT@w3ai.net';
+  defaultEmail = 'global@w3ai.net';
   defaultProjects = 'Intl Edu Project';
   defaultServices = 'NS, ON, NY Edu';
   defaultInterests = 'fast, social, innovation, student, teams';
-  defaultConsole = `GIT(master)$> nt generate venture Edu
-GIT(master)$> venture Edu created
-GIT(master)$> nt generate skills Edu
-GIT(master)$> skills Edu created
-GIT(master)$> nt g teams Edu
-GIT(master)$> teams Edu created
-GIT(master)$> nt g project Edu
-GIT(master)$> project Edu created
-GIT(DNA)$> nt g p PMO
-GIT(DNA)$> nt g p COE`;
-  defaultUrl = 'https://nteams.w3ai.net/GIT/';
+  defaultConsole = `global(master)$> nt generate venture Edu
+global(master)$> venture Edu created
+global(master)$> nt generate skills Edu
+global(master)$> skills Edu created
+global(master)$> nt g teams Edu
+global(master)$> teams Edu created
+global(master)$> nt g project Edu
+global(master)$> project Edu created
+global(DNA)$> nt g p PMO
+global(DNA)$> nt g p COE`;
+  defaultUrl = 'https://w3ai.net/GIT/';
   // isLoading$: Observable<boolean>;
 
   constructor(
