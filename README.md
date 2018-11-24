@@ -1,19 +1,25 @@
-# nTeams Internet Brain Project: nGenes Web Dev App
-[live nTeams PoC 0.3](https://teamhub.w3ai.net)
+# Global OS - Your Decentralized Social Network for Cloud and Browser 
+[Global OS Preview](https://w3ai.net)
 
-nTeams/TeamHub is the core nGene dev app for building distributed social neural networks for businesses, communities and professionals.
-It consists of a trinity of modules that add realtime interactions to build the progressive nature of your network:
+Global OS is a Web App and Google Apps Scripts system that matches continuously Projects to Services from your Social Network. It aims to find the most performant solution for your Projects and the best deal for your Services within your Business Network. 
 
-### nGenes + nProjects = nVentures
+## Cloud Installation
+(during pre-alpha development you can request access to the core Google Apps Scripts file through our meetup links below)
 
-nTeams is being built to be used on any mobile device or desktop or as a side app to Microsoft Excel or Google Sheets.
+The Cloud version of Global OS is a Google Spreadsheet file that contains the the basic commands and data structures for your OS. You just need to make a copy of the core file on your Google Office Suite and configure it under your business name you use in your Social Setwork. Then you add your current Projects and Services using the templates provided. Using the Global OS templates for both projects and services within a social network allows the core DNA algorithm of the OS to search continuously for best solutions and deals for everyone in the network.
 
-The nTeams web app is developed dynamically by Agile teams of volunteers from the W3AI Meetups network in:
+Global OS acts as your personal PMO, COE and HR and makes (or executes) recommendations for automatic outsourcing of projects and services to your friends and colleagues worldwide.
+
+Your Project and Service files are stored in your Office Cloud and you decide if and how to share them within your network. 
+
+Global OS is being built to be used on any mobile device or desktop or as a side app for Google Sheets or Microsoft Excel.
+
+Global OS web app is developed dynamically by Agile teams of volunteers from the W3AI Meetups in:
 - Toronto - [TCP1P - Transformative Code Pile 1 Programing Meetup](https://www.meetup.com/SocialAI/)
 - New York - [Manhatan AIR - Algorithmic Innovations Reactor](https://www.meetup.com/Manhattan-AIR/)
 - Halifax - [AIG - Halifax Algorithmic Innovation Group](https://www.meetup.com/HalifaxAIG/)
 
-Team up with us to build together the fastest social business networks meant to solve world's top voted problems.
+Team up with us to build together the fast business networks meant to solve world's top voted projects.
 
 ## For Coders:
 
