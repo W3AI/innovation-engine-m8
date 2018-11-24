@@ -19,11 +19,12 @@ Global OS web app is developed dynamically by Agile teams of volunteers from the
 - New York - [Manhatan AIR - Algorithmic Innovations Reactor](https://www.meetup.com/Manhattan-AIR/)
 - Halifax - [AIG - Halifax Algorithmic Innovation Group](https://www.meetup.com/HalifaxAIG/)
 
-Team up with us to build together the fast business networks meant to solve world's top voted projects.
+Team up with us to build together fast business networks to solve algorithmically world's top voted projects.
 
 ## For Coders:
 
-The TeamHub project is generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+Global OS Web App is generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+You'll need to setup your own Firebase & Firestore database for realtime OS operations.
 
 ## Development server
 
