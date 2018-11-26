@@ -33,6 +33,8 @@ import { MarketComponent } from './market/market.component';
 import { MapComponent } from './map/map.component';
 import { SetupComponent } from './setup/setup.component';
 import { HelpComponent } from './help/help.component';
+import { SetupService } from './setup.service';
+import { LoggingService } from './logging.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,20 @@ import { HelpComponent } from './help/help.component';
     FormsModule,
     StoreModule.forRoot(reducers)
   ],
-  providers: [AuthService, TeamService, FriendService, SessionService, AccountService, ProjectService, SkillService, VentureService, UIService, LoggerService],
+  providers: [
+    AuthService, 
+    TeamService, 
+    FriendService, 
+    SessionService, 
+    AccountService, 
+    ProjectService, 
+    SkillService, 
+    VentureService, 
+    UIService, 
+    LoggerService,
+    SetupService,
+    LoggingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
