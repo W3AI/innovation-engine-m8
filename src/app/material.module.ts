@@ -21,8 +21,8 @@ import {
     MatPaginatorModule,
     MatSnackBarModule,
     MatGridListModule,
-    MatExpansionModule
-
+    MatExpansionModule,
+    MatBadgeModule
 } from '@angular/material';
 
 @NgModule({
@@ -48,7 +48,8 @@ import {
         MatPaginatorModule,
         MatSnackBarModule,
         MatGridListModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatBadgeModule
     ],
     exports: [
         MatButtonModule, 
@@ -72,7 +73,8 @@ import {
         MatPaginatorModule,
         MatSnackBarModule,
         MatGridListModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatBadgeModule
     ]
 })
 export class MaterialModule {}
