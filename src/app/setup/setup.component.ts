@@ -15,7 +15,7 @@ export class SetupComponent implements OnInit {
   @Input() id: number;
 
   timer: number;
-  aiName: string = 'My Global OS';
+  aiName: string = 'iTeam';
   // @Output() newDnaCycle = new EventEmitter<number>();
   interval = 500;   // nr or miliseconds for the DNA Loop  interval
   newInterval = 500;
@@ -42,6 +42,13 @@ export class SetupComponent implements OnInit {
 
   dnaLoop() {
     this.newInterval++;
+  }
+
+  onSetTitle() {
+    this.setupService.addAccount('Steve', this.aiName, 'active');
+    this.loggingService.logStatusChange(this.aiName);
+
+    this.setupService.statusUpdated.emit(this.aiName);
   }
 
   onSetCycle() {

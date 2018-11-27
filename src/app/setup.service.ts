@@ -7,7 +7,7 @@ export class SetupService {
   accounts = [
     {
       name: 'Steve',
-      osName: 'Global OS',
+      osName: 'Team OS',
       status: 'active'
     }
   ];

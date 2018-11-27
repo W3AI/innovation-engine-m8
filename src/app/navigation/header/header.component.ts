@@ -16,14 +16,16 @@ import { SetupService } from '../../setup.service';
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth$: Observable<boolean>;
+  appTitle = 'iTeam';
 
   constructor(private store: Store<fromRoot.State>, 
               private authService: AuthService,
               private loggingService: LoggingService,
               private setupService: SetupService ) { 
                 this.setupService.statusUpdated.subscribe(
-                  (status: string) => alert('New Setup: ' + status)
-                );
+                  (title: string) => {
+                    this.appTitle = title;
+                  });
               }
 
   ngOnInit() {
