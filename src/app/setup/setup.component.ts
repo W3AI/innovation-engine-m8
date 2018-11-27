@@ -11,8 +11,10 @@ import { SetupService } from '../setup.service';
   styleUrls: ['./setup.component.css']
 })
 export class SetupComponent implements OnInit {
-  @Input() account: {name: string, osName: string, status: string};
-  @Input() id: number;
+  // @Input() account: {name: string, osName: string, status: string};
+  // @Input() id: number;
+
+  // accounts: Accounts[] = [];
 
   timer: number;
   aiName: string = 'iTeam';
@@ -59,10 +61,10 @@ export class SetupComponent implements OnInit {
     this.startDnaLoop();
   }
 
-  onSetTo(status: string) {
-    this.setupService.updateStatus(this.id, status);
+  // onSetTo(status: string) {
+  //   this.setupService.updateStatus(this.id, status);
     
-    this.setupService.statusUpdated.emit(status);
-  }
+  //   this.setupService.statusUpdated.emit(status);
+  // }
 
 }
