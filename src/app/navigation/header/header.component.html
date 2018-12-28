@@ -20,10 +20,10 @@
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-md>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="15px" class="navigation-items">
 
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="10+" matBadgeColor="warn">Teams</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="7" matBadgeColor="warn" matBadgeOverlap="true">ToDo</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="10" matBadgeColor="warn">Teams</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="warn" matBadgeOverlap="true">ToDo</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" matBadgeColor="warn" matBadgeOverlap="true">Done</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="9" matBadgeColor="warn" matBadgeOverlap="true">Bots</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" matBadgeColor="warn" matBadgeOverlap="true">Bots</span></a></li>
 
             <li *ngIf="!(isAuth$ | async)"><a routerLink="/signup">Signup</a></li>
             <li *ngIf="!(isAuth$ | async)"><a routerLink="/login">Login</a></li>
