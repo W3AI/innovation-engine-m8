@@ -17,7 +17,7 @@ export class SetupComponent implements OnInit {
   // accounts: Accounts[] = [];
 
   timer: number;
-  aiName: string = 'iTeam';
+  aiName: string = 'uProgress';
   // @Output() newDnaCycle = new EventEmitter<number>();
   interval = 500;   // nr or miliseconds for the DNA Loop  interval
   newInterval = 500;
