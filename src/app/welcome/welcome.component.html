@@ -15,7 +15,7 @@
     <td style="width:3px"></td><td style="width:7px"></td><td style="width:105px"></td><td style="width:20px"></td><td style="width:10px"></td><td style="width:85px"></td><td style="width:10px"></td><td style="width:20px"></td><td style="width:105px"></td><td style="width:7px"></td><td style="width:3px"></td>
   </tr>
   <tr>
-    <td></td><td></td><td><b>&nbsp;uLead Projects&nbsp;</b></td><td></td><td></td><td><b>&nbsp;&nbsp;uTeam ToDos&nbsp;&nbsp;</b></td><td></td><td></td><td><b>&nbsp;uCode Services&nbsp;</b></td><td></td><td></td>
+    <td></td><td></td><td contenteditable="true"><b>&nbsp;uLead Projects&nbsp;</b></td><td></td><td></td><td contenteditable="true"><b>&nbsp;&nbsp;uTeam ToDos&nbsp;&nbsp;</b></td><td></td><td></td><td contenteditable="true"><b>&nbsp;uCode Services&nbsp;</b></td><td></td><td></td>
   </tr>
   <tr>
     <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
@@ -79,7 +79,7 @@
 
 <table id="fbView">
   <tr>
-    <td style="width:3px"></td><td style="width:7px"></td><td style="width:45px"><u>nProject</u></td><td style="width:45px"></td><td colspan="4" style="width:180px; text-align:center;"><b>DNA Script Processor</b></td><td style="width:45px"></td><td style="width:40px">nService</td><td style="width:7px"></td><td style="width:3px"></td>
+    <td style="width:3px"></td><td style="width:7px"></td><td style="width:45px"><u>Project</u></td><td style="width:45px"></td><td colspan="4" style="width:180px; text-align:center;"><b>Progress Processor</b></td><td style="width:45px"></td><td style="width:40px">Service</td><td style="width:7px"></td><td style="width:3px"></td>
   </tr>
   <tr>
     <td></td><td></td><td><b>Title</b></td><td colspan="5">{{this.queue[this.row][2+1] | slice:0:36}}</td><td style="text-align:right;"> {{shares}} &nbsp;</td><td><b>Votes</b></td><td></td><td></td>
@@ -128,19 +128,19 @@
 
     <div class="header" fxLayout="row" fxLayoutAlign="center center">
 
-      <div id="left" fxFlex="25%">
+      <div id="left" fxFlex="27%">
         <p>
-          <br><span class="side-title">Business Neural Nets</span><br>
-          nLinks<sup>2</sup>: {{ superFriendsNo }}<br>
-          nProjects: {{ superProjectsNo }}<br>
-          nSkills: {{ superServicesNo }}<br>
-          nTasks/ms: {{ superTxPerMs }}<br>
+          <br><span class="side-title">Cloud Progress Teams</span><br>
+          Links<sup>2</sup>: {{ superFriendsNo }}<br>
+          Projects: {{ superProjectsNo }}<br>
+          Skills: {{ superServicesNo }}<br>
+          Tasks/ms: {{ superTxPerMs }}<br>
           $/min: {{ superRatePerMin | currency }}<br>
           <span class="side-title">Live Internet Brain</span><br>
         </p>
       </div>
 
-      <div id="center" fxFlex="50%">
+      <div id="center" fxFlex="46%">
         <div class="welcome">
           <a *ngIf="!(isAuth$ | async); else Project" routerLink="/signup">
             <img src="assets/img/icon_512.png" alt="Solve World's Problems" height="96" width="96">
@@ -153,7 +153,7 @@
         </div>
       </div>
 
-      <div id="right" fxFlex="25%">
+      <div id="right" fxFlex="27%">
         <div fxLayout fxLayoutAlign="end end">
           <p>
             <br><span class="side-title">Office Teams</span><br>
@@ -176,7 +176,7 @@
 <section>
 <div class="free-ai">
   <h3>I'm your</h3>
-  <h3>Web of Progress Accelerators</h3>
+  <h3 contenteditable="true">Progress Accelerator</h3>
 </div>
 
 <div id="south-globe">

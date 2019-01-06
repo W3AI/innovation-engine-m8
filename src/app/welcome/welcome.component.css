@@ -15,7 +15,13 @@ table {
     font-size: x-small;
     line-height: 11px;
     border-collapse: collapse;
+    border: 1px solid red;
     width: 375px;
+  }
+
+  td {
+    border: 1px solid grey;
+    background-color: #fff;
   }
 
 .wall-1-projects {
