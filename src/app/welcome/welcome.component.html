@@ -143,11 +143,11 @@
       <div id="center" fxFlex="46%">
         <div class="welcome">
           <a *ngIf="!(isAuth$ | async); else Project" routerLink="/signup">
-            <img src="assets/img/icon_512.png" alt="Solve World's Problems" height="96" width="96">
+            <img src="/assets/img/icon_512.png" alt="Solve World's Problems" height="96" width="96">
           </a>
           <ng-template #Project>
             <a id="project" routerLink="/project">
-              <img src="assets/img/icon_512.png" alt="Solve World's Problems" height="96" width="96">
+              <img src="/assets/img/icon_512.png" alt="Solve World's Problems" height="96" width="96">
             </a>
           </ng-template>
         </div>
@@ -319,6 +319,7 @@
     <p>Alan Turing</p>
     <p>Alonzo Church</p>
     <p>Linus Torvalds</p>
+    <p>Andrew Tanenbaum</p>
     <p>Leonid Hurwicz</p>
     <p>Stephen Wolfram</p>
     <p>Mark Zuckerberg</p>   
