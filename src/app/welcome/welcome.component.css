@@ -6,8 +6,13 @@ div.web-show {
     height: 400px;
 }
 
-h2.web-show {
+h2.web-show-progressive {
     margin: 0px;
+}
+
+h6.web-show-meetups {
+    margin: 0px;
+    color: whitesmoke;
 }
 
 .top {
