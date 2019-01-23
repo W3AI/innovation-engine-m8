@@ -1,18 +1,40 @@
+.web-view {
+    height: 400px;
+}
+
 div.web-show {
     padding: 0px;
     text-align: center;
     background-image: url("/assets/img/innovators-400.jpg");
     background-color: rgba(64,84,178);
     height: 400px;
+   
 }
 
-h2.web-show-progressive {
-    margin: 0px;
+.under-grid {
+    position: relative;
+    top: 0px;
+    z-index: 0;
+    width: 400px;
+}
+
+.under-tile {
+    border: 1px solid white;
+
+}
+
+.slides {
+    position: relative;
+    
+    z-index: 20;
 }
 
 h6.web-show-meetups {
+    position: relative;
+    
     margin-top: 10px;
     color: whitesmoke;
+    
 }
 
 a.web-show {

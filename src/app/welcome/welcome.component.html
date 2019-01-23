@@ -1,6 +1,17 @@
 <section class="web-view">
-  <div class="web-show">
-    <img src="/assets/img/3ai-show.png" alt="Progressive Teams Operating System">
+  <div fxLayout="column" fxLayoutAlign="start center" class="web-show">
+
+      <mat-grid-list class="under-grid" cols="4" rowHeight="10px">
+          <mat-grid-tile class="under-tile" class="under-tile"
+              *ngFor="let tile of tiles"
+              [colspan]="tile.cols"
+              [rowspan]="tile.rows"
+              [style.background]="tile.color">
+            {{tile.text}}
+          </mat-grid-tile>
+        </mat-grid-list>
+
+    <img class="slides" src="/assets/img/3ai-show.png" alt="Progressive Teams Operating System">
     <h6 class="web-show-meetups">Join Progress Teams @ W3AI Meetups: <a class="web-show" href="https://www.meetup.com/SocialAI/">Toronto</a> - <a class="web-show" href="https://www.meetup.com/Manhattan-AIR/">NYC</a> - <a class="web-show" href="https://www.meetup.com/HalifaxAIG/">Halifax</a></h6>
   </div>
 </section>

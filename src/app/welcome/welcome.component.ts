@@ -6,9 +6,18 @@ import * as fromRoot from '../app.reducer';
 import { AuthService } from '../auth/auth.service';
 
 // import * as h from "../logic/helper";
+// ToDo [ ] - Do we need both Queue files?
 import * as q from "../logic/AlgoQueue";
 import * as q1 from "../logic/3AI-Queue";
+// import * as cell from "../logic/facebot";
 import { color } from 'd3';
+
+export interface Tile {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
 
 @Component({
   selector: 'app-welcome',
@@ -16,6 +25,13 @@ import { color } from 'd3';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit, AfterViewInit {
+
+  tiles: Tile[] = [
+    {text: '', cols: 3, rows: 1, color: ''},
+    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+  ];
 
   manual = false;
 
