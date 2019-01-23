@@ -27,10 +27,33 @@ export interface Tile {
 export class WelcomeComponent implements OnInit, AfterViewInit {
 
   tiles: Tile[] = [
-    {text: '', cols: 3, rows: 1, color: ''},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: '#ffcc33'},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''},
+    {text: '', cols: 1, rows: 1, color: ''}
   ];
 
   manual = false;
