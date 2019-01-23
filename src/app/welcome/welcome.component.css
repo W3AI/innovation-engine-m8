@@ -1,14 +1,15 @@
 .web-view {
     height: 400px;
+    background-image: url("/assets/img/innovators-400.jpg");
+    background-color: rgba(64,84,178);
 }
 
 div.web-show {
     padding: 0px;
     text-align: center;
     background-image: url("/assets/img/innovators-400.jpg");
-    background-color: rgba(64,84,178);
     height: 400px;
-   
+    width: 400px;
 }
 
 .under-grid {
