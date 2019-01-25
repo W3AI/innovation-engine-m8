@@ -24,6 +24,17 @@ div.web-show {
     background-position-x: 90px;
 }
 
+.faster-world {
+    height: 120px;
+    width: 100%;
+    position: relative;
+    top: -160px;
+    z-index: 4;
+    background-image: url("/assets/img/World-120.png");
+    background-size: contain;
+    background-position-x: 90px;
+}
+
 .under-grid {
     position: relative;
     top: -648px;

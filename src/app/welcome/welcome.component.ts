@@ -69,7 +69,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   isAuth$: Observable<boolean>;
 
   timer: number;
-  interval: number = 300;   // set interval timer 
+  interval: number = 30;   // set interval timer 
   newInterval: number = 300;
   setupCycle: number = 1000;   // well use this setupCycle updated from the Setup page 
                               // to increase / decrease the time interval
@@ -260,6 +260,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
       this.i++;
       this.w3aiStats();
       this.setSlowWorldMove();
+      this.setFasterWorldMove();
     }, this.interval );
 
   }
@@ -484,8 +485,14 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   // To scroll the Slow World background banner World-120.png
   setSlowWorldMove() {
     let positionX = 0;
-    return positionX - 0.3 * this.i;
+    return positionX + 0.3 * this.i;
   }
+
+    // To scroll the Faster World background banner World-120.png
+    setFasterWorldMove() {
+      let positionX = 0;
+      return positionX + 3 * this.i;
+    }
 
   // Dynamic Styling functions
   getDeltaColor() {
