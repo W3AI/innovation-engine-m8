@@ -259,6 +259,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
       // Move to next tag / link in the queue
       this.i++;
       this.w3aiStats();
+      this.setSlowWorldMove();
     }, this.interval );
 
   }
@@ -478,6 +479,12 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     this.officeRatePerMin = this.officeRatePerMin + (Math.floor(Math.random() * Math.floor(2))
       - Math.floor(Math.random() * Math.floor(2))) / 100;
 
+  }
+
+  // To scroll the Slow World background banner World-120.png
+  setSlowWorldMove() {
+    let positionX = 0;
+    return positionX - 0.3 * this.i;
   }
 
   // Dynamic Styling functions
