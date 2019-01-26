@@ -13,26 +13,38 @@ div.web-show {
     height: 400px;
 }
 
-.slow-world {
+.faster-world {
     height: 120px;
     width: 100%;
     position: relative;
-    top: -160px;
+    top: -400px;
     z-index: 4;
     background-image: url("/assets/img/World-120.png");
     background-size: contain;
     background-position-x: 90px;
 }
 
-.faster-world {
-    height: 120px;
+.slow-world {
+    height: 240px;
     width: 100%;
     position: relative;
-    top: -160px;
+    top: -400px;
     z-index: 4;
-    background-image: url("/assets/img/World-120.png");
+    background-image: url("/assets/img/World-240.png");
     background-size: contain;
     background-position-x: 90px;
+}
+
+#leaders {
+    height: 100%;
+    width: 100%;
+    filter:hue-rotate(0deg) opacity(0%) saturate(10);
+}
+
+#voters {
+    height: 100%;
+    width: 100%;
+    filter:hue-rotate(0deg) opacity(0%) saturate(10);
 }
 
 .under-grid {
@@ -48,13 +60,13 @@ div.web-show {
 
 .slides {
     position: relative;
-    top: -240px;
+    top: -760px;
     z-index: 20;
 }
 
 h6.web-show-meetups {
     position: relative;
-    top: -240px;
+    top: -760px;
     margin-top: 12px;
     color: whitesmoke;
     
