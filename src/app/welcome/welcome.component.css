@@ -14,21 +14,21 @@ div.web-show {
 }
 
 .faster-world {
-    height: 120px;
+    height: 60px;
     width: 100%;
     position: relative;
     top: -400px;
     z-index: 4;
     background-image: url("/assets/img/World-120.png");
-    background-size: contain;
+    background-size: 0% 0%;
     background-position-x: 90px;
 }
 
 .slow-world {
-    height: 240px;
+    height: 200px;
     width: 100%;
     position: relative;
-    top: -400px;
+    top: -300px;
     z-index: 4;
     background-image: url("/assets/img/World-240.png");
     background-size: contain;
@@ -60,13 +60,13 @@ div.web-show {
 
 .slides {
     position: relative;
-    top: -760px;
+    top: -660px;
     z-index: 20;
 }
 
 h6.web-show-meetups {
     position: relative;
-    top: -760px;
+    top: -660px;
     margin-top: 12px;
     color: whitesmoke;
     
