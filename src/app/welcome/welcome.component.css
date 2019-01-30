@@ -64,6 +64,14 @@ div.web-show {
     z-index: 20;
 }
 
+.stats {
+    position: relative;
+    top: -280px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
 .web-line {
     position: relative;
     top: -300px;
