@@ -32,7 +32,7 @@ div.web-show {
     z-index: 4;
     background-image: url("/assets/img/World-240.png");
     background-size: contain;
-    background-position-x: 90px;
+    background-position: 90px 0px;
 }
 
 #leaders {

@@ -8,7 +8,7 @@
     </div>
 
     <div fxHide.gt-sm>
-        <a routerLink="/">Progress</a>
+        <a routerLink="/">iProgress</a>
     </div>
 
     <div fxHide.lt-md>
@@ -18,7 +18,7 @@
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="15px" class="navigation-items">
             <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent">ToDo</span></a></li>            
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">Test</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">Vote</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span class="alternate-theme" matBadge="6" matBadgeColor="primary">Done</span></a></li>
         </ul>
     </div>
