@@ -19,7 +19,7 @@ div.web-show {
     position: relative;
     top: -400px;
     z-index: 4;
-    background-image: url("/assets/img/World-120.png");
+/*    background-image: url("/assets/img/World-120.png");   */
     background-size: 0% 0%;
     background-position-x: 90px;
 }
@@ -60,8 +60,24 @@ div.web-show {
 
 .slides {
     position: relative;
-    top: -660px;
+    top: -664px;
     z-index: 20;
+}
+
+.web-line {
+    position: relative;
+    top: -300px;
+    height: 4px;
+    width: 100%;
+    
+    background-image: url("/assets/img/web-line-120.png");
+    z-index: 10;
+}
+
+#web-filter {
+    height: 100%;
+    width: 100%;
+    filter:hue-rotate(0deg) opacity(0%) saturate(10);
 }
 
 h6.web-show-meetups {
