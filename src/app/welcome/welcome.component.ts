@@ -260,7 +260,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
       this.i++;
       this.w3aiStats();
       this.setSlowWorldMove();
-      this.setFasterWorldMove();
+      this.setProgressSpeed();
     }, this.interval );
 
   }
@@ -489,7 +489,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   }
 
     // To scroll the Faster World background banner World-120.png
-    setFasterWorldMove() {
+    setProgressSpeed() {
       let positionX = 0;
       return positionX + 3 * this.i;
     }

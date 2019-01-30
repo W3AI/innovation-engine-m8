@@ -15,7 +15,9 @@
     <img id="voters" src="/assets/img/filter.png">
   </div>
 
-  <div class="web-line"><img id="web-filter" src="/assets/img/filter.png"></div>
+  <div class="web-line" [ngStyle]="{'background-position-x': setProgressSpeed() + 'px'}">
+    <img id="web-filter" src="/assets/img/filter.png">
+  </div>
 
   <div fxLayout="column" fxLayoutAlign="start center">
 
