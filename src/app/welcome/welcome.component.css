@@ -96,8 +96,9 @@ h6.web-show-meetups {
     
 }
 
-a.web-show {
+a.web-ppt {
     color: whitesmoke;
+    text-decoration: underline;
 }
 
 .top {
