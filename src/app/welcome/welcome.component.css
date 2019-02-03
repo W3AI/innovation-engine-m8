@@ -66,7 +66,7 @@ div.web-show {
 
 .stats {
     position: relative;
-    top: -280px;
+    top: -640px;
     height: 40px;
     width: 100%;
     text-align: center;
@@ -96,15 +96,34 @@ div.web-show {
     filter:hue-rotate(0deg) opacity(0%) saturate(10);
 }
 
-h6.web-show-meetups {
+h6.web-links {
     position: relative;
-    top: -660px;
+    top: -636px;
     margin-top: 12px;
     color: whitesmoke;
-    
 }
 
-a.web-ppt {
+.carouselbox {
+    color: whitesmoke;
+}
+
+.content li {
+    list-style: none;
+}
+
+.middle {
+    height: 40px;
+    width: 400px;
+    text-align: center;
+}
+
+.ranks {
+    position: relative;
+    top: -697px;
+    color: whitesmoke;
+}
+
+a.ppt-links {
     color: whitesmoke;
     text-decoration: underline;
 }
