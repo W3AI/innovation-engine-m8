@@ -99,28 +99,61 @@ div.web-show {
 h6.web-links {
     position: relative;
     top: -636px;
-    margin-top: 12px;
+    margin-top: 0px;
     color: whitesmoke;
 }
 
 .carouselbox {
+    position: relative;
+    top: -664px;
+    height: 40px;
     color: whitesmoke;
 }
 
-.content li {
-    list-style: none;
+.content-carousel{
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
 }
 
-.middle {
-    height: 40px;
-    width: 400px;
+.content-carousel li {
+    list-style: none;
+    padding: 0px;
+}
+
+h6.carousel {
     text-align: center;
+    margin: 0px;
 }
 
 .ranks {
-    position: relative;
-    top: -697px;
+    height: 38px;
+    width: 360px;
     color: whitesmoke;
+    top: 50%;
+}
+
+li.ranks {
+    margin: 0;
+}
+
+.container-index {
+    height: 40px;
+    width: 360px;
+    padding: 0px;
+}
+
+ol.container-index {
+    height: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.rank {
+    font: arrial;
+    font-size: 12px;
+    color: whitesmoke;
+
 }
 
 a.ppt-links {
