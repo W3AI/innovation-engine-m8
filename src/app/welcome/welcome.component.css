@@ -153,7 +153,11 @@ ol.container-index {
     font: arrial;
     font-size: 12px;
     color: whitesmoke;
+}
 
+.rank-flag {
+    height: 12px;
+    width: 18px;
 }
 
 a.ppt-links {
