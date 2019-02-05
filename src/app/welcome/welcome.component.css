@@ -137,6 +137,12 @@ li.ranks {
     margin: 0;
 }
 
+.middle {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
 .container-index {
     height: 40px;
     width: 360px;
