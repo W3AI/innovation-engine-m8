@@ -62,8 +62,8 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   setup = 'marathon'; // manual | marathon | hackathon
 
   aiSetup = '3AI Bots';   // Marathon or Hackathon
-  goalFCB = 'Family - Community - Business'; 
-  goalMAX = 'MAXIMUM PRODUCTIVITY';
+  goalFCB = 'Family & Friends';  // initially was 'Family - Community - Business'
+  goalMAX = 'Maximum Productivity';
   goal = this.goalFCB;
 
   isAuth$: Observable<boolean>;
