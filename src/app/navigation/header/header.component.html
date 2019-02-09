@@ -7,12 +7,14 @@
         </button>
     </div>
 
-    <div fxHide.gt-sm>
+<section class="toolbar-text" fxFlex>
+
+    <div fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
         <a routerLink="/">Progress</a>
     </div>
 
-    <div fxHide.lt-md>
-        <a routerLink="/">{{ appTitle }}</a>
+    <div xFlex fxLayout fxLayoutAlign="flex-start" fxHide.lt-md>
+        <a class="desktop" routerLink="/">{{ appTitle }}</a>
     </div>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
@@ -44,11 +46,13 @@
             <li>
                 <button mat-icon-button>
                     <mat-icon>
-                        <a routerLink="/setup"><img src="/assets/img/icon_154.png" alt="W3AI" height="24" width="24"></a>
+                        <a class="right-icon" routerLink="/setup"><img src="/assets/img/icon_154.png" alt="W3AI" height="24" width="24"></a>
                     </mat-icon>
                 </button>
             </li>
-
         </ul>
     </div>
+
+</section>
+
 </mat-toolbar>
