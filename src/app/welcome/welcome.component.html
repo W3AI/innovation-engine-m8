@@ -96,8 +96,8 @@
     <div fxLayout="row" xLayoutAlign="center center" fxLayoutGap="18px"  fxLayoutGap.gt-xs="24px">
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetManual(3000)"
-            [ngStyle]="{color: getStatusButtonManual()}"><b>Manual</b></button></div>
-        <div>control 3sec</div>
+            [ngStyle]="{color: getStatusButtonManual()}"><b>Matcher</b></button></div>
+        <div>manual control</div>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetMarathon(100)"
@@ -106,7 +106,7 @@
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetCompete(10)"
-            [ngStyle]="{color: getStatusButtonHackathon()}"><b>Web Bots</b></button></div>
+            [ngStyle]="{color: getStatusButtonHackathon()}"><b>Web Brain</b></button></div>
         <div>max speed</div>
       </div>
     </div>
@@ -222,13 +222,13 @@
 
       <div id="left" fxFlex="27%">
         <p>
-          <br><span class="side-title">Web Progress Groups</span><br>
+          <br><span class="side-title">Progress Bots</span><br>
           Links<sup>2</sup>: {{ superFriendsNo }}<br>
           Projects: {{ superProjectsNo }}<br>
-          Skills: {{ superServicesNo }}<br>
+          Services: {{ superServicesNo }}<br>
           Tasks/ms: {{ superTxPerMs }}<br>
           $/min: {{ superRatePerMin | currency }}<br>
-          <span class="side-title">Live Internet Brain</span><br>
+          <span class="side-title">Web Brain</span><br>
         </p>
       </div>
 
@@ -254,7 +254,7 @@
             skills: {{ officeServicesNo }}<br>
             tasks/ms: {{ officeTxPerMs }}<br>
             $/min: {{ officeRatePerMin | currency }}<br>
-            <span class="side-title">Live Office Networks</span><br>
+            <span class="side-title">Office Networks</span><br>
           </p>
         </div>
       </div>
