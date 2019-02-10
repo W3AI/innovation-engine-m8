@@ -43,10 +43,10 @@
             <li *ngIf="isAuth$ | async">
                 <a style="cursor: pointer" (click)="onLogout()">Logout</a>
             </li>
-            <li>
+            <li class="right-icon">
                 <button mat-icon-button>
                     <mat-icon>
-                        <a class="right-icon" routerLink="/setup"><img src="/assets/img/icon_154.png" alt="W3AI" height="24" width="24"></a>
+                        <a routerLink="/setup"><img src="/assets/img/icon_154.png" alt="W3AI" height="24" width="24"></a>
                     </mat-icon>
                 </button>
             </li>

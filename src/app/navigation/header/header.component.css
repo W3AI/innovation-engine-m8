@@ -1,5 +1,6 @@
 .mat-toolbar {
     padding: 0px 16px 0px 0px;
+    height: 50px;
 }
 
 .toolbar-text {
@@ -7,6 +8,7 @@
 }
 
 .desktop {
+    margin-top: 4px;
     margin-left: 16px;
 }
 
@@ -40,7 +42,7 @@ a:active {
 }
 
 .right-icon {
-    margin-top: -4px;
+    padding-bottom: 4px;
 }
 
 
