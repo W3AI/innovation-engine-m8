@@ -1,5 +1,5 @@
 .web-view {
-    height: 300px;
+    height: 275px;
     background-image: url("/assets/img/innovators-400.jpg");
     background-color: rgba(64,84,178);
 }
@@ -28,7 +28,7 @@ div.web-show {
     height: 240px;
     width: 100%;
     position: relative;
-    top: -340px;
+    top: -315px;
     z-index: 4;
     background-image: url("/assets/img/World-240.png");
     background-size: contain;
@@ -60,7 +60,7 @@ div.web-show {
 
 .slides {
     position: relative;
-    top: -584px;
+    top: -559px;
     z-index: 20;
 }
 
@@ -74,7 +74,7 @@ div.web-show {
 
 .web-line-north {
     position: relative;
-    top: -580px;
+    top: -555px;
     height: 2px;
     width: 100%;
     background-image: url("/assets/img/web-line-120.png");
@@ -83,7 +83,7 @@ div.web-show {
 
 .web-line-south {
     position: relative;
-    top: -342px;
+    top: -317px;
     height: 2px;
     width: 100%;
     background-image: url("/assets/img/web-line-120.png");
@@ -105,7 +105,7 @@ h6.web-links {
 
 .carouselbox {
     position: relative;
-    top: -634px;
+    top: -597px;
     height: 40px;
     color: whitesmoke;
 }
