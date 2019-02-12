@@ -57,9 +57,11 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   ];
 
   manual = false;
+  sprint = true;
+  run = false;
 
   indigo = 'rgba(55,72,172,1)';  // Google mat indigo
-  setup = 'marathon'; // manual | marathon | hackathon
+  setup = 'sprint'; // manual | sprint | run ;  previously it was manual | marathon | hackathon 
 
   aiSetup = 'Sprint';   // Marathon or Hackathon
   goalFCB = 'Fair Social Progress';  // initially was 'Family - Community - Business'
@@ -212,39 +214,45 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   }
 
   getStatusButtonMarathon() {
-    return this.setup === 'marathon' ? this.indigo : 'black';
+    return this.setup === 'sprint' ? this.indigo : 'black';
   }
 
   getStatusButtonHackathon() {
-    return this.setup === 'hackathon' ? this.indigo : 'black';
+    return this.setup === 'run' ? this.indigo : 'black';
   }
 
   onSetManual(newCycle: number) {
     clearInterval(this.timer);
     this.setup = 'manual';
-    this.manual = true;   // To switch on the DNA View table
+    this.manual = true;   // To switch on the Project/Service side by side View
+    this.sprint = false;
+    this.run = false;
     // Line below is just to offer a bit of feedback onSetCycle change
     this.interval = newCycle;
     this.startDnaLoop();
   }
 
-  onSetMarathon(newCycle: number) {
+  onSetSprint(newCycle: number) {
     clearInterval(this.timer);
-    this.setup = 'marathon';
+    this.setup = 'sprint';
     this.aiSetup = 'Run';
     this.goal = this.goalMAX; // MAXIMUM PRODUCTIVITY
-    this.manual = false;   // To switch off the DNA View table
+    this.manual = false;   // To switch OFF the Project/Service side by side View
+    this.sprint = true;
+    this.run = false;
     // Line below is just to offer a bit of feedback onSetCycle change
     this.interval = newCycle;
     this.startDnaLoop();
   }
 
-  onSetCompete(newCycle: number) {
+  onSetRun(newCycle: number) {
     clearInterval(this.timer);
-    this.setup = 'hackathon';
+    this.setup = 'run';
     this.aiSetup = 'Sprint';
-    this.goal = this.goalFCB; // Family - Community - Business
-    this.manual = false;   // To switch off the DNA View table
+    this.goal = this.goalFCB; // Initially was FCB for Family - Community - Business
+    this.manual = false;   // To switch OFF the Project/Service side by side View
+    this.sprint = false;
+    this.run = true;
     // Line below is just to offer a bit of feedback onSetCycle change
     this.interval = newCycle;
     this.startDnaLoop();
