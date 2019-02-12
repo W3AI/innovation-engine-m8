@@ -107,7 +107,7 @@
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetCompete(10)"
             [ngStyle]="{color: getStatusButtonHackathon()}"><b>Run</b></button></div>
-        <div>max speed</div>
+        <div>max IO speed</div>
       </div>
     </div>
   </section>
@@ -169,44 +169,21 @@
 
 <div id="manual" *ngIf="manual; else helloWorld">
 
-<table id="fbView">
-  <tr>
-    <td style="width:3px"></td><td style="width:7px"></td><td style="width:45px"><u>Project</u></td><td style="width:45px"></td><td colspan="4" style="width:180px; text-align:center;"><b>CFS Solution Compiler</b></td><td style="width:45px"></td><td style="width:40px">Service</td><td style="width:7px"></td><td style="width:3px"></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td><b>Title</b></td><td colspan="5">{{this.queue[this.row][2+1] | slice:0:36}}</td><td style="text-align:right;"> {{shares}} &nbsp;</td><td><b>Votes</b></td><td></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td>Description</td><td colspan="5">{{this.queue[this.row][2+8] | slice:0:36}}</td><td style="text-align:right;"> {{this.queue[this.row][7]}} &nbsp;</td><td>Status</td><td></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td>Tags</td><td colspan="5">{{this.queue[this.row][2+10] | slice:0:36}}</td><td style="text-align:right;"> {{this.queue[this.row][4]}} &nbsp;</td><td>Country</td><td></td><td></td>
-  </tr>
-      
-  <tr>
-    <td></td><td></td><td>Name</td><td colspan="3">{{this.queue[this.row][2+4]}}</td><td colspan="3" style="text-align:right;"> &nbsp;</td><td>Email</td><td></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td>Bid | Ask</td><td colspan="2">$ {{this.queue[this.row][8]}}</td><td>Currency</td><td>{{this.queue[this.row][4]}}</td><td colspan="2"></td><td>Timeframe</td><td></td><td></td>
-  </tr>
+<table id="fbView" style="width:300px">
 
   <tr>
-    <td></td><td></td><td><b>nGene</b></td><td colspan="2" style="text-align:center;"><b>Input</b></td><td colspan="2" style="text-align:center;"><b>Solution</b></td><td colspan="2" style="text-align:center;"><b>Output</b></td><td colspan="2"><b>T & C</b></td><td></td>
+    <td style="height:20px">title</td><td>title</td>
   </tr>
   <tr>
-    <td></td><td></td><td>text</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td></td>
+    <td style="height:10px">subtitle</td><td>subtitle</td>
   </tr>
   <tr>
-    <td></td><td></td><td>JS</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td>GS</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td>VBA</td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td></td>
-  </tr>
-  <tr>
-    <td style="height:1px"></td><td></td><td></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td><td></td>
+    <td style="height:150px">
+      <img src="/assets/img/0projects/voyager-woman.png" alt="Voyager Project" height="150" width="150">
+    </td>
+    <td>
+      <img src="/assets/img/0services/voyager-man.png" alt="Voyager Service" height="150" width="150">
+    </td>
   </tr>
 
 </table>
