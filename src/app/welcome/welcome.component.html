@@ -1,16 +1,11 @@
 <section fxLayout="column" fxLayoutAlign="start center" class="web-view">
 
-  <img id="innovators" class="web-show" src="/assets/img/innovators-400.jpg">
+  <img id="innovators" class="web-show" src="/assets/img/innovators-400.jpg" height="300">
 
   <div class="faster-world">
     <img id="leaders" src="/assets/img/filter.png">
   </div>
 
-  <!--
-  <div class="faster-world" [ngStyle]="{'background-position-x': setFasterWorldMove() + 'px'}">
-      <img id="leaders" src="/assets/img/filter.png">
-  </div>
--->
   <div class="slow-world" [ngStyle]="{'background-position-x': setSlowWorldMove() + 'px'}">
     <img id="voters" src="/assets/img/filter.png">
   </div>
@@ -34,7 +29,7 @@
         <li fxHide.lt-md class="ranks" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
           <h6 class="carousel"
             title="Ranking based on Alfred North Whitehead formula - Civilization Rank = Number of unique automated services">
-            Innovation Rank by number of unique bot services</h6>
+            Innovation Rank by number of unique service bots</h6>
           <ol class="container-index" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
             <li class="rank">EN <img class="rank-flag" src="/assets/flags/US.png"></li>
             <li class="rank">ZH <img class="rank-flag" src="/assets/flags/CN.png"></li>
@@ -60,7 +55,7 @@
         <li fxHide.lt-md class="ranks" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
           <h6 class="carousel"
             title="Ranking based on Alfred North Whitehead formula - Progress Rank = Speed of adding new types of automated services">
-            Progress Rank by speed of adding new bot services</h6>
+            Progress Rank by speed of adding new service bots</h6>
           <ol class="container-index" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
             <li class="rank">ZH <img class="rank-flag" src="/assets/flags/CN.png"></li>
             <li class="rank">EN <img class="rank-flag" src="/assets/flags/US.png"></li>
