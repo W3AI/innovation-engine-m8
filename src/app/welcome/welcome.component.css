@@ -1,5 +1,6 @@
 .web-view {
     height: 265px;
+    width: 100%;
     background-image: url("/assets/img/innovators-400.jpg");
     background-color: rgba(64,84,178);
 }
@@ -59,8 +60,12 @@ div.web-show {
 }
 
 .slides {
+    height: 265px;
+    width: 100%;
     position: relative;
     top: -489px;
+    background-position: center;
+    background-image: url("/assets/img/3ai-ppt.png");
     z-index: 20;
 }
 
@@ -105,7 +110,7 @@ h6.web-links {
 
 .carouselbox {
     position: relative;
-    top: -490px;
+    top: -488px;
     height: 40px;
     color: #3f538f;
 }
