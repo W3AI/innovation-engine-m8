@@ -150,7 +150,7 @@ li.ranks {
 
 .container-index {
     height: 40px;
-    width: 360px;
+    width: 300px;
     padding: 0px;
 }
 
@@ -161,6 +161,8 @@ ol.container-index {
 }
 
 .rank {
+    margin-top: 12px;
+    text-align: center;
     font: arrial;
     font-size: 12px;
     color: #3f538f;
