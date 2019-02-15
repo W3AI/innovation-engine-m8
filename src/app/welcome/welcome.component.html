@@ -310,22 +310,24 @@
   
       <div id="round-robin-container">
         <div id="interest-container">#Rank - Interest - $Budget</div>
-        <div id="project-service-container" fxLayout="row" fxLayoutGap="100px" style="width: 300px; height: 200px;">
+        <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" style="width: 300px; height: 200px;">
 
-          <div id="project-container" style="width: 100px; height: 100px;"
+          <div id="project-container" fxLayout="column" fxLayoutAlign="center center" 
+          style="width: 150px; height: 200px; background-color: #f09991"
           [@prjState]="prj_state">
-            <div id="project-owner-container"></div>
+            <div id="project-owner-container">Owner Image</div>
             <div id="project-state-container">
-              <div id="project-state"></div>
+              <div id="project-state">Next Steps</div>
               <div id="project-state-badges-container"></div>
             </div>
           </div>
 
-          <div id="service-container" style="width: 100px; height: 100px;"
+          <div id="service-container" fxLayout="column" fxLayoutAlign="center center"
+          style="width: 150px; height: 200px; background-color: #50b3ed"
           [@srvState]="srv_state">
-            <div id="service-owner-container"></div>
+            <div id="service-owner-container">Owner Image</div>
             <div id="service-state-container">
-                <div id="service-state"></div>
+                <div id="service-state">Next Steps</div>
                 <div id="service-state-badges-container"></div>
             </div>
           </div>
