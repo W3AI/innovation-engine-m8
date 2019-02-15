@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { trigger, state, style } from '@angular/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 import * as fromRoot from '../app.reducer';
 import { AuthService } from '../auth/auth.service';
@@ -28,12 +28,14 @@ export interface Tile {
   trigger('prjState', [
     state('exposure', style({
       'background-color': 'red',
-      transform: 'translateX(0)'
+      transform: 'translateY(0)'
     })),
     state('transition', style({
       backgroundColor: 'blue',
-      transform: 'translateX(100px)'
-    }))
+      transform: 'translateY(100px)'
+    })),
+    transition('exposure => transition', animate(300)),
+    transition('transition => exposure', animate(300))
   ])
   ]
 })
