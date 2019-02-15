@@ -36,12 +36,25 @@ export interface Tile {
     })),
     transition('exposure => transition', animate(300)),
     transition('transition => exposure', animate(300))
+  ]),
+  trigger('srvState', [
+    state('exposure', style({
+      'background-color': 'red',
+      transform: 'translateY(0)'
+    })),
+    state('transition', style({
+      backgroundColor: 'blue',
+      transform: 'translateY(100px)'
+    })),
+    transition('exposure => transition', animate(300)),
+    transition('transition => exposure', animate(300))
   ])
   ]
 })
 export class WelcomeComponent implements OnInit, AfterViewInit {
 
   prj_state = 'exposure';
+  srv_state = 'exposure';
 
   tiles: Tile[] = [
     {text: '', cols: 1, rows: 1, color: ''},
@@ -225,6 +238,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     /* If pace set to manual alternate project state between exposure and transition */
     if (this.setup == 'manual') {
       this.prj_state == 'exposure' ? this.prj_state = 'transition' : this.prj_state = 'exposure';
+      this.srv_state == 'exposure' ? this.srv_state = 'transition' : this.srv_state = 'exposure';
     }
 
     this.row = (this.i+2)%this.nrLinks; // calculate the row in the queue array to display in the manual table
@@ -253,6 +267,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     // Line below is just to offer a bit of feedback onSetCycle change
     this.interval = newCycle;
     this.prj_state = 'exposure';  // project container is visible
+    this.srv_state = 'exposure';  // service container is visible
     this.startDnaLoop();
   }
 
