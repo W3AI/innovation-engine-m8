@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { trigger, state, style } from '@angular/animations';
 
 import * as fromRoot from '../app.reducer';
 import { AuthService } from '../auth/auth.service';
@@ -22,9 +23,23 @@ export interface Tile {
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  styleUrls: ['./welcome.component.css'],
+  animations: [
+  trigger('prjState', [
+    state('exposure', style({
+      'background-color': 'red',
+      transform: 'translateX(0)'
+    })),
+    state('transition', style({
+      backgroundColor: 'blue',
+      transform: 'translateX(100px)'
+    }))
+  ])
+  ]
 })
 export class WelcomeComponent implements OnInit, AfterViewInit {
+
+  prj_state = 'exposure';
 
   tiles: Tile[] = [
     {text: '', cols: 1, rows: 1, color: ''},
@@ -203,7 +218,13 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
   dnaLoop() {
     this.updateLoopTable();
-    this.i++;   // increment the index of the DNA Queue
+    this.i++;   // increment the index of the DNA Queue - Circular List
+
+    /* If pace set to manual alternate project state between exposure and transition */
+    if (this.setup == 'manual') {
+      this.prj_state == 'exposure' ? this.prj_state = 'transition' : this.prj_state = 'exposure';
+    }
+
     this.row = (this.i+2)%this.nrLinks; // calculate the row in the queue array to display in the manual table
     this.shares = 10 + Math.floor(Math.random() * Math.floor(1000))
     this.w3aiStats();
@@ -229,6 +250,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     this.run = false;
     // Line below is just to offer a bit of feedback onSetCycle change
     this.interval = newCycle;
+    this.prj_state = 'exposure';  // project container is visible
     this.startDnaLoop();
   }
 

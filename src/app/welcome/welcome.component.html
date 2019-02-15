@@ -308,6 +308,30 @@
 
     <section id="manual" *ngIf="manual">
   
+      <div id="round-robin-container">
+        <div id="interest-container">#Rank - Interest - $Budget</div>
+        <div id="project-service-container">
+
+          <div id="project-container" style="width: 100px; height: 100px;"
+          [@prjState]="prj_state">
+            <div id="project-owner-container"></div>
+            <div id="project-state-container">
+              <div id="project-state"></div>
+              <div id="project-state-badges-container"></div>
+            </div>
+          </div>
+
+          <div id="service-container">
+            <div id="service-owner-container"></div>
+            <div id="service-state-container">
+                <div id="service-state"></div>
+                <div id="service-state-badges-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Table draft for Manual / FaceMash View 
       <table id="fbView" style="width:300px">
         <tr>
           <td style="height:20px">title</td>
@@ -326,7 +350,8 @@
           </td>
         </tr>
       </table>
-  
+    -->
+
     </section>
   
     <section *ngIf="run">
