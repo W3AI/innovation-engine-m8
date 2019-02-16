@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, state, style, transition, animate, group } from '@angular/animations';
 
 import * as fromRoot from '../app.reducer';
 import { AuthService } from '../auth/auth.service';
@@ -34,18 +34,22 @@ export interface Tile {
       opacity: 0,
       transform: 'translateY(30px)'
     })),
-    transition('new <=> same', animate(300))
+    transition('same => new', animate(300)),
+    transition('new => same', [
+      animate(300, style({
+        transform: 'translateY(-30px)',
+        opacity: 0
+      }))
+    ])
   ]),
-  trigger('srvState', [
-    state('new', style({
-      opacity: 1,
-      transform: 'translateY(0px)'
-    })),
-    state('same', style({
-      opacity: 0,
-      transform: 'translateY(-30px)'
-    })),
-    transition('new <=> same', animate(300)),
+  trigger('serviceInOutTrigger', [
+    transition(':enter', [
+      style({ opacity: 0 }),
+      animate(200, style({ opacity: 1 })),
+    ]),
+    transition(':leave', [
+      animate(200, style({ opacity: 0 }))
+    ])
   ])
   ]
 })
@@ -235,8 +239,8 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
     /* If pace set to manual alternate project state between new and transition */
     if (this.setup == 'manual') {
-      this.prj_state == 'new' ? this.prj_state = 'same' : this.prj_state = 'new';
-      this.srv_state == 'same' ? this.srv_state = 'new' : this.srv_state = 'same';
+      Math.random() < 0.3 ? this.prj_state = 'new' : this.prj_state = 'same';   // random values during animation dev
+      Math.random() > 0.3 ? this.srv_state = 'new' : this.srv_state = 'same';
     }
 
     this.row = (this.i+2)%this.nrLinks; // calculate the row in the queue array to display in the manual table
