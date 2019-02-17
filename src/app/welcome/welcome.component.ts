@@ -92,7 +92,10 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   sprint = true;
   run = false;
 
-  indigo = 'rgba(55,72,172,1)';  // Google mat indigo
+  bot_red = 'rgba(238,153,147,1)';  // Bot red
+  bot_yellow = 'rgba(254,203,69,1)';  // Bot yellow
+  bot_blue = 'rgba(85,180,235,1)';  // Bot blue
+
   setup = 'sprint'; // manual | sprint | run ;  previously it was manual | marathon | hackathon 
 
   aiSetup = 'Sprint';   // Marathon or Hackathon
@@ -249,15 +252,15 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   }
 
   getStatusButtonManual() {
-    return this.setup === 'manual' ? this.indigo : 'black';
+    return this.setup === 'manual' ? this.bot_red : 'whitesmoke';
   }
 
   getStatusButtonMarathon() {
-    return this.setup === 'sprint' ? this.indigo : 'black';
+    return this.setup === 'sprint' ? this.bot_yellow : 'whitesmoke';
   }
 
   getStatusButtonHackathon() {
-    return this.setup === 'run' ? this.indigo : 'black';
+    return this.setup === 'run' ? this.bot_blue : 'whitesmoke';
   }
 
   onSetManual(newCycle: number) {

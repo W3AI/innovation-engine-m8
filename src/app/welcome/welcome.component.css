@@ -247,15 +247,20 @@ table {
 }
 
 .W3AI-button {
-    
+    position: relative;
+    top: -68px;
+    z-index: 30;
+    height: 36px !important;
+    min-width: 70px !important;
     font-family: arial, sans-serif;
-    font-size: small;
+    font-size: medium;
+    font-weight: bolder;
     color: whitesmoke;
     margin: 0px;
     padding: 0px;
     border: 0px;
-    background-color: rgba(217, 190, 190, 1);
-    border-radius: 8px;
+    background-color: rgba(117, 117, 117, 1);
+    border-radius: 16px;
 }
 
 .AUTO-button {
