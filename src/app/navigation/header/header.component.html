@@ -10,7 +10,7 @@
 <section class="toolbar-text" fxFlex>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/">Bots</a>
+        <a routerLink="/">bot mob</a>
     </div>
 
     <div xFlex fxLayout fxLayoutAlign="flex-start" fxHide.lt-md>
@@ -19,29 +19,29 @@
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="10px" fxLayoutGap.gt-xs="15px" class="navigation-items">
-            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent">Idea</span></a></li>            
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">Vote</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span class="alternate-theme" matBadge="6" matBadgeColor="primary">Done</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent">idea</span></a></li>            
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">vote</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span class="alternate-theme" matBadge="6" matBadgeColor="primary">done</span></a></li>
         </ul>
     </div>
     
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-md>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="10px" fxLayoutGap.gt-xs="15px" class="navigation-items">
 
-            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent" matBadgeOverlap="true">Idea</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn" >Vote</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" class="alternate-theme" matBadgeColor="primary" matBadgeOverlap="true">Done</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" class="bot-theme" matBadgeColor="primary" matBadgeOverlap="true">Bots</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent" matBadgeOverlap="true">idea</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn" >vote</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" class="alternate-theme" matBadgeColor="primary" matBadgeOverlap="true">done</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" class="bot-theme" matBadgeColor="primary" matBadgeOverlap="true">bots</span></a></li>
 
-            <li *ngIf="!(isAuth$ | async)"><a routerLink="/signup">Signup</a></li>
-            <li *ngIf="!(isAuth$ | async)"><a routerLink="/login">Login</a></li>
+            <li *ngIf="!(isAuth$ | async)"><a routerLink="/signup">signup</a></li>
+            <li *ngIf="!(isAuth$ | async)"><a routerLink="/login">login</a></li>
 
-            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/about">about</a></li>
 
-            <li><a routerLink="/help">Help</a></li>
+            <li><a routerLink="/help">help</a></li>
 
             <li *ngIf="isAuth$ | async">
-                <a style="cursor: pointer" (click)="onLogout()">Logout</a>
+                <a style="cursor: pointer" (click)="onLogout()">logout</a>
             </li>
             <li class="right-icon">
                 <button mat-icon-button>

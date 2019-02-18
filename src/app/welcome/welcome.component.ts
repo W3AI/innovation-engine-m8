@@ -42,21 +42,31 @@ export interface Tile {
       }))
     ])
   ]),
-  trigger('serviceInOutTrigger', [
-    transition(':enter', [
-      style({ opacity: 0 }),
-      animate(200, style({ opacity: 1 })),
-    ]),
-    transition(':leave', [
-      animate(200, style({ opacity: 0 }))
+
+  trigger('srvState', [
+    state('new', style({
+      opacity: 1,
+      transform: 'translateY(0px)'
+    })),
+    state('same', style({
+      opacity: 0,
+      transform: 'translateY(-30px)'
+    })),
+    transition('same => new', animate(300)),
+    transition('new => same', [
+      animate(300, style({
+        transform: 'translateY(+30px)',
+        opacity: 0
+      }))
     ])
   ])
+
   ]
 })
 export class WelcomeComponent implements OnInit, AfterViewInit {
 
   prj_state = 'new';
-  srv_state = 'same';
+  srv_state = 'new';
 
   tiles: Tile[] = [
     {text: '', cols: 1, rows: 1, color: ''},
@@ -88,16 +98,18 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     {text: '', cols: 1, rows: 1, color: ''}
   ];
 
-  manual = false;
-  sprint = true;
+  // iLead process/bot on the landing screen - manual = true
+  manual = true;
+  sprint = false;
   run = false;
 
   bot_red = 'rgba(238,153,147,1)';  // Bot red
   bot_yellow = 'rgba(254,203,69,1)';  // Bot yellow
   bot_blue = 'rgba(85,180,235,1)';  // Bot blue
 
-  setup = 'sprint'; // manual | sprint | run ;  previously it was manual | marathon | hackathon 
+  setup = 'manual'; // manual | sprint | run ;  previously it was manual | marathon | hackathon 
 
+  // [ ToDo ] - Do we still need this section ?!
   aiSetup = 'Sprint';   // Marathon or Hackathon
   goalFCB = 'Fair Social Progress';  // initially was 'Family - Community - Business'
   goalMAX = 'Maximum Productivity';
@@ -106,7 +118,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   isAuth$: Observable<boolean>;
 
   timer: number;
-  interval: number = 30;   // set interval timer 
+  interval: number = 3000;   // set initial interval timer 
   newInterval: number = 300;
   setupCycle: number = 1000;   // well use this setupCycle updated from the Setup page 
                               // to increase / decrease the time interval
@@ -236,12 +248,15 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     }, this.interval );
   }
 
+  // To loop through all the Projects and Services in the Interests loop/list table
   dnaLoop() {
+
     this.updateLoopTable();
+
     this.i++;   // increment the index of the DNA Queue - Circular List
 
     /* If pace set to manual alternate project state between new and transition */
-    if (this.setup == 'manual') {
+    if (this.setup === 'manual') {
       Math.random() < 0.3 ? this.prj_state = 'new' : this.prj_state = 'same';   // random values during animation dev
       Math.random() > 0.3 ? this.srv_state = 'new' : this.srv_state = 'same';
     }
@@ -306,13 +321,25 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
     this.readQueueV1IntoLoopArrays();
     // this.readQueueIntoLoopArrays();    the reader for first version of the Queue
+
     this.timer = setInterval( ()=> {
-      this.updateLoopTable();
+
+      this.dnaLoop();
+
+      // [ ToDo ] - To remove these commented parts
+      // To update the spreadshhet table view for Sprint peed setup >>
+      // this.updateLoopTable();
+      //
       // Move to next tag / link in the queue
-      this.i++;
-      this.w3aiStats();
+      // this.i++;
+      //
+      // Stats for the Run setup >>>
+      // this.w3aiStats();
+
+      // Move world map to simulate rotation / speed / progress
       this.setSlowWorldMove();
       this.setProgressSpeed();
+
     }, this.interval );
 
   }
