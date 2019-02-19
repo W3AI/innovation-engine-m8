@@ -138,6 +138,17 @@ h6.carousel {
     top: 50%;
 }
 
+.my-bot-mob-tops {
+    width: 170px;
+    padding:0px;
+}
+
+.mob-in {
+    margin-top: 10px;
+    border: 0px;
+    padding: 0px;
+}
+
 li.ranks {
     margin: 0;
 }
@@ -176,6 +187,12 @@ ol.container-index {
 a.ppt-links {
     color: whitesmoke;
     text-decoration: underline;
+}
+
+#interest-container {
+    margin-top: 5px;
+    background-color: rgba(254, 203, 69, .5);
+    padding: 4px;
 }
 
 .top {
@@ -288,6 +305,7 @@ table {
     font-size: medium;
     font-weight: bold;
     color: #333;
+    margin-top: 8px;
     margin-bottom: 8px;
     padding: 0px;
     border: 0px;

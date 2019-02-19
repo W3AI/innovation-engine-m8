@@ -48,20 +48,23 @@
 
         <li class="ranks middle" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
             
-          <b>world bots: {{i}} | prj: {{ prj_state }} | set: {{setup}}</b>
-          <!--
-          <a routerLink="/signup"><button class="auth-button" mat-button>Game In</button></a>
-          -->
-          <h6 class="carousel">
-<!--
-            Join <a class="ppt-links"
-              href="https://docs.google.com/spreadsheets/d/1VkTX5YG4xA_kVOf2Jzug3isQRcOae4CvkTRJycj_dtY/edit#gid=0">
-              Innovation Web</a>
-            @ W3AI Meetups: <a class="ppt-links" href="https://www.meetup.com/SocialAI/">Toronto</a>
-            &nbsp;<a class="ppt-links" href="https://www.meetup.com/Manhattan-AIR/">NYC</a>
-            &nbsp;<a class="ppt-links" href="https://www.meetup.com/HalifaxAIG/">Halifax</a>
-          -->
-          </h6>
+          <ol class="container-index" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+
+            <li>
+                <ol class="my-bot-mob-tops" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                    <li class="rank">bots<br><img class="rank-flag" src="/assets/flags/US.png"><br>112</li>
+                    <li class="rank">mobs<br><img class="rank-flag" src="/assets/flags/CA.png"><br>134</li>
+                    <li class="rank">skills<br><img class="rank-flag" src="/assets/flags/IN.png"><br>137</li>
+                    <li class="rank">friends<br><img class="rank-flag" src="/assets/flags/RO.png"><br>216</li>
+                </ol>
+            </li>
+
+            <li class="mob-in">
+                <a routerLink="/signup"><button class="auth-button" mat-button>Mob In</button></a>
+            </li>
+
+          </ol>
+
         </li>
 
         <li fxHide.lt-md class="ranks" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
@@ -315,9 +318,9 @@
         <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" style="width: 300px; height: 200px;">
 
           <div id="project-container" fxLayout="column" fxLayoutAlign="center center" 
-          style="width: 150px; height: 200px; background-color: #f09991"
+          style="width: 150px; height: 200px; background-color: #f09991; padding: 5px;"
           [@prjState]="prj_state">
-            <div id="project-owner-container">Title</div>
+            <div id="project-owner-container">{{ nProject1 }}</div>
             <div id="project-state-container">Owner Image
               <div id="project-state">Next Steps</div>
               <div id="project-state-badges-container"></div>
@@ -327,8 +330,8 @@
           <div id="service-container" fxLayout="column" fxLayoutAlign="center center"
           style="width: 150px; height: 200px; background-color: #50b3ed"
           [@srvState]="srv_state">
-            <div id="service-owner-container">Owner Image</div>
-            <div id="service-state-container">
+            <div id="service-owner-container">{{ nService1 }}</div>
+            <div id="service-state-container">Owner Image
                 <div id="service-state">Next Steps</div>
                 <div id="service-state-badges-container"></div>
             </div>
@@ -417,17 +420,18 @@
 
 <div id="south-globe">
 
+<!--
     <div class="quote">
         <p><q>We are all connected by the Internet, like Neurons in a Giant Brain.</q><br>
         <i>Stephen Hawking</i></p>
       </div>
 
-<!--
+
   <h3 id="under-blue">Set your Progress on {{aiSetup}}</h3>
   <h5>for</h5>
   <h1 id="goal">{{goal}}</h1>
 -->
-  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="40px">
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="60px">
     <a routerLink="/login"><button class="auth-button" mat-button>Sign In</button></a>
     <a routerLink="/signup"><button class="auth-button" mat-button>Sign Up</button></a>
   </div>
@@ -439,12 +443,12 @@
   <section class="clone" fxLayout="row" fxLayoutGap="40px">
     <div class="open-source" fxLayout="column" fxLayoutAlign="center end">
       <p><b>FREE W3AI.ORG</b></p>
-      <p><b><a href="https://w3ai.org">Personal Bots</a></b></p>
+      <p><b><a href="https://w3ai.org">public mobs</a></b></p>
       <p>EDU, ORG</p>
     </div>
     <div class="enterprise" fxLayout="column" fxLayoutAlign="center ">
       <p><b>OPEN W3AI.NET</b></p>
-      <p><b><a href="https://w3ai.net">Business Bots</a></b></p>
+      <p><b><a href="https://w3ai.net">business mobs</a></b></p>
       <p>GOV, COM</p>
     </div>
   </section>
