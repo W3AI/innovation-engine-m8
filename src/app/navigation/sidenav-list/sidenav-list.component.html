@@ -2,40 +2,40 @@
 
     <a mat-list-item routerLink="/about" (click)="onClose()">
         <mat-icon>info_outline</mat-icon>
-        <span class="nav-caption">About</span>
+        <span class="nav-caption">about</span>
     </a>
     <a mat-list-item routerLink="/venture" (click)="onClose()" *ngIf="isAuth$ | async">
         <mat-icon>group_add</mat-icon>
-        <span class="nav-caption">Network</span>            
+        <span class="nav-caption">network</span>            
     </a>
     <a mat-list-item routerLink="/project" (click)="onClose()" *ngIf="isAuth$ | async">
         <mat-icon>group_add</mat-icon>
-        <span class="nav-caption">Jobs</span>            
+        <span class="nav-caption">mobs</span>            
     </a>
     <a mat-list-item routerLink="/session" (click)="onClose()" *ngIf="isAuth$ | async">
         <mat-icon>code</mat-icon>
-        <span class="nav-caption">Services</span>            
+        <span class="nav-caption">bots</span>            
     </a>
     <a mat-list-item routerLink="/signup" (click)="onClose()" *ngIf="!(isAuth$ | async)">
         <mat-icon>face</mat-icon>
-        <span class="nav-caption">Signup</span>
+        <span class="nav-caption">signup</span>
     </a>
     <a mat-list-item routerLink="/login" (click)="onClose()" *ngIf="!(isAuth$ | async)">
         <mat-icon>input</mat-icon>
-        <span class="nav-caption">Login</span>            
+        <span class="nav-caption">login</span>            
     </a>
     <a mat-list-item routerLink="/setup" (click)="onClose()">
         <mat-icon>settings</mat-icon>
-        <span class="nav-caption">Setup</span>
+        <span class="nav-caption">setup</span>
     </a>
     <a mat-list-item routerLink="/help" (click)="onClose()">
         <mat-icon>help_outline</mat-icon>
-        <span class="nav-caption">Help</span>
+        <span class="nav-caption">help</span>
     </a>
     <mat-list-item> 
         <button mat-icon-button (click)="onLogout()" *ngIf="isAuth$ | async">
             <mat-icon>eject</mat-icon>
-            <span class="nav-caption">Logout</span>  
+            <span class="nav-caption">logout</span>  
         </button>
     </mat-list-item>
     <!--
@@ -64,13 +64,13 @@
 
 <div>
     <ul class="nav-footer">
-        <li>Join W3AI Innovators Meetups</li>
+        <li>join w3ai innovators meetups</li>
         <li>
             <a href="https://www.meetup.com/SocialAI/">Toronto</a> - 
             <a href="https://www.meetup.com/Manhattan-AIR/">New York</a> - 
             <a href="https://www.meetup.com/HalifaxAIG/">Halifax</a>
         </li>
-        <li class="nav-footer-small"><a href="https://github.com/W3AI/Global-OS">Clone DNA Engine 0.8 @ GitHub</a></li>
+        <li class="nav-footer-small"><a href="https://github.com/W3AI/Global-OS">clone DNA engine 0.8 @ github</a></li>
         <li>© Ianta Labs / MIT License</li>
     </ul>
 </div>

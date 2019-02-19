@@ -1,8 +1,8 @@
 <section class="login-form">
   <div class="login">
-    <h3>Login to Manage</h3>
+    <h3>login to manage</h3>
       <img src="assets/img/icon_512.png" alt="Solve World's Problems" height="96" width="96">
-    <h3>Your Progress Network</h3>
+    <h3>your bot network</h3>
   </div>
     <form 
       fxLayout="column" 
@@ -14,30 +14,30 @@
         <input 
           type="email" 
           matInput 
-          placeholder="Your email" 
+          placeholder="your email" 
           formControlName="email">
-          <mat-hint>Please enter a valid email.</mat-hint>
-          <mat-error>Invalid or missing email.</mat-error>
+          <mat-hint>please enter a valid email.</mat-hint>
+          <mat-error>invalid or missing email.</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input 
           type="password" 
           matInput 
-          placeholder="Your password" 
+          placeholder="your password" 
           formControlName="password">
-          <mat-hint>Please enter your password.</mat-hint>
-          <mat-error>Missing password.</mat-error>
+          <mat-hint>please enter your password.</mat-hint>
+          <mat-error>missing password.</mat-error>
       </mat-form-field>
       <button *ngIf="!(isLoading$ | async)" type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
       <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
     </form>
     <div class="login">
-        <h3>UNIVERSAL PROGRESS OS</h3>
-        <h3>Online 24/7</h3>
-        <h3>powered by web nGenes</h3>
+        <h3>universal bot OS</h3>
+        <h3>online 24/7</h3>
+        <h3>powered by web bots</h3>
     </div>
     <div class="login-footer">
-        <p>UProgress OS PoC 0.8</p>
+        <p>bot OS PoC 0.8</p>
       <p>© Ianta Labs / MIT License</p>
     </div>
 </section>
