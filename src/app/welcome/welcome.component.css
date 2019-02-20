@@ -15,16 +15,25 @@ div.web-show {
     display: block;
 }
 
-.faster-world {
+.mission {
     height: 40px;
     width: 100%;
     position: relative;
     top: -340px;
-    z-index: 4;
-/*    background-image: url("/assets/img/World-120.png");   */
-    background-size: 0% 0%;
-    background-position-x: 90px;
+    z-index: 40;
+/*  background-image: url("/assets/img/World-120.png");   */
     display: block;
+}
+
+#leaders {
+    color: white;
+    font-size: 20px;
+    margin-left: 40px;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    top: 80px;
+    z-index: 40;
 }
 
 .slow-world {
@@ -39,11 +48,7 @@ div.web-show {
     display: block;
 }
 
-#leaders {
-    height: 100%;
-    width: 100%;
-    filter:hue-rotate(0deg) opacity(0%) saturate(10);
-}
+
 
 #voters {
     height: 100%;
