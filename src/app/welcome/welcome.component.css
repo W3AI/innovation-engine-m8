@@ -1,6 +1,7 @@
 .web-view {
-    height: 265px;
+    height: 235px;
     width: 100%;
+    text-align: center;
     background-image: url("/assets/img/innovators-400.jpg");
     background-color: rgba(64,84,178);
 }
@@ -11,7 +12,7 @@ div.web-show {
     z-index: 2;
     padding: 0px;
     text-align: center;
-    height: 340px;
+    height: 235px;
     display: block;
 }
 
@@ -19,7 +20,7 @@ div.web-show {
     height: 40px;
     width: 100%;
     position: relative;
-    top: -340px;
+    top: -341px;
     z-index: 40;
 /*  background-image: url("/assets/img/World-120.png");   */
     display: block;
@@ -28,27 +29,25 @@ div.web-show {
 #leaders {
     color: white;
     font-size: 20px;
-    margin-left: 40px;
+    margin-left: 14px;
     height: 40px;
     width: 100%;
     position: relative;
-    top: 80px;
+    top: 110px;
     z-index: 40;
 }
 
 .slow-world {
-    height: 180px;
+    height: 146px;
     width: 100%;
     position: relative;
-    top: -305px;
+    top: -274px;
     z-index: 4;
     background-image: url("/assets/img/World-240.png");
     background-size: contain;
     background-position: 90px 0px;
     display: block;
 }
-
-
 
 #voters {
     height: 100%;
@@ -68,10 +67,10 @@ div.web-show {
 }
 
 .slides {
-    height: 265px;
+    height: 235px;
     width: 100%;
     position: relative;
-    top: -489px;
+    top: -424px;
     background-position: center;
     background-image: url("/assets/img/3ai-ppt.png");
     z-index: 20;
@@ -87,7 +86,7 @@ div.web-show {
 
 .web-line-north {
     position: relative;
-    top: -485px;
+    top: -422px;
     height: 2px;
     width: 100%;
     background-image: url("/assets/img/web-line-120.png");
@@ -96,7 +95,7 @@ div.web-show {
 
 .web-line-south {
     position: relative;
-    top: -222px;
+    top: -186px;
     height: 2px;
     width: 100%;
     background-image: url("/assets/img/web-line-120.png");
@@ -118,8 +117,8 @@ h6.web-links {
 
 .carouselbox {
     position: relative;
-    top: -488px;
-    height: 40px;
+    top: -422px;
+    height: 45px;
     color: #3f538f;
 }
 
@@ -274,6 +273,12 @@ table {
     padding: 0px;
 }
 
+.speed-type {
+    position: relative;
+    top: -10px;
+    color: whitesmoke;
+}
+
 .W3AI-button {
     height: 36px !important;
     min-width: 70px !important;
@@ -323,7 +328,7 @@ table {
 
 .world-brain {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 10px;
     padding-top: 0px;
     /*
     width: 100%;
