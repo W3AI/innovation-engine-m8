@@ -53,14 +53,14 @@
             <li>
                 <ol class="my-bot-mob-tops" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
                     <li class="rank">bots<br><img class="rank-flag" src="/assets/flags/US.png"><br>112</li>
-                    <li class="rank">mobs<br><img class="rank-flag" src="/assets/flags/CA.png"><br>134</li>
+                    <li class="rank">swarms<br><img class="rank-flag" src="/assets/flags/CA.png"><br>134</li>
                     <li class="rank">skills<br><img class="rank-flag" src="/assets/flags/IN.png"><br>137</li>
                     <li class="rank">friends<br><img class="rank-flag" src="/assets/flags/RO.png"><br>216</li>
                 </ol>
             </li>
 
             <li class="mob-in">
-                <a routerLink="/signup"><button class="auth-button" mat-button>mob in</button></a>
+                <a routerLink="/signup"><button class="auth-button" mat-button>weBrain</button></a>
             </li>
 
           </ol>
@@ -314,7 +314,11 @@
     <section id="manual" *ngIf="manual">
   
       <div id="round-robin-container">
-        <div id="interest-container">{{ link1 }} mobs / Δ: ${{ this.tag[(i+2)%this.nrLinks][5] }}</div>
+        <div id="interest-container" fxLayout="row" fxLayoutAlign="space-between center">
+          <div>{{ i % nrLinks }}</div>
+          <div>{{ link1 }}</div>
+          <div>{{ this.tag[(i+2)%this.nrLinks][5] }}</div>
+        </div>
         <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" style="width: 300px; height: 200px;">
 
           <div id="project-container" fxLayout="column" fxLayoutAlign="center center" 
@@ -369,7 +373,7 @@
         <div class="header" fxLayout="row" fxLayoutAlign="center center">
           <div id="left" fxFlex="27%">
             <p>
-              <br><span class="side-title">web mobs</span><br>
+              <br><span class="side-title">smart swarms</span><br>
               links<sup>2</sup>: {{ superFriendsNo }}<br>
               projects: {{ superProjectsNo }}<br>
               services: {{ superServicesNo }}<br>
@@ -443,12 +447,12 @@
   <section class="clone" fxLayout="row" fxLayoutGap="40px">
     <div class="open-source" fxLayout="column" fxLayoutAlign="center end">
       <p><b>free w3ai.org</b></p>
-      <p><b><a href="https://w3ai.org">public mobs</a></b></p>
+      <p><b><a href="https://w3ai.org">world brains</a></b></p>
       <p>edu org</p>
     </div>
     <div class="enterprise" fxLayout="column" fxLayoutAlign="center ">
       <p><b>open w3ai.net</b></p>
-      <p><b><a href="https://w3ai.net">business mobs</a></b></p>
+      <p><b><a href="https://w3ai.net">business brains</a></b></p>
       <p>gov com</p>
     </div>
   </section>
@@ -460,7 +464,7 @@
   </a>
 -->
 
-  <h1>web brain</h1>
+  <h1>the web brain</h1>
 </section>
 
 <div class="welcome" fxLayout="row" fxLayoutGap="0px"  fxLayoutGap.gt-xs="18px" fxLayoutAlign="center center">
@@ -480,7 +484,7 @@
 
 <div class="welcome">
   <section>
-      <h1>join 1000s of mobs</h1>
+      <h1>join 1000s of swarms</h1>
       <p>and</p>
       <h1>make 1000s of friends</h1>
       <h1>worldwide</h1>
@@ -492,36 +496,36 @@
 <div class="welcome" fxLayout="column" fxLayout.gt-md="row"  fxLayoutGap.gt-md="30px" fxLayoutAlign="center center">
   <section>
     <h3>how it works</h3>
-    <p contenteditable="true">1. post mob ideas.</p>
+    <p contenteditable="true">1. post swarm ideas.</p>
     <p contenteditable="true">2. post web bots.</p>
-    <p>3. mob up for best solutions.</p>
+    <p>3. swarm up for best solutions.</p>
   </section>
   <section>
       <h3>available</h3>
       <p>worldwide 24/7.</p>
-      <p>online and Offline.</p>
-      <p>in the cloud and on all web devices.</p>
+      <p>online and offline.</p>
+      <p>on cloud & web devices.</p>
     </section>
   <section>
     <h3>what you need</h3>
     <p>cloud email: gmail | outlook (soon)</p>
-    <p>cloud office: google sheets | excel (soon)</p>
+    <p>cloud office: gsheets | excel (soon)</p>
     <p>basic office spreadsheet skills.</p>
   </section>
 </div>
 
 <div class="welcome">
   <h1>web's neocortex</h1>
-  <p>decentralized web mobs run 24/7</p>
+  <p>decentralized web swarms vote 24/7</p>
   <p>3 types of bots in w3ai format:</p>
-  <p>mob bot, social bot, swarm bot</p>
+  <p>lead bot, social bot, swarm bot</p>
   <p>build & share projects, skills & teams</p>
-  <p>with mob service providers & consumers</p>
+  <p>with swarm service providers & consumers</p>
   <p>live transformation of ideas in swarms</p>
-  <p>3 mob bots cloned on your OS loop</p>
+  <p>trinity bots cloned on your OS loop</p>
   <p>for online & offline operation 24/7</p>
-  <p>maximize use of your mobs resources</p>
-  <p>fair distribution of benefits to all mobs</p>
+  <p>maximize use of your swarm resources</p>
+  <p>fair distribution of benefits to all</p>
 </div>
 
 <div class="meetups" fxLayout="column" fxLayoutAlign="center center">
@@ -579,15 +583,10 @@
     <p>Alfred North Whitehead</p>
     <p>-</p>
 
-<p><q>... the greatest invention of the 19th century was the invention of the method of invention.</q><br><i>Alfred North Whitehead</i></p>
-<p>-</p>
-<h3>run your w3ai<br>mobs accelerator<br>on the cloud technologies<br>of the<br>21<sup>st</sup> century</h3>
-<p>-</p>
-
 </div>
 
   <ul class="footer">
-    <li><a href="https://github.com/W3AI/Global-OS">clone your mob OS @ github</a></li>
+    <li><a href="https://github.com/W3AI/Global-OS">clone weBrain @ github</a></li>
     <li>brain engine PoC 0.8</li>
     <li>© Ianta Labs / MIT License</li>  
 </ul>

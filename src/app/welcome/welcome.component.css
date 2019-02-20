@@ -12,6 +12,7 @@ div.web-show {
     padding: 0px;
     text-align: center;
     height: 340px;
+    display: block;
 }
 
 .faster-world {
@@ -23,6 +24,7 @@ div.web-show {
 /*    background-image: url("/assets/img/World-120.png");   */
     background-size: 0% 0%;
     background-position-x: 90px;
+    display: block;
 }
 
 .slow-world {
@@ -34,6 +36,7 @@ div.web-show {
     background-image: url("/assets/img/World-240.png");
     background-size: contain;
     background-position: 90px 0px;
+    display: block;
 }
 
 #leaders {
