@@ -202,6 +202,20 @@ a.ppt-links {
     padding: 4px;
 }
 
+#project-container {
+    width: 150px; 
+    height: 200px; 
+    background-color: rgba(238, 153, 147, .5);
+    padding: 5px;
+}
+
+#service-container {
+    width: 150px; 
+    height: 200px; 
+    background-color: rgba(85, 180, 235, .5);
+    padding: 5px;
+}
+
 .top {
     background-color: rgba(171, 211, 222, 1);
     width: 100%;

@@ -110,17 +110,17 @@
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetManual(3000)"
             [ngStyle]="{color: getStatusButtonManual()}"><b>></b></button></div>
-            <div class="speed-type">manual</div>
+            <div class="speed-type">v f</div>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetSprint(100)"
             [ngStyle]="{color: getStatusButtonMarathon()}"><b>>></b></button></div>
-            <div class="speed-type">pilot</div>
+            <div class="speed-type">f f</div>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetRun(10)"
             [ngStyle]="{color: getStatusButtonHackathon()}"><b>>>></b></button></div>
-            <div class="speed-type">max</div>
+            <div class="speed-type">f f f</div>
       </div>
     </div>
   </section>
@@ -322,7 +322,6 @@
         <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" style="width: 300px; height: 200px;">
 
           <div id="project-container" fxLayout="column" fxLayoutAlign="center center" 
-          style="width: 150px; height: 200px; background-color: #f09991; padding: 5px;"
           [@prjState]="prj_state">
             <div id="project-owner-container">{{ nProject1 }}</div>
             <div id="project-state-container">Owner Image
@@ -332,7 +331,6 @@
           </div>
 
           <div id="service-container" fxLayout="column" fxLayoutAlign="center center"
-          style="width: 150px; height: 200px; background-color: #50b3ed"
           [@srvState]="srv_state">
             <div id="service-owner-container">{{ nService1 }}</div>
             <div id="service-state-container">Owner Image
@@ -447,12 +445,12 @@
   <section class="clone" fxLayout="row" fxLayoutGap="40px">
     <div class="open-source" fxLayout="column" fxLayoutAlign="center center">
       <p><b>w3ai.org</b></p>
-      <p><b><a href="https://w3ai.org">swarm 4 fun</a></b></p>
+      <p><b><a href="https://w3ai.org">swarm 4 fun<br>public swarms</a></b></p>
       <p>edu | org</p>
     </div>
     <div class="enterprise" fxLayout="column" fxLayoutAlign="center center">
       <p><b>w3ai.net</b></p>
-      <p><b><a href="https://w3ai.net">swarm 4 money</a></b></p>
+      <p><b><a href="https://w3ai.net">swarm 4 money<br>business swarms</a></b></p>
       <p>gov | com</p>
     </div>
   </section>
@@ -516,11 +514,10 @@
 
 <div class="welcome">
   <h1>web's neocortex</h1>
-  <p>decentralized web swarms vote 24/7</p>
+  <p>decentralized web swarms run 24/7</p>
   <p>3 types of bots in w3ai format:</p>
   <p>lead bot, social bot, swarm bot</p>
   <p>build & share projects, skills & teams</p>
-  <p>with swarm service providers & consumers</p>
   <p>live transformation of ideas in swarms</p>
   <p>trinity bots cloned on your OS loop</p>
   <p>for online & offline operation 24/7</p>
