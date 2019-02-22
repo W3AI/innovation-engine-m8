@@ -3,7 +3,7 @@
   <img id="innovators" class="web-show" src="/assets/img/innovators-400.jpg" height="235">
 
   <div class="mission">
-    <h4 id="leaders">4  &nbsp;fun  &nbsp;days &nbsp;weekend</h4>
+    <h4 id="leaders">mob OS for billion cells</h4>
   </div>
 
   <div class="slow-world" [ngStyle]="{'background-position-x': setSlowWorldMove() + 'px'}">
@@ -60,7 +60,7 @@
             </li>
 
             <li class="mob-in">
-                <a routerLink="/signup"><button class="auth-button" mat-button>weSwarm</button></a>
+                <a routerLink="/signup"><button class="auth-button" mat-button>have fun</button></a>
             </li>
 
           </ol>
@@ -315,15 +315,15 @@
   
       <div id="round-robin-container">
         <div id="interest-container" fxLayout="row" fxLayoutAlign="space-between center">
-          <div>#<br><b>{{ i % nrLinks }}</b></div>
+          <div>#<br><b>{{ l }}</b></div>
           <div>link<br><b>{{ link1 }}</b></div>
-          <div><b>f 101</b><br><b>$ {{ this.tag[(i+2)%this.nrLinks][5] }}</b></div>
+          <div><b>f 101</b><br><b>¢ {{ this.tag[l][5] }}</b></div>
         </div>
         <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" style="width: 300px; height: 200px;">
 
           <div id="project-container" fxLayout="column" fxLayoutAlign="center center" 
           [@prjState]="prj_state">
-            <div id="project-owner-container">{{ nProject1 }}</div>
+            <div id="project-owner-container">#{{p}} - {{ nProject1 }}</div>
             <div id="project-state-container">Owner Image
               <div id="project-state">Next Steps</div>
               <div id="project-state-badges-container"></div>
@@ -332,7 +332,7 @@
 
           <div id="service-container" fxLayout="column" fxLayoutAlign="center center"
           [@srvState]="srv_state">
-            <div id="service-owner-container">{{ nService1 }}</div>
+            <div id="service-owner-container">#{{s}} - {{ nService1 }}</div>
             <div id="service-state-container">Owner Image
                 <div id="service-state">Next Steps</div>
                 <div id="service-state-badges-container"></div>
@@ -445,12 +445,12 @@
   <section class="clone" fxLayout="row" fxLayoutGap="40px">
     <div class="open-source" fxLayout="column" fxLayoutAlign="center center">
       <p><b>w3ai.org</b></p>
-      <p><b><a href="https://w3ai.org">swarm 4 fun<br>public swarms</a></b></p>
+      <p><b><a href="https://w3ai.org">fun mobs<br>public mobs</a></b></p>
       <p>edu | org</p>
     </div>
     <div class="enterprise" fxLayout="column" fxLayoutAlign="center center">
       <p><b>w3ai.net</b></p>
-      <p><b><a href="https://w3ai.net">swarm 4 money<br>business swarms</a></b></p>
+      <p><b><a href="https://w3ai.net">cash mobs<br>business mobs</a></b></p>
       <p>gov | com</p>
     </div>
   </section>

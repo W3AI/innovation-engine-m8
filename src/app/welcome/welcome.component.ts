@@ -65,9 +65,17 @@ export interface Tile {
 })
 export class WelcomeComponent implements OnInit, AfterViewInit {
 
-  prj_state = 'new';
-  srv_state = 'new';
 
+  // project p and service s index within an interest/tag pair
+  // e.g. for one interest tag/link we could have 2 projects (p=2) and 3 services (s=3)
+  // that are linked through that interest tag
+  p: number = 0;
+  s: number = 0; 
+  // project and service state for the manual/visual loop - 2 values new | same as the loop goes thought each p|s combinations
+  prj_state: string = 'new';
+  srv_state: string = 'new';
+
+  // This tile array was a prep experiment for bot messaging / sonar animation over the social network matrix 
   tiles: Tile[] = [
     {text: '', cols: 1, rows: 1, color: ''},
     {text: '', cols: 1, rows: 1, color: ''},
@@ -126,7 +134,10 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   queue = q1.queue;
 
   tagsCounter: number;
-  i: number = 0;
+  i: number = 0;            // interest/tags loop index
+  l: number = 0;            // link index for the manual / visual pace/speed
+  c: number = 0;            // # of projects x services combinations for a link tag
+  x: number = 0;            // index of combinations c - for looping through the combinations
 
   nrInterests = 7;  // 7 Default interests :-)
 
@@ -255,8 +266,32 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
     this.i++;   // increment the index of the DNA Queue - Circular List
 
-    /* If pace set to manual alternate project state between new and transition */
+    /* If pace set to manual alternate project state between new and transition 
+    loop index i is now extended to include for each link/tag 
+    the number of projects or services or combinations p x s 
+    that need to be diplayed in the manual set */
     if (this.setup === 'manual') {
+
+      // update link index
+      this.l = (this.i - 1) % this.nrLinks;   // [ ToDo ] - This should happen only once when entering the manual state
+      // - after l is set i will continue to increment and provide a tick for changes
+      // but l (link id) and x - id of pxs combinations will determine the manual visualization state 
+
+      // get the nr of projects and services from the interest tags table
+      this.p = this.tag[this.l][1];
+      this.s = this.tag[this.l][2];
+
+      // set the number of combinations c we have to loop through for a link/tag
+      if ( (this.p > 0) && (this.s > 0) ) {
+        this.c = this.p * this.s;
+      } else {
+        if (this.p > 0) {
+          this.c = this.p;
+        } else {
+          this.c = this.s;
+        }
+      }
+
       Math.random() < 0.3 ? this.prj_state = 'new' : this.prj_state = 'same';   // random values during animation dev
       Math.random() > 0.3 ? this.srv_state = 'new' : this.srv_state = 'same';
     }
@@ -366,7 +401,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
       this.tag[t] = new Array(6); // to write 5 values 
       this.tag[t][0] = q1.queue[t][0]; // Read into tag[] the link value from Column 1 / A
-      this.tag[t][1] = q1.queue[t][2]; // Read into tag[] the nr problems/tag value from Column 3 / C
+      this.tag[t][1] = q1.queue[t][2]; // Read into tag[] the nr projects/problems/tag value from Column 3 / C
       this.tag[t][2] = q1.queue[t][255]; // Read into tag[] the nr services/tag value from Column 18 / R
       // Added on Nov 2, 2018 
       // tag[t][3] to store Total Bids (Projects) per tag
