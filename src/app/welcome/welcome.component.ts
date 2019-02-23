@@ -8,7 +8,7 @@ import { AuthService } from '../auth/auth.service';
 
 // import * as h from "../logic/helper";
 // ToDo [ ] - Do we need both Queue files?
-import * as q from "../logic/AlgoQueue";
+import * as q from "../logic/AlgoQueue";  // ToDo - to remove and test
 import * as q1 from "../logic/3AI-Queue";
 // import * as cell from "../logic/facebot";
 import { color } from 'd3';
@@ -26,16 +26,16 @@ export interface Tile {
   styleUrls: ['./welcome.component.css'],
   animations: [
   trigger('prjState', [
-    state('new', style({
+    state('in', style({
       opacity: 1,
       transform: 'translateY(0px)'
     })),
-    state('same', style({
+    state('out', style({
       opacity: 0,
       transform: 'translateY(30px)'
     })),
-    transition('same => new', animate(300)),
-    transition('new => same', [
+    transition('* => in', animate(300)),
+    transition('* => out', [
       animate(300, style({
         transform: 'translateY(-30px)',
         opacity: 0
@@ -44,16 +44,16 @@ export interface Tile {
   ]),
 
   trigger('srvState', [
-    state('new', style({
+    state('in', style({
       opacity: 1,
       transform: 'translateY(0px)'
     })),
-    state('same', style({
+    state('out', style({
       opacity: 0,
       transform: 'translateY(-30px)'
     })),
-    transition('same => new', animate(300)),
-    transition('new => same', [
+    transition('* => in', animate(300)),
+    transition('* => out', [
       animate(300, style({
         transform: 'translateY(+30px)',
         opacity: 0
@@ -65,15 +65,21 @@ export interface Tile {
 })
 export class WelcomeComponent implements OnInit, AfterViewInit {
 
+  // [ ToDo ] - Switch queueUpdated to false after implementing some update functions for 
+  // + reading from cloud spreadsheets or from a realtime db / Firestore
+  queueUpdated: boolean = true;
 
-  // project p and service s index within an interest/tag pair
-  // e.g. for one interest tag/link we could have 2 projects (p=2) and 3 services (s=3)
+  // project prj and service ssrv index within an interest/tag pair
+  // e.g. for one interest tag/link we could have 2 projects (prj=2) and 3 services (srv=3)
   // that are linked through that interest tag
+  prj: number = 0;
+  srv: number = 0; 
+  // p and s - project and service indexes for going through the list of prj and srv of an interest lin/tag
   p: number = 0;
-  s: number = 0; 
+  s: number = 0;
   // project and service state for the manual/visual loop - 2 values new | same as the loop goes thought each p|s combinations
-  prj_state: string = 'new';
-  srv_state: string = 'new';
+  prj_state: string = 'in';
+  srv_state: string = 'in';
 
   // This tile array was a prep experiment for bot messaging / sonar animation over the social network matrix 
   tiles: Tile[] = [
@@ -135,7 +141,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
   tagsCounter: number;
   i: number = 0;            // interest/tags loop index
-  l: number = 0;            // link index for the manual / visual pace/speed
+  linkId: number = 0;            // link index for the manual / visual pace/speed
   c: number = 0;            // # of projects x services combinations for a link tag
   x: number = 0;            // index of combinations c - for looping through the combinations
 
@@ -273,27 +279,64 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     if (this.setup === 'manual') {
 
       // update link index
-      this.l = (this.i - 1) % this.nrLinks;   // [ ToDo ] - This should happen only once when entering the manual state
+      this.linkId = (this.i - 1) % this.nrLinks;   // [ ToDo ] - This should happen only once when entering the manual state
       // - after l is set i will continue to increment and provide a tick for changes
       // but l (link id) and x - id of pxs combinations will determine the manual visualization state 
 
       // get the nr of projects and services from the interest tags table
-      this.p = this.tag[this.l][1];
-      this.s = this.tag[this.l][2];
+      this.prj = this.tag[this.linkId][1];
+      this.srv = this.tag[this.linkId][2];
 
       // set the number of combinations c we have to loop through for a link/tag
-      if ( (this.p > 0) && (this.s > 0) ) {
-        this.c = this.p * this.s;
+      if ( (this.prj > 0) && (this.srv > 0) ) {
+        this.c = this.prj * this.srv;
       } else {
-        if (this.p > 0) {
-          this.c = this.p;
+        if (this.prj > 0) {
+          this.c = this.prj;
         } else {
-          this.c = this.s;
+          this.c = this.srv;
         }
       }
 
-      Math.random() < 0.3 ? this.prj_state = 'new' : this.prj_state = 'same';   // random values during animation dev
-      Math.random() > 0.3 ? this.srv_state = 'new' : this.srv_state = 'same';
+      // [ ToDo ] - Update Queue with the latest Interest tags, Projects (interests) and Services (interests)
+      if ( !this.queueUpdated ) {
+
+        // [ ToDo ] - Update queue function
+
+        this.queueUpdated = true; 
+      }
+
+      // [ ToDo ] - Add some ToDo Projects to the initial Queue as examples of fun coding projects
+      // to serve also as invite during demos to join the fun OS dev
+
+
+      // [ ToDo ] - Implement and populate a Link/Tag stack contaning all combinations of Projects and Services for the Link
+
+      // Loop through the Link combinatorics Stack and pass each pair of ( Prj, Srv) through a visualization function
+      // for top/bottom (or in/out) projects and services with increased z-index for animating ins and outs
+      for ( this.p = 0; this.p <= this.prj; this.p++) {
+
+        this.prj_state = 'in';
+
+        for ( this.s = 0; this.s <= this.srv; this.s++ ) {
+
+          this.srv_state = 'in';
+
+          if ( this.s == this.srv ) {
+
+            this.prj_state = 'out';
+
+          }
+
+        }
+
+      }
+
+      // Used linew below for testing / dev
+      // Math.random() < 0.3 ? this.prj_state = 'in' : this.prj_state = 'out';  
+      // Math.random() > 0.3 ? this.srv_state = 'in' : this.srv_state = 'out';
+
+
     }
 
     this.row = (this.i+2)%this.nrLinks; // calculate the row in the queue array to display in the manual table
@@ -321,8 +364,8 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     this.run = false;
     // Line below is just to offer a bit of feedback onSetCycle change
     this.interval = newCycle;
-    this.prj_state = 'new';  // project container is visible
-    this.srv_state = 'new';  // service container is visible
+    this.prj_state = 'in';  // project container is visible
+    this.srv_state = 'in';  // service container is visible
     this.startDnaLoop();
   }
 
