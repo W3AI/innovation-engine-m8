@@ -26,39 +26,75 @@ export interface Tile {
   styleUrls: ['./welcome.component.css'],
   animations: [
   trigger('prjState', [
-    state('in', style({
-      opacity: 1,
+    state('0', style({
       transform: 'translateY(0px)'
     })),
-    state('out', style({
-      opacity: 0,
-      transform: 'translateY(30px)'
+    state('1', style({
+      transform: 'translateY(200px)'
     })),
-    transition('* => in', animate(300)),
-    transition('* => out', [
-      animate(300, style({
-        transform: 'translateY(-30px)',
-        opacity: 0
-      }))
-    ])
+    state('2', style({
+      transform: 'translateY(400px)'
+    })),
+    state('3', style({
+      transform: 'translateY(600px)'
+    })),
+    state('4', style({
+      transform: 'translateY(800px)'
+    })),
+    state('5', style({
+      transform: 'translateY(1000px)'
+    })),
+    state('6', style({
+      transform: 'translateY(1200px)'
+    })),
+    state('7', style({
+      transform: 'translateY(1400px)'
+    })),
+    transition('* => 0', animate(300)),
+    transition('0 => 1', animate(300)),
+    transition('1 => 2', animate(300)),
+    transition('2 => 3', animate(300)),
+    transition('3 => 4', animate(300)),
+    transition('4 => 5', animate(300)),
+    transition('5 => 6', animate(300)),
+    transition('6 => 7', animate(300)),
+    transition('7 => 0', animate(300)),
   ]),
 
   trigger('srvState', [
-    state('in', style({
-      opacity: 1,
+    state('0', style({
       transform: 'translateY(0px)'
     })),
-    state('out', style({
-      opacity: 0,
-      transform: 'translateY(-30px)'
+    state('1', style({
+      transform: 'translateY(-200px)'
     })),
-    transition('* => in', animate(300)),
-    transition('* => out', [
-      animate(300, style({
-        transform: 'translateY(+30px)',
-        opacity: 0
-      }))
-    ])
+    state('2', style({
+      transform: 'translateY(-400px)'
+    })),
+    state('3', style({
+      transform: 'translateY(-600px)'
+    })),
+    state('4', style({
+      transform: 'translateY(-800px)'
+    })),
+    state('5', style({
+      transform: 'translateY(-1000px)'
+    })),
+    state('6', style({
+      transform: 'translateY(-1200px)'
+    })),
+    state('7', style({
+      transform: 'translateY(-1400px)'
+    })),
+    transition('* => 0', animate(300)),
+    transition('0 => 1', animate(300)),
+    transition('1 => 2', animate(300)),
+    transition('2 => 3', animate(300)),
+    transition('3 => 4', animate(300)),
+    transition('4 => 5', animate(300)),
+    transition('5 => 6', animate(300)),
+    transition('6 => 7', animate(300)),
+    transition('7 => 0', animate(300)),
   ])
 
   ]
@@ -78,8 +114,8 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   p: number = 0;
   s: number = 0;
   // project and service state for the manual/visual loop - 2 values new | same as the loop goes thought each p|s combinations
-  prj_state: string = 'in';
-  srv_state: string = 'in';
+  prj_state: string = '0';
+  srv_state: string = '0';
 
   // This tile array was a prep experiment for bot messaging / sonar animation over the social network matrix 
   tiles: Tile[] = [
