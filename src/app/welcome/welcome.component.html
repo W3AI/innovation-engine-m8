@@ -3,7 +3,7 @@
   <img id="innovators" class="web-show" src="/assets/img/innovators-400.jpg" height="235">
 
   <div class="mission">
-    <h4 id="leaders">faster than anyone thinks</h4>
+    <h4 id="leaders">faster together</h4>
   </div>
 
   <div class="slow-world" [ngStyle]="{'background-position-x': setSlowWorldMove() + 'px'}">
@@ -60,7 +60,7 @@
             </li>
 
             <li class="mob-in">
-                <a routerLink="/signup"><button class="auth-button" mat-button>swarm</button></a>
+                <a routerLink="/signup"><button class="auth-button" mat-button>vote in</button></a>
             </li>
 
           </ol>
@@ -110,17 +110,17 @@
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetManual(3000)"
             [ngStyle]="{color: getStatusButtonManual()}"><b>></b></button></div>
-            <div class="speed-type">v f</div>
+            <div class="speed-type">f</div>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetSprint(100)"
             [ngStyle]="{color: getStatusButtonMarathon()}"><b>>></b></button></div>
-            <div class="speed-type">f f</div>
+            <div class="speed-type">v &nbsp;f</div>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetRun(10)"
             [ngStyle]="{color: getStatusButtonHackathon()}"><b>>>></b></button></div>
-            <div class="speed-type">f f f</div>
+            <div class="speed-type">w &nbsp;t &nbsp;f</div>
       </div>
     </div>
   </section>
@@ -533,7 +533,7 @@
         <div class="header" fxLayout="row" fxLayoutAlign="center center">
           <div id="left" fxFlex="27%">
             <p>
-              <br><span class="side-title">fun swarms</span><br>
+              <br><span class="side-title">world teams</span><br>
               links<sup>2</sup>: {{ superFriendsNo }}<br>
               projects: {{ superProjectsNo }}<br>
               services: {{ superServicesNo }}<br>
@@ -559,13 +559,13 @@
           <div id="right" fxFlex="27%">
             <div fxLayout fxLayoutAlign="end end">
               <p>
-                <br><span class="side-title">cell teams</span><br>
+                <br><span class="side-title">office teams</span><br>
                 friends<sup>2</sup>: {{ officeFriendsNo }}<br>
                 projects: {{ officeProjectsNo }}<br>
                 skills: {{ officeServicesNo }}<br>
                 tasks/ms: {{ officeTxPerMs }}<br>
                 $/min: {{ officeRatePerMin | currency }}<br>
-                <span class="side-title">office teams</span><br>
+                <span class="side-title">business brains</span><br>
               </p>
             </div>
           </div>
@@ -607,12 +607,12 @@
   <section class="clone" fxLayout="row" fxLayoutGap="40px">
     <div class="open-source" fxLayout="column" fxLayoutAlign="center center">
       <p><b>w3ai.org</b></p>
-      <p><b><a href="https://w3ai.org">fun swarms<br>public mobs</a></b></p>
+      <p><b><a href="https://w3ai.org">public teams<br>fun swarms</a></b></p>
       <p>edu | org</p>
     </div>
     <div class="enterprise" fxLayout="column" fxLayoutAlign="center center">
       <p><b>w3ai.net</b></p>
-      <p><b><a href="https://w3ai.net">cash swarms<br>business mobs</a></b></p>
+      <p><b><a href="https://w3ai.net">business teams<br>cash swarms</a></b></p>
       <p>gov | com</p>
     </div>
   </section>
@@ -644,7 +644,7 @@
 
 <div class="welcome">
   <section>
-      <h1>join 1000s of swarms</h1>
+      <h1>join 1000s of teams</h1>
       <p>&</p>
       <h1>make 1000s of friends</h1>
       <h1>worldwide</h1>
