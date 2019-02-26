@@ -203,6 +203,10 @@ a.ppt-links {
     padding: 4px;
 }
 
+.project-service-container {
+    overflow: auto;
+}
+
 #projects-container {
     font-size: 9px;
     width: 150px; 

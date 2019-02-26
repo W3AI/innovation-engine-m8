@@ -323,7 +323,9 @@
 
         <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" style="width: 300px; height: 200px;">
 
-          <div id="projects-container" [@prjState]="prj_state">
+          <div id="projects-container">
+
+            <div id="project-list" [@prjState]="prj_state">
 
             <div class="project-container">
               <div class="project-title">{{ nProject1 }}</div>
@@ -411,8 +413,12 @@
 
           </div>
 
-          <div id="services-container" [@srvState]="srv_state">
+          </div>
+
+          <div id="services-container">
           
+            <div id="service-list" [@srvState]="srv_state">
+
             <div class="service-container">
               <div class="service-title">{{ nService1 }}</div>
               <div class="service-owner-container" fxLayout="row">
@@ -496,6 +502,8 @@
                 <div class="service-state-badges">KPIs</div>
               </div>
             </div>
+
+          </div>
           
           </div>
 
@@ -678,9 +686,9 @@
 
 <div class="welcome">
   <h1>web's neocortex</h1>
-  <p>decentralized web bots run 24/7</p>
+  <p>decentralized web neurons run 24/7</p>
   <p>3 types of bots in w3ai format:</p>
-  <p>lead bot, fair bot, web bot</p>
+  <p>lead bot, deal bot, web bot</p>
   <p>build & share projects, skills & teams</p>
   <p>live transformation of ideas in bots</p>
   <p>trinity bots cloned on your OS loop</p>

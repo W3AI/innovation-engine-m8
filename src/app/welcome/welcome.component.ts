@@ -30,42 +30,6 @@ export interface Tile {
       transform: 'translateY(0px)'
     })),
     state('1', style({
-      transform: 'translateY(200px)'
-    })),
-    state('2', style({
-      transform: 'translateY(400px)'
-    })),
-    state('3', style({
-      transform: 'translateY(600px)'
-    })),
-    state('4', style({
-      transform: 'translateY(800px)'
-    })),
-    state('5', style({
-      transform: 'translateY(1000px)'
-    })),
-    state('6', style({
-      transform: 'translateY(1200px)'
-    })),
-    state('7', style({
-      transform: 'translateY(1400px)'
-    })),
-    transition('* => 0', animate(300)),
-    transition('0 => 1', animate(300)),
-    transition('1 => 2', animate(300)),
-    transition('2 => 3', animate(300)),
-    transition('3 => 4', animate(300)),
-    transition('4 => 5', animate(300)),
-    transition('5 => 6', animate(300)),
-    transition('6 => 7', animate(300)),
-    transition('7 => 0', animate(300)),
-  ]),
-
-  trigger('srvState', [
-    state('0', style({
-      transform: 'translateY(0px)'
-    })),
-    state('1', style({
       transform: 'translateY(-200px)'
     })),
     state('2', style({
@@ -85,6 +49,42 @@ export interface Tile {
     })),
     state('7', style({
       transform: 'translateY(-1400px)'
+    })),
+    transition('* => 0', animate(300)),
+    transition('0 => 1', animate(300)),
+    transition('1 => 2', animate(300)),
+    transition('2 => 3', animate(300)),
+    transition('3 => 4', animate(300)),
+    transition('4 => 5', animate(300)),
+    transition('5 => 6', animate(300)),
+    transition('6 => 7', animate(300)),
+    transition('7 => 0', animate(300)),
+  ]),
+
+  trigger('srvState', [
+    state('0', style({
+      transform: 'translateY(0px)'
+    })),
+    state('1', style({
+      transform: 'translateY(200px)'
+    })),
+    state('2', style({
+      transform: 'translateY(400px)'
+    })),
+    state('3', style({
+      transform: 'translateY(600px)'
+    })),
+    state('4', style({
+      transform: 'translateY(800px)'
+    })),
+    state('5', style({
+      transform: 'translateY(1000px)'
+    })),
+    state('6', style({
+      transform: 'translateY(1200px)'
+    })),
+    state('7', style({
+      transform: 'translateY(1400px)'
     })),
     transition('* => 0', animate(300)),
     transition('0 => 1', animate(300)),
@@ -177,8 +177,10 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
   tagsCounter: number;
   i: number = 0;            // interest/tags loop index
-  linkId: number = 0;            // link index for the manual / visual pace/speed
-  c: number = 0;            // # of projects x services combinations for a link tag
+  linkId: number = 0;       // link index for the manual / visual pace/speed
+  combInProgress: boolean = false;   // Combinations of Projects and Services for a link is in progress
+  combNo: number = 0;       // # of projects x services combinations for a link tag
+  c: number = 0;            // combinations index
   x: number = 0;            // index of combinations c - for looping through the combinations
 
   nrInterests = 7;  // 7 Default interests :-)
@@ -323,24 +325,63 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
       this.prj = this.tag[this.linkId][1];
       this.srv = this.tag[this.linkId][2];
 
-      // set the number of combinations c we have to loop through for a link/tag
-      if ( (this.prj > 0) && (this.srv > 0) ) {
-        this.c = this.prj * this.srv;
-      } else {
-        if (this.prj > 0) {
-          this.c = this.prj;
+      // set the number of combinations combNo we have to loop through for a link/tag
+      if (!this.combInProgress) {
+
+        if ( (this.prj > 0) && (this.srv > 0) ) {
+          this.combNo = this.prj * this.srv;
         } else {
-          this.c = this.srv;
+          if (this.prj > 0) {
+            this.combNo = this.prj;
+          } else {
+            this.combNo = this.srv;
+          }
         }
+
+        this.combInProgress = true;
+        // initialize combinations index c, project index p and service index s
+        this.c = 0;
+        this.p = 0;
+        this.s = 0;
+
+      }
+
+      while ( this.c <= this.combNo && this.combInProgress == true) {
+
+        this.c++;
+
+        if ( this.srv == 0 ) {
+          this.s = 0;
+          this.p++;
+          break;
+        } 
+
+        if ( this.prj == 0 ) {
+          this.p = 0;
+          this.s++;
+          break;
+        }
+
+        // if prjNo and srvNo > 0
+        this.s = this.c % this.srv;
+        this.p = Math.floor(this.c / this.srv);
+
+        this.prj_state = this.p.toString();
+        this.srv_state = this.s.toString();
+
+        if ( this.c == this.combNo ) {
+          // all combinations of projects and services are done
+          this.combInProgress = false;
+        }
+
+        break;
       }
 
       // [ ToDo ] - Update Queue with the latest Interest tags, Projects (interests) and Services (interests)
-      if ( !this.queueUpdated ) {
-
-        // [ ToDo ] - Update queue function
-
-        this.queueUpdated = true; 
-      }
+      // if ( !this.queueUpdated ) {
+      // [ ToDo ] - Update queue function
+      //  this.queueUpdated = true; 
+      //}
 
       // [ ToDo ] - Add some ToDo Projects to the initial Queue as examples of fun coding projects
       // to serve also as invite during demos to join the fun OS dev
@@ -350,27 +391,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
       // Loop through the Link combinatorics Stack and pass each pair of ( Prj, Srv) through a visualization function
       // for top/bottom (or in/out) projects and services with increased z-index for animating ins and outs
-      for ( this.p = 0; this.p <= this.prj; this.p++) {
 
-        this.prj_state = 'in';
-
-        for ( this.s = 0; this.s <= this.srv; this.s++ ) {
-
-          this.srv_state = 'in';
-
-          if ( this.s == this.srv ) {
-
-            this.prj_state = 'out';
-
-          }
-
-        }
-
-      }
-
-      // Used linew below for testing / dev
-      // Math.random() < 0.3 ? this.prj_state = 'in' : this.prj_state = 'out';  
-      // Math.random() > 0.3 ? this.srv_state = 'in' : this.srv_state = 'out';
 
 
     }
@@ -400,8 +421,8 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     this.run = false;
     // Line below is just to offer a bit of feedback onSetCycle change
     this.interval = newCycle;
-    this.prj_state = 'in';  // project container is visible
-    this.srv_state = 'in';  // service container is visible
+    this.prj_state = '0';  // project container is visible
+    this.srv_state = '0';  // service container is visible
     this.startDnaLoop();
   }
 
