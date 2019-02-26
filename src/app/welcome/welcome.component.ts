@@ -47,9 +47,6 @@ export interface Tile {
     state('6', style({
       transform: 'translateY(-1200px)'
     })),
-    state('7', style({
-      transform: 'translateY(-1400px)'
-    })),
     transition('* => 0', animate(300)),
     transition('0 => 1', animate(300)),
     transition('1 => 2', animate(300)),
@@ -57,34 +54,30 @@ export interface Tile {
     transition('3 => 4', animate(300)),
     transition('4 => 5', animate(300)),
     transition('5 => 6', animate(300)),
-    transition('6 => 7', animate(300)),
-    transition('7 => 0', animate(300)),
+    transition('6 => 0', animate(300))
   ]),
 
   trigger('srvState', [
     state('0', style({
-      transform: 'translateY(0px)'
+      transform: 'translateY(-1200px)'
     })),
     state('1', style({
-      transform: 'translateY(200px)'
+      transform: 'translateY(-1000px)'
     })),
     state('2', style({
-      transform: 'translateY(400px)'
+      transform: 'translateY(-800px)'
     })),
     state('3', style({
-      transform: 'translateY(600px)'
+      transform: 'translateY(-600px)'
     })),
     state('4', style({
-      transform: 'translateY(800px)'
+      transform: 'translateY(-400px)'
     })),
     state('5', style({
-      transform: 'translateY(1000px)'
+      transform: 'translateY(-200px)'
     })),
     state('6', style({
-      transform: 'translateY(1200px)'
-    })),
-    state('7', style({
-      transform: 'translateY(1400px)'
+      transform: 'translateY(0px)'
     })),
     transition('* => 0', animate(300)),
     transition('0 => 1', animate(300)),
@@ -93,8 +86,7 @@ export interface Tile {
     transition('3 => 4', animate(300)),
     transition('4 => 5', animate(300)),
     transition('5 => 6', animate(300)),
-    transition('6 => 7', animate(300)),
-    transition('7 => 0', animate(300)),
+    transition('6 => 0', animate(300))
   ])
 
   ]
@@ -316,12 +308,16 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     that need to be diplayed in the manual set */
     if (this.setup === 'manual') {
 
+      // Keep the circular list / queue fixed during the combinatorial (prj - srv) process
+      this.i--;
+
       // update link index
-      this.linkId = (this.i - 1) % this.nrLinks;   // [ ToDo ] - This should happen only once when entering the manual state
+      this.linkId = (this.i) % this.nrLinks;   // [ ToDo ] - This should happen only once when entering the manual state
       // - after l is set i will continue to increment and provide a tick for changes
       // but l (link id) and x - id of pxs combinations will determine the manual visualization state 
 
       // get the nr of projects and services from the interest tags table
+      // [ ToDo ] - Explain why - 13 = (7 + 7) - 1; 7 = prj & srv stack depth   
       this.prj = this.tag[this.linkId][1];
       this.srv = this.tag[this.linkId][2];
 
@@ -344,23 +340,41 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
         this.p = 0;
         this.s = 0;
 
+        this.prj_state = '0';
+        this.srv_state = '0';
       }
 
       while ( this.c <= this.combNo && this.combInProgress == true) {
 
         this.c++;
 
+        if ( this.c == this.combNo ) {
+          // all combinations of projects and services are done
+          this.combInProgress = false;
+          // Return prj and srv stacks to initial state
+          this.prj_state = '0';
+          this.srv_state = '0';
+          // advance the circular list/ queue
+          this.i++;
+          break;
+        }
+
         if ( this.srv == 0 ) {
           this.s = 0;
           this.p++;
+          this.prj_state = this.p.toString();
+          this.srv_state = this.s.toString();
           break;
         } 
 
         if ( this.prj == 0 ) {
           this.p = 0;
           this.s++;
+          this.prj_state = this.p.toString();
+          this.srv_state = this.s.toString();
           break;
         }
+
 
         // if prjNo and srvNo > 0
         this.s = this.c % this.srv;
@@ -369,12 +383,8 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
         this.prj_state = this.p.toString();
         this.srv_state = this.s.toString();
 
-        if ( this.c == this.combNo ) {
-          // all combinations of projects and services are done
-          this.combInProgress = false;
-        }
-
         break;
+
       }
 
       // [ ToDo ] - Update Queue with the latest Interest tags, Projects (interests) and Services (interests)

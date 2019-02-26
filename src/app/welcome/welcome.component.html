@@ -3,7 +3,10 @@
   <img id="innovators" class="web-show" src="/assets/img/innovators-400.jpg" height="235">
 
   <div class="mission">
-    <h4 id="leaders">faster together</h4>
+    <h4 id="leaders">
+      fun &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+      fair &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+      fast</h4>
   </div>
 
   <div class="slow-world" [ngStyle]="{'background-position-x': setSlowWorldMove() + 'px'}">
@@ -316,9 +319,22 @@
       <div id="round-robin-container">
 
         <div id="interest-container" fxLayout="row" fxLayoutAlign="space-between center">
-          <div>#<br><b>{{ linkId }}</b></div>
-          <div>link<br><b>{{ link1 }}</b></div>
-          <div><b>f 101</b><br><b>¢ {{ this.tag[linkId][5] }}</b></div>
+          <!--
+                  <div>#<br><b>{{ linkId }}</b></div>
+                  <div> link: <br><b>{{ link1 }}</b></div>
+                  <div><b>f 101</b><br><b>¢ {{ this.tag[linkId][5] }}</b></div>
+        -->
+        
+          <div><b>prj_state: {{prj_state}} of {{prj}}</b>
+            <br><b>p: {{p}}</b></div>
+        
+          <div> <b>{{ linkId }} | c: {{c}} of {{combNo}} = {{prj * srv}} </b>
+            <br><b>{{ tag[linkId][0] }}</b></div>
+        
+          <div><b>srv_state: {{srv_state}} / {{srv}}</b>
+            <br><b>s: {{s}}</b></div>
+        
+        
         </div>
 
         <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" style="width: 300px; height: 200px;">
@@ -328,86 +344,86 @@
             <div id="project-list" [@prjState]="prj_state">
 
             <div class="project-container">
-              <div class="project-title">{{ nProject1 }}</div>
+              <div class="project-title">1. {{ problems[(i) % nrLinks][0] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-image">Owner Image</div>
-                <div class="project-owner-badges">Owner Badges</div>
+                <div class="project-owner-image">1. Owner Image</div>
+                <div class="project-owner-badges">1. Owner Badges</div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status: </div>
-                <div class="project-state-badges">KPIs</div>
+                <div class="project-state-image">1. Project Status: </div>
+                <div class="project-state-badges">1. KPIs</div>
               </div>
             </div>
 
             <div class="project-container">
-              <div class="project-title">{{ nProject2 }}</div>
+              <div class="project-title">2. {{ problems[(i) % nrLinks][1] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-image">Owner Image</div>
-                <div class="project-owner-badges">Owner Badges</div>
+                <div class="project-owner-image">2. Owner Image</div>
+                <div class="project-owner-badges">2. Owner Badges</div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status: </div>
-                <div class="project-state-badges">KPIs</div>
+                <div class="project-state-image">2. Project Status: </div>
+                <div class="project-state-badges">2. KPIs</div>
               </div>
             </div>
 
             <div class="project-container">
-              <div class="project-title">{{ nProject3 }}</div>
+              <div class="project-title">3. {{ problems[(i) % nrLinks][2] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-image">Owner Image</div>
-                <div class="project-owner-badges">Owner Badges</div>
+                <div class="project-owner-image">3. Owner Image</div>
+                <div class="project-owner-badges">3. Owner Badges</div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status: </div>
-                <div class="project-state-badges">KPIs</div>
+                <div class="project-state-image">3. Project Status: </div>
+                <div class="project-state-badges">3. KPIs</div>
               </div>
             </div>
             
             <div class="project-container">
-              <div class="project-title">{{ nProject4 }}</div>
+              <div class="project-title">4. {{ problems[(i) % nrLinks][3] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-image">Owner Image</div>
-                <div class="project-owner-badges">Owner Badges</div>
+                <div class="project-owner-image">4. Owner Image</div>
+                <div class="project-owner-badges">4. Owner Badges</div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status: </div>
-                <div class="project-state-badges">KPIs</div>
+                <div class="project-state-image">4. Project Status: </div>
+                <div class="project-state-badges">4. KPIs</div>
               </div>
             </div>
             
             <div class="project-container">
-              <div class="project-title">{{ nProject5 }}</div>
+              <div class="project-title">5. {{ problems[(i) % nrLinks][4] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-image">Owner Image</div>
-                <div class="project-owner-badges">Owner Badges</div>
+                <div class="project-owner-image">5. Owner Image</div>
+                <div class="project-owner-badges">5. Owner Badges</div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status: </div>
-                <div class="project-state-badges">KPIs</div>
+                <div class="project-state-image">5. Project Status: </div>
+                <div class="project-state-badges">5. KPIs</div>
               </div>
             </div>
             
             <div class="project-container">
-              <div class="project-title">{{ nProject6 }}</div>
+              <div class="project-title">6. {{ problems[(i) % nrLinks][5] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-image">Owner Image</div>
-                <div class="project-owner-badges">Owner Badges</div>
+                <div class="project-owner-image">6. Owner Image</div>
+                <div class="project-owner-badges">6. Owner Badges</div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status: </div>
-                <div class="project-state-badges">KPIs</div>
+                <div class="project-state-image">6. Project Status: </div>
+                <div class="project-state-badges">6. KPIs</div>
               </div>
             </div>
             
             <div class="project-container">
-              <div class="project-title">{{ nProject7 }}</div>
+              <div class="project-title">7. {{ problems[(i) % nrLinks][6] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-image">Owner Image</div>
-                <div class="project-owner-badges">Owner Badges</div>
+                <div class="project-owner-image">7. Owner Image</div>
+                <div class="project-owner-badges">7. Owner Badges</div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status: </div>
-                <div class="project-state-badges">KPIs</div>
+                <div class="project-state-image">7. Project Status: </div>
+                <div class="project-state-badges">7. KPIs</div>
               </div>
             </div>
 
@@ -420,86 +436,86 @@
             <div id="service-list" [@srvState]="srv_state">
 
             <div class="service-container">
-              <div class="service-title">{{ nService1 }}</div>
+              <div class="service-title">7. {{ services[(i) % nrLinks][6] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">Owner Image</div>
-                <div class="service-owner-badges">Owner Badges</div>
+                <div class="service-owner-image">7. Owner Image</div>
+                <div class="service-owner-badges">7. Owner Badges</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-image">Service Status: </div>
-                <div class="service-state-badges">KPIs</div>
+                <div class="service-state-image">7. Service Status: </div>
+                <div class="service-state-badges">7. KPIs</div>
               </div>
             </div>
           
             <div class="service-container">
-              <div class="service-title">{{ nService2 }}</div>
+              <div class="service-title">6. {{ services[(i) % nrLinks][5] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">Owner Image</div>
-                <div class="service-owner-badges">Owner Badges</div>
+                <div class="service-owner-image">6. Owner Image</div>
+                <div class="service-owner-badges">6. Owner Badges</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-image">Service Status: </div>
-                <div class="service-state-badges">KPIs</div>
+                <div class="service-state-image">6. Service Status: </div>
+                <div class="service-state-badges">6. KPIs</div>
               </div>
             </div>
             
             <div class="service-container">
-              <div class="service-title">{{ nService3 }}</div>
+              <div class="service-title">5. {{ services[(i) % nrLinks][4] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">Owner Image</div>
-                <div class="service-owner-badges">Owner Badges</div>
+                <div class="service-owner-image">5. Owner Image</div>
+                <div class="service-owner-badges">5. Owner Badges</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-image">Service Status: </div>
-                <div class="service-state-badges">KPIs</div>
+                <div class="service-state-image">5. Service Status: </div>
+                <div class="service-state-badges">5. KPIs</div>
               </div>
             </div>
             
             <div class="service-container">
-              <div class="service-title">{{ nService4 }}</div>
+              <div class="service-title">4. {{ services[(i) % nrLinks][3] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">Owner Image</div>
-                <div class="service-owner-badges">Owner Badges</div>
+                <div class="service-owner-image">4. Owner Image</div>
+                <div class="service-owner-badges">4. Owner Badges</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-image">Service Status: </div>
-                <div class="service-state-badges">KPIs</div>
+                <div class="service-state-image">4. Service Status: </div>
+                <div class="service-state-badges">4. KPIs</div>
               </div>
             </div>
             
             <div class="service-container">
-              <div class="service-title">{{ nService5 }}</div>
+              <div class="service-title">3. {{ services[(i) % nrLinks][2] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">Owner Image</div>
-                <div class="service-owner-badges">Owner Badges</div>
+                <div class="service-owner-image">3. Owner Image</div>
+                <div class="service-owner-badges">3. Owner Badges</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-image">Service Status: </div>
-                <div class="service-state-badges">KPIs</div>
+                <div class="service-state-image">3. Service Status: </div>
+                <div class="service-state-badges">3. KPIs</div>
               </div>
             </div>
             
             <div class="service-container">
-              <div class="service-title">{{ nService6 }}</div>
+              <div class="service-title">2. {{ services[(i) % nrLinks][1] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">Owner Image</div>
-                <div class="service-owner-badges">Owner Badges</div>
+                <div class="service-owner-image">2. Owner Image</div>
+                <div class="service-owner-badges">2. Owner Badges</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-image">Service Status: </div>
-                <div class="service-state-badges">KPIs</div>
+                <div class="service-state-image">2. Service Status: </div>
+                <div class="service-state-badges">2. KPIs</div>
               </div>
             </div>
             
             <div class="service-container">
-              <div class="service-title">{{ nService7 }}</div>
+              <div class="service-title">1. {{ services[(i) % nrLinks][0] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">Owner Image</div>
-                <div class="service-owner-badges">Owner Badges</div>
+                <div class="service-owner-image">1. Owner Image</div>
+                <div class="service-owner-badges">1. Owner Badges</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-image">Service Status: </div>
-                <div class="service-state-badges">KPIs</div>
+                <div class="service-state-image">1. Service Status: </div>
+                <div class="service-state-badges">1. KPIs</div>
               </div>
             </div>
 
