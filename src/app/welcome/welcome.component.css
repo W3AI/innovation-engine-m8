@@ -227,36 +227,34 @@ a.ppt-links {
 
 .project-owner-container {
     width: 150px; 
-    height: 100px; 
+    height: 80px; 
 }
 
 .project-owner-image {
-    width: 100px; 
-    height: 100px; 
-    border: 0px solid lightgray;
+    width: 80px; 
+    height: 80px; 
+    text-align: right;
 }
 
 .project-owner-badges {
-    width: 50px; 
-    height: 100px; 
-    border: 0px solid lightgray;
+    width: 70px; 
+    height: 80px; 
 }
 
 .project-state-container {
     width: 150px; 
-    height: 60px; 
+    height: 80px; 
 }
 
 .project-state-image {
-    width: 100px; 
-    height: 60px; 
-    border: 0px solid lightgray;
+    width: 70px; 
+    height: 80px; 
 }
 
 .project-state-badges {
-    width: 50px; 
-    height: 60px; 
-    border: 0px solid lightgray;
+    width: 80px; 
+    height: 80px; 
+    text-align: right;
 }
 
 
@@ -281,36 +279,32 @@ a.ppt-links {
 
 .service-owner-container {
     width: 150px; 
-    height: 100px; 
+    height: 80px; 
 }
 
 .service-owner-image {
-    width: 100px; 
-    height: 100px; 
-    border: 0px solid lightgray;
+    width: 80px; 
+    height: 80px; 
 }
 
 .service-owner-badges {
-    width: 50px; 
-    height: 100px; 
-    border: 0px solid lightgray;
+    width: 70px; 
+    height: 80px; 
 }
 
 .service-state-container {
     width: 150px; 
-    height: 60px; 
+    height: 80px; 
 }
 
 .service-state-image {
-    width: 100px; 
-    height: 60px; 
-    border: 0px solid lightgray;
+    width: 70px; 
+    height: 80px; 
 }
 
 .service-state-badges {
-    width: 50px; 
-    height: 60px; 
-    border: 0px solid lightgray;
+    width: 80px; 
+    height: 80px; 
 }
 
 
