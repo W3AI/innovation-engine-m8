@@ -324,13 +324,13 @@
                   <div><b>f 101</b><br><b>¢ {{ this.tag[linkId][5] }}</b></div>
         -->
         
-          <div><b>prj_state: {{prj_state}} of {{prj}}</b>
+          <div style="text-align: left"><b>innovation stack: {{prj_state}} of {{prj}}</b>
             <br><b>p: {{p}}</b></div>
         
-          <div> <b>{{ linkId }} | c: {{c}} of {{combNo}} = {{prj * srv}} </b>
+          <div style="text-align: center"> <b>{{ linkId }} | c: {{c}} of {{combNo}} = {{prj * srv}} </b>
             <br><b>{{ tag[linkId][0] }}</b></div>
         
-          <div><b>srv_state: {{srv_state}} / {{srv}}</b>
+          <div style="text-align: right"><b>servus stack: {{srv_state}} / {{srv}}</b>
             <br><b>s: {{s}}</b></div>
         
         
@@ -345,13 +345,13 @@
             <div class="project-container">
               <div class="project-title">1. {{ problems[(i) % nrLinks][0] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">1. Innovator badges</div>
+                <div class="project-owner-badges">1. Innovator</div>
                 <div class="project-owner-image" 
                 [ngStyle]="{'background-image': setOwnerImage('prj', 1, 0, 'dev') }">
                   <img src="/assets/img/3-links-dna-left-100.png" width="80px;" height="80px;"></div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">1. Innovation Status: </div>
+                <div class="project-state-image">Project Status</div>
                 <div class="project-state-badges">
                   <img src="/assets/img/3-links-dna-left-100.png" width="80px;" height="80px;"></div>
               </div>
@@ -360,73 +360,78 @@
             <div class="project-container">
               <div class="project-title">2. {{ problems[(i) % nrLinks][1] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">2. Innovator badges</div>
-                <div class="project-owner-image"
+                <div class="project-owner-badges">2. Innovator </div>
+                <div class="project-owner-image" 
                 [ngStyle]="{'background-image': setOwnerImage('prj', 2, 0, 'dev') }"></div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">2. Innovation Status: </div>
-                <div class="project-state-badges">2. IO -</div>
+                <div class="project-state-image">Project Status</div>
+                <div class="project-state-badges">2. Tags -</div>
               </div>
             </div>
 
             <div class="project-container">
               <div class="project-title">3. {{ problems[(i) % nrLinks][2] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">3. Owner Badges</div>
-                <div class="project-owner-image">3. Owner Image -</div>
+                <div class="project-owner-badges">3. Innovator</div>
+                <div class="project-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('prj', 3, 0, 'dev') }"></div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">3. Project Status: </div>
-                <div class="project-state-badges">3. IO -</div>
+                <div class="project-state-image">Project Status: </div>
+                <div class="project-state-badges">3. Tags -</div>
               </div>
             </div>
             
             <div class="project-container">
               <div class="project-title">4. {{ problems[(i) % nrLinks][3] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">4. Owner Badges</div>
-                <div class="project-owner-image">4. Owner Image -</div>
+                <div class="project-owner-badges">4. Innovator</div>
+                <div class="project-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('prj', 4, 0, 'dev') }"></div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">4. Project Status: </div>
-                <div class="project-state-badges">4. IO -</div>
+                <div class="project-state-image">Project Status: </div>
+                <div class="project-state-badges">4. Tags -</div>
               </div>
             </div>
             
             <div class="project-container">
               <div class="project-title">5. {{ problems[(i) % nrLinks][4] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">5. Owner Badges</div>
-                <div class="project-owner-image">5. Owner Image -</div>
+                <div class="project-owner-badges">5. Innovator</div>
+                <div class="project-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('prj', 5, 0, 'dev') }"></div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">5. Project Status: </div>
-                <div class="project-state-badges">5. IO -</div>
+                <div class="project-state-image">Project Status: </div>
+                <div class="project-state-badges">5. Tags -</div>
               </div>
             </div>
             
             <div class="project-container">
               <div class="project-title">6. {{ problems[(i) % nrLinks][5] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">6. Owner Badges</div>
-                <div class="project-owner-image">6. Owner Image -</div>
+                <div class="project-owner-badges">6. Innovator</div>
+                <div class="project-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('prj', 6, 0, 'dev') }"></div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">6. Project Status: </div>
-                <div class="project-state-badges">6. IO -</div>
+                <div class="project-state-image">Project Status: </div>
+                <div class="project-state-badges">6. Tags -</div>
               </div>
             </div>
             
             <div class="project-container">
               <div class="project-title">7. {{ problems[(i) % nrLinks][6] }}</div>
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">7. Owner Badges</div>
-                <div class="project-owner-image">7. Owner Image -</div>
+                <div class="project-owner-badges">7. Innovator</div>
+                <div class="project-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('prj', 7, 0, 'dev') }"></div>
               </div>
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">7. Project Status: </div>
-                <div class="project-state-badges">7. IO -</div>
+                <div class="project-state-image">Project Status: </div>
+                <div class="project-state-badges">7. Tags -</div>
               </div>
             </div>
 
@@ -441,72 +446,78 @@
             <div class="service-container">
               <div class="service-title">7. {{ services[(i) % nrLinks][6] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">- 7. Owner Image</div>
-                <div class="service-owner-badges">7. Owner Badges</div>
+                <div class="service-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('srv', 7, 1, 'dev') }"></div>
+                <div class="service-owner-badges">7. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                  <div class="service-state-badges">- 7. IO</div>
-                <div class="service-state-image">7. Service Status: </div>
+                  <div class="service-state-badges">- 7. Skills</div>
+                <div class="service-state-image">Service Status: </div>
               </div>
             </div>
           
             <div class="service-container">
               <div class="service-title">6. {{ services[(i) % nrLinks][5] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">6. Owner Image</div>
-                <div class="service-owner-badges">6. Owner Badges</div>
+                <div class="service-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('srv', 6, 1, 'dev') }"></div>
+                <div class="service-owner-badges">6. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-badges">- 6. IO</div>
-                <div class="service-state-image">6. Service Status: </div>
+                <div class="service-state-badges">- 6. Skills</div>
+                <div class="service-state-image">Service Status: </div>
               </div>
             </div>
             
             <div class="service-container">
               <div class="service-title">5. {{ services[(i) % nrLinks][4] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">- 5. Owner Image</div>
-                <div class="service-owner-badges">5. Owner Badges</div>
+                <div class="service-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('srv', 5, 1, 'dev') }"></div>
+                <div class="service-owner-badges">5. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                <div class="service-state-badges">- 5. IO</div>
-                <div class="service-state-image">5. Service Status: </div>
+                <div class="service-state-badges">- 5. Skills</div>
+                <div class="service-state-image">Service Status: </div>
               </div>
             </div>
             
             <div class="service-container">
               <div class="service-title">4. {{ services[(i) % nrLinks][3] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">- 4. Owner Image</div>
-                <div class="service-owner-badges">4. Owner Badges</div>
+                <div class="service-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('srv', 4, 1, 'dev') }"></div>
+                <div class="service-owner-badges">4. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                  <div class="service-state-badges">- 4. IO</div>
-                <div class="service-state-image">4. Service Status: </div>
+                  <div class="service-state-badges">- 4. Skills</div>
+                <div class="service-state-image">Service Status: </div>
               </div>
             </div>
             
             <div class="service-container">
               <div class="service-title">3. {{ services[(i) % nrLinks][2] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">- 3. Owner Image</div>
-                <div class="service-owner-badges">3. Owner Badges</div>
+                <div class="service-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('srv', 3, 1, 'dev') }"></div>
+                <div class="service-owner-badges">3. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                  <div class="service-state-badges">- 3. IO</div>
-                <div class="service-state-image">3. Service Status: </div>
+                  <div class="service-state-badges">- 3. Skills</div>
+                <div class="service-state-image">Service Status: </div>
               </div>
             </div>
             
             <div class="service-container">
               <div class="service-title">2. {{ services[(i) % nrLinks][1] }}</div>
               <div class="service-owner-container" fxLayout="row">
-                <div class="service-owner-image">- 2. Owner Image</div>
-                <div class="service-owner-badges">2. Owner Badges</div>
+                <div class="service-owner-image" 
+                [ngStyle]="{'background-image': setOwnerImage('srv', 2, 1, 'dev') }"></div>
+                <div class="service-owner-badges">2. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                  <div class="service-state-badges">- 2. IO</div>
-                <div class="service-state-image">2. Service Status: </div>
+                  <div class="service-state-badges">- 2. Skills</div>
+                <div class="service-state-image">Service Status: </div>
               </div>
             </div>
             
@@ -516,11 +527,11 @@
                 <div class="service-owner-image"
                 [ngStyle]="{'background-image': setOwnerImage('srv', 1, 1, 'dev') }">
                 <img src="/assets/img/3-links-dna-right-100.png" width="80px;" height="80px;"></div>
-                <div class="service-owner-badges">1. Owner Badges</div>
+                <div class="service-owner-badges">1. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
                   <div class="service-state-badges"><img src="/assets/img/3-links-dna-right-100.png" width="80px;" height="80px;"></div>
-                <div class="service-state-image">1. Service Status: </div>
+                <div class="service-state-image">Service Status: </div>
               </div>
             </div>
 

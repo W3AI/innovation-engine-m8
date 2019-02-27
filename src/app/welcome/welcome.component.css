@@ -221,6 +221,7 @@ a.ppt-links {
 }
 
 .project-title {
+    text-align: right;
     width: 150px; 
     height: 40px; 
 }
@@ -238,6 +239,7 @@ a.ppt-links {
 }
 
 .project-owner-badges {
+    padding: 4px;
     width: 70px; 
     height: 80px; 
 }
@@ -248,14 +250,15 @@ a.ppt-links {
 }
 
 .project-state-image {
+    padding: 4px;
     width: 70px; 
     height: 80px; 
 }
 
 .project-state-badges {
+    text-align: right;
     width: 80px; 
     height: 80px; 
-    text-align: right;
 }
 
 
@@ -289,6 +292,8 @@ a.ppt-links {
 }
 
 .service-owner-badges {
+    text-align: right;
+    padding: 4px;
     width: 70px; 
     height: 80px; 
 }
@@ -299,6 +304,8 @@ a.ppt-links {
 }
 
 .service-state-image {
+    text-align: right;
+    padding: 4px;
     width: 70px; 
     height: 80px; 
 }
