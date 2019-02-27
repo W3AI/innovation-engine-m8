@@ -109,6 +109,15 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   prj_state: string = '0';
   srv_state: string = '0';
 
+  // Manual visualization vars
+  p1_Owner_Img: string = '001';     // [ ToDo ] - setup first prjs/sers / Owners / etc as a Demo animation  
+  p2_Owner_Img: string = '002';
+  p3_Owner_Img: string = '003';
+  p4_Owner_Img: string = '004';
+  p5_Owner_Img: string = '005';
+  p6_Owner_Img: string = '006';
+  p7_Owner_Img: string = '007';
+
   // This tile array was a prep experiment for bot messaging / sonar animation over the social network matrix 
   tiles: Tile[] = [
     {text: '', cols: 1, rows: 1, color: ''},
@@ -721,6 +730,36 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   // Dynamic Styling functions
   getDeltaColor() {
     return this.tag[(this.i+2)%this.nrLinks][5]> 0 ? 'green' : 'red';
+  }
+
+  // Dynamic Owner images
+  // type: prj | srv; rank: 1 - 7 ; id: from Queue/List ; mode: normal | demo | dev/random
+  setOwnerImage(type: string, rank: number, id: number, mode: string) {
+
+    let imagePath = 'url(/assets/img/innovators/innovator-190219'
+    let devId = 0;
+    let devIdString = '';
+
+    switch (mode) {
+      case 'dev' : 
+        devId = Math.floor(rank + id + 100 * Math.random());
+        if (devId < 10 ) {
+          devIdString = '00' + devId.toString();        
+        } else if ( devId < 100 ) {
+          devIdString = '0' + devId.toString();
+        } else {
+          devIdString = devId.toString();
+        }
+        imagePath += devIdString;
+        break;
+
+      default: 
+        imagePath += '000';   // [ ToDo ] - Set lower number images '000' for self Projects / Opportunities !!!
+    }
+
+    imagePath += '.jpeg)';
+
+    return imagePath;
   }
 
   getPrjFlag1() {

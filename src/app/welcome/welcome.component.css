@@ -29,7 +29,7 @@ div.web-show {
 #leaders {
     color: white;
     font-size: 20px;
-    margin-left: 12px;
+    margin-left: 0px;
     height: 40px;
     width: 100%;
     position: relative;
@@ -234,7 +234,7 @@ a.ppt-links {
     width: 80px; 
     height: 80px; 
     text-align: right;
-    background-image: url("/assets/img/innovators/innovator-190219000.jpeg");
+    background-size: '100% 100%';
 }
 
 .project-owner-badges {
@@ -286,7 +286,6 @@ a.ppt-links {
 .service-owner-image {
     width: 80px; 
     height: 80px; 
-    background-image: url("/assets/img/innovators/innovator-190219001.jpeg");
 }
 
 .service-owner-badges {
