@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterContentInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { trigger, state, style, transition, animate, group } from '@angular/animations';
@@ -91,7 +91,7 @@ export interface Tile {
 
   ]
 })
-export class WelcomeComponent implements OnInit, AfterViewInit {
+export class WelcomeComponent implements OnInit, AfterContentInit {
 
   // [ ToDo ] - Switch queueUpdated to false after implementing some update functions for 
   // + reading from cloud spreadsheets or from a realtime db / Firestore
@@ -110,13 +110,13 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   srv_state: string = '0';
 
   // Manual visualization vars
-  p1_Owner_Img: string = '001';     // [ ToDo ] - setup first prjs/sers / Owners / etc as a Demo animation  
-  p2_Owner_Img: string = '002';
-  p3_Owner_Img: string = '003';
-  p4_Owner_Img: string = '004';
-  p5_Owner_Img: string = '005';
-  p6_Owner_Img: string = '006';
-  p7_Owner_Img: string = '007';
+  // p1_Owner_Img: string = '001';     // [ ToDo ] - setup first prjs/sers / Owners / etc as a Demo animation  
+  // p2_Owner_Img: string = '002';
+  // p3_Owner_Img: string = '003';
+  // p4_Owner_Img: string = '004';
+  // p5_Owner_Img: string = '005';
+  // p6_Owner_Img: string = '006';
+  // p7_Owner_Img: string = '007';
 
   // This tile array was a prep experiment for bot messaging / sonar animation over the social network matrix 
   tiles: Tile[] = [
@@ -473,28 +473,32 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
   constructor(private store: Store<fromRoot.State>, private authService: AuthService) {
 
+    // To detach ChangeDetector in order to eliminate ExpressionChangedAfterItHasBeenCheckedError
+    //  as we loop through projects / services continually and change the background images
+    // this.cdRef.detach();
+
     this.readQueueV1IntoLoopArrays();
     // this.readQueueIntoLoopArrays();    the reader for first version of the Queue
 
-    this.timer = setInterval( ()=> {
+    // this.timer = setInterval( ()=> {
 
-      this.dnaLoop();
+    //   this.dnaLoop();
 
-      // [ ToDo ] - To remove these commented parts
-      // To update the spreadshhet table view for Sprint peed setup >>
-      // this.updateLoopTable();
-      //
-      // Move to next tag / link in the queue
-      // this.i++;
-      //
-      // Stats for the Run setup >>>
-      // this.w3aiStats();
+    //   // [ ToDo ] - To remove these commented parts
+    //   // To update the spreadshhet table view for Sprint peed setup >>
+    //   // this.updateLoopTable();
+    //   //
+    //   // Move to next tag / link in the queue
+    //   // this.i++;
+    //   //
+    //   // Stats for the Run setup >>>
+    //   // this.w3aiStats();
 
-      // Move world map to simulate rotation / speed / progress
-      this.setSlowWorldMove();
-      this.setProgressSpeed();
+    //   // Move world map to simulate rotation / speed / progress
+    //   this.setSlowWorldMove();
+    //   this.setProgressSpeed();
 
-    }, this.interval );
+    // }, this.interval );
 
   }
 
@@ -1024,15 +1028,18 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     this.isAuth$ = this.store.select(fromRoot.getIsAuth);
   }
 
-  ngAfterViewInit() {
-  //   // testing writing in the loop table from the queue matric
-  //   // h.setCell('loop', 3, 3, 'test loop');
-  //   // h.setCell('loop', 4, 4, q.queue[3][0]);
+  ngAfterContentInit() {
 
-  } // END of ngAfterViewInit
+    this.timer = setInterval( ()=> {
 
-  // async delay(ms: number) {
-  //   await new Promise(resolve => setTimeout(()=>resolve(), ms)).then(()=>console.log("fired"));
-  // }
+      this.dnaLoop();
+
+      // Move world map to simulate rotation / speed / progress
+      this.setSlowWorldMove();
+      this.setProgressSpeed();
+
+    }, this.interval );
+
+  } 
 
 }
