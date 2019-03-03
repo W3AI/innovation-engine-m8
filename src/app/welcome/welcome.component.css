@@ -211,14 +211,14 @@ a.ppt-links {
 #projects-container {
     font-size: 9px;
     width: 150px; 
-    height: 200px; 
+    height: 330px; 
     overflow: auto;
     background-color: rgba(238, 153, 147, .5);
 }
 
 .project-container {
     width: 150px; 
-    height: 200px; 
+    height: 330px; 
 }
 
 .project-title {
@@ -229,37 +229,37 @@ a.ppt-links {
 
 .project-owner-container {
     width: 150px; 
-    height: 80px; 
+    height: 150px; 
 }
 
 .project-owner-image {
-    width: 80px; 
-    height: 80px; 
+    width: 150px; 
+    height: 150px; 
     text-align: right;
-    background-size: '100% 100%';
+    background-size:  cover;
 }
 
 .project-owner-badges {
     padding: 4px;
-    width: 70px; 
-    height: 80px; 
+    width: 75px; 
+    height: 150px; 
 }
 
 .project-state-container {
     width: 150px; 
-    height: 80px; 
+    height: 150px; 
 }
 
 .project-state-image {
     padding: 4px;
-    width: 70px; 
-    height: 80px; 
+    width: 150px; 
+    height: 150px; 
 }
 
 .project-state-badges {
     text-align: right;
-    width: 80px; 
-    height: 80px; 
+    width: 75px; 
+    height: 150px; 
 }
 
 
@@ -267,14 +267,14 @@ a.ppt-links {
 #services-container {
     font-size: 9px;
     width: 150px; 
-    height: 200px; 
+    height: 330px; 
     overflow: auto;
     background-color: rgba(85, 180, 235, .5);
 }
 
 .service-container {
     width: 150px; 
-    height: 200px; 
+    height: 330px; 
 }
 
 .service-title {
@@ -284,36 +284,37 @@ a.ppt-links {
 
 .service-owner-container {
     width: 150px; 
-    height: 80px; 
+    height: 150px; 
 }
 
 .service-owner-image {
-    width: 80px; 
-    height: 80px; 
+    width: 150px; 
+    height: 150px; 
+    background-size:  cover;
 }
 
 .service-owner-badges {
     text-align: right;
     padding: 4px;
-    width: 70px; 
-    height: 80px; 
+    width: 75px; 
+    height: 150px; 
 }
 
 .service-state-container {
     width: 150px; 
-    height: 80px; 
+    height: 150px; 
 }
 
 .service-state-image {
     text-align: right;
     padding: 4px;
-    width: 70px; 
-    height: 80px; 
+    width: 150px; 
+    height: 150px; 
 }
 
 .service-state-badges {
-    width: 80px; 
-    height: 80px; 
+    width: 75px; 
+    height: 150px; 
 }
 
 
