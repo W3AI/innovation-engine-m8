@@ -30,22 +30,22 @@ export interface Tile {
       transform: 'translateY(0px)'
     })),
     state('1', style({
-      transform: 'translateY(-200px)'
+      transform: 'translateY(-330px)'
     })),
     state('2', style({
-      transform: 'translateY(-400px)'
+      transform: 'translateY(-660px)'
     })),
     state('3', style({
-      transform: 'translateY(-600px)'
+      transform: 'translateY(-990px)'
     })),
     state('4', style({
-      transform: 'translateY(-800px)'
+      transform: 'translateY(-1320px)'
     })),
     state('5', style({
-      transform: 'translateY(-1000px)'
+      transform: 'translateY(-1650px)'
     })),
     state('6', style({
-      transform: 'translateY(-1200px)'
+      transform: 'translateY(-1980px)'
     })),
     transition('* => 0', animate(300)),
     transition('0 => 1', animate(300)),
@@ -59,22 +59,22 @@ export interface Tile {
 
   trigger('srvState', [
     state('0', style({
-      transform: 'translateY(-1200px)'
+      transform: 'translateY(-1980px)'
     })),
     state('1', style({
-      transform: 'translateY(-1000px)'
+      transform: 'translateY(-1650px)'
     })),
     state('2', style({
-      transform: 'translateY(-800px)'
+      transform: 'translateY(-1320px)'
     })),
     state('3', style({
-      transform: 'translateY(-600px)'
+      transform: 'translateY(-990px)'
     })),
     state('4', style({
-      transform: 'translateY(-400px)'
+      transform: 'translateY(-660px)'
     })),
     state('5', style({
-      transform: 'translateY(-200px)'
+      transform: 'translateY(-330px)'
     })),
     state('6', style({
       transform: 'translateY(0px)'
