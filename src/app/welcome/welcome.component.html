@@ -336,7 +336,23 @@
         
         </div>
 
-        <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" style="width: 300px; height: 200px;">
+        <div id="pairing" fxLayout="column" fxLayoutGap="60px" fxLayoutAlign="center center">
+          <div id="governance" fxLayout="column" fxLayoutGap="32px" fxLayoutAlign="center center"
+          style="position: relative; top: 12px;">
+            <div class="dna-reg" id="script-sched-in"></div>
+            <div class="dna-reg" id="script-sched-mid"></div>
+            <div class="dna-reg" id="script-sched-out"></div>
+          </div>
+          <div id="execution" fxLayout="column" fxLayoutGap="32px" fxLayoutAlign="center center"
+          style="position: relative; top: 20px;">
+            <div class="rna-exe" id="script-exe-in"></div>
+            <div class="rna-exe" id="script-exe-mid"></div>
+            <div class="rna-exe" id="script-exe-out"></div>
+          </div>
+        </div>
+
+        <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" 
+        style="width: 300px; height: 300px; position: relative; top: -330px;">
 
           <div id="projects-container">
 
@@ -622,131 +638,107 @@
 
 </section>
 
+<section id="south-globe">
 
-
-<section>
-
-<div id="south-globe">
-
-<!--
-    <div class="quote">
-        <p><q>We are all connected by the Internet, like Neurons in a Giant Brain.</q><br>
-        <i>Stephen Hawking</i></p>
-      </div>
-
-
-  <h3 id="under-blue">Set your Progress on {{aiSetup}}</h3>
-  <h5>for</h5>
-  <h1 id="goal">{{goal}}</h1>
--->
   <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="60px">
     <a routerLink="/login"><button class="auth-button" mat-button>sign in</button></a>
     <a routerLink="/signup"><button class="auth-button" mat-button>sign up</button></a>
   </div>
-</div>
-</section>
 
+  <section class="mid" fxLayout="column" fxLayoutAlign="center center">
+    <section class="clone" fxLayout="row" fxLayoutGap="60px">
+      <div class="open-source" fxLayout="column" fxLayoutAlign="center center">
+        <p><b>w3ai.org</b></p>
+        <p><b><a href="https://w3ai.org">world teams</a></b></p>
+        <p><b><a href="https://w3ai.org">fair votes</a></b></p>
+        <p>edu | org</p>
+      </div>
+      <div class="enterprise" fxLayout="column" fxLayoutAlign="center center">
+        <p><b>w3ai.net</b></p>
+        <p><b><a href="https://w3ai.org">office teams</a></b></p>
+        <p><b><a href="https://w3ai.org">cash votes</a></b></p>
+        <p>gov | com</p>
+      </div>
+    </section>
 
-<section class="mid" fxLayout="column" fxLayoutAlign="center center">
-  <section class="clone" fxLayout="row" fxLayoutGap="60px">
-    <div class="open-source" fxLayout="column" fxLayoutAlign="center center">
-      <p><b>w3ai.org</b></p>
-      <p><b><a href="https://w3ai.org">world teams</a></b></p>
-      <p><b><a href="https://w3ai.org">fair votes</a></b></p>
-      <p>edu | org</p>
-    </div>
-    <div class="enterprise" fxLayout="column" fxLayoutAlign="center center">
-      <p><b>w3ai.net</b></p>
-      <p><b><a href="https://w3ai.org">office teams</a></b></p>
-      <p><b><a href="https://w3ai.org">cash votes</a></b></p>
-      <p>gov | com</p>
-    </div>
+    <h1>minion worlds</h1>
   </section>
 
-<!--
-  <h1>FAIR PROGRESS ENGINES</h1>
-  <a href="https://www.meetup.com/SocialAI/">
-    <img src="assets/img/3AI-uWeb-Cortex.png" title="Join our W3AI Meetups in Toronto, NYC, Halifax to learn more.">
-  </a>
--->
+  <div class="welcome" fxLayout="row" fxLayoutGap="0px" fxLayoutGap.gt-xs="18px" fxLayoutAlign="center center">
+    <section>
+      <h3>innovate</h3>
+      <a routerLink="/project"><button mat-button>add projects</button></a>
+    </section>
+    <section>
+      <h3>venture</h3>
+      <a routerLink="/venture"><button mat-button>add teams</button></a>
+    </section>
+    <section>
+      <h3>progress</h3>
+      <a routerLink="/skill"><button mat-button>add mins</button></a>
+    </section>
+  </div>
 
-  <h1>minion worlds</h1>
-</section>
-
-<div class="welcome" fxLayout="row" fxLayoutGap="0px"  fxLayoutGap.gt-xs="18px" fxLayoutAlign="center center">
-  <section>
-    <h3>innovate</h3>
-        <a routerLink="/project"><button mat-button>add projects</button></a>
-  </section>
-  <section>
-    <h3>venture</h3>
-    <a routerLink="/venture"><button mat-button>add teams</button></a>
-  </section>
-  <section>
-    <h3>progress</h3>
-    <a routerLink="/skill"><button mat-button>add mins</button></a>
-  </section>
-</div>
-
-<div class="welcome">
-  <section>
+  <div class="welcome">
+    <section>
       <h1>join 1000s of teams</h1>
       <p>&</p>
       <h1>make 1000s of friends</h1>
       <h1>worldwide</h1>
       <h1>online 24/7</h1>
-    <h3>connections & results in seconds</h3>
-  </section>
-</div>
+      <h3>connections & results in seconds</h3>
+    </section>
+  </div>
 
-<div class="welcome" fxLayout="column" fxLayout.gt-md="row"  fxLayoutGap.gt-md="30px" fxLayoutAlign="center center">
-  <section>
-    <h3>how it works</h3>
-    <p contenteditable="true">1. post lead ideas.</p>
-    <p contenteditable="true">2. build web minions.</p>
-    <p contenteditable="true">3. team up for fast wins.</p>
-  </section>
-  <section>
+  <div class="welcome" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="30px" fxLayoutAlign="center center">
+    <section>
+      <h3>how it works</h3>
+      <p contenteditable="true">1. post lead ideas.</p>
+      <p contenteditable="true">2. build web minions.</p>
+      <p contenteditable="true">3. team up for fast wins.</p>
+    </section>
+    <section>
       <h3>available</h3>
       <p>worldwide 24/7.</p>
       <p>online and offline.</p>
       <p>on cloud & web devices.</p>
     </section>
-  <section>
-    <h3>what you need</h3>
-    <p>cloud email: gmail | outlook (soon)</p>
-    <p>cloud office: gsheets | excel (soon)</p>
-    <p>basic office spreadsheet skills.</p>
-  </section>
-</div>
+    <section>
+      <h3>what you need</h3>
+      <p>cloud email: gmail | outlook (soon)</p>
+      <p>cloud office: gsheets | excel (soon)</p>
+      <p>basic office spreadsheet skills.</p>
+    </section>
+  </div>
 
-<div class="welcome">
-  <h1>web minions OS</h1>
-  <p>your web minions armies run 24/7</p>
-  <p>3 types of minions in w3ai format:</p>
-  <p>lead mins, deal mins, web mins</p>
-  <p>build & share projects, skills & teams</p>
-  <p>live transformation of ideas in mins</p>
-  <p>trinity mins cloned on your OS loop</p>
-  <p>for online & offline operation 24/7</p>
-  <p>maximize use of world resources</p>
-  <p>fair distribution of benefits to all</p>
-</div>
+  <div class="welcome">
+    <h1>web minions OS</h1>
+    <p>your web minions armies run 24/7</p>
+    <p>3 types of minions in w3ai format:</p>
+    <p>lead mins, deal mins, web mins</p>
+    <p>build & share projects, skills & teams</p>
+    <p>live transformation of ideas in mins</p>
+    <p>trinity mins cloned on your OS loop</p>
+    <p>for online & offline operation 24/7</p>
+    <p>maximize use of world resources</p>
+    <p>fair distribution of benefits to all</p>
+  </div>
 
-<div class="meetups" fxLayout="column" fxLayoutAlign="center center">
-    <h3>Learn more at W3AI Meetups</h3> 
+  <div class="meetups" fxLayout="column" fxLayoutAlign="center center">
+    <h3>Learn more at W3AI Meetups</h3>
     <a href="https://www.meetup.com/SocialAI/">
-      <img src="assets/img/3AI-nCortex.png" title="Join W3AI Meetups in Toronto, NYC, Halifax..." width="480px" height="270px">
+      <img src="assets/img/3AI-nCortex.png" title="Join W3AI Meetups in Toronto, NYC, Halifax..." width="480px"
+        height="270px">
     </a>
     <ul class="footer">
-        <li>
-            <a href="https://www.meetup.com/SocialAI/">Toronto</a> - 
-            <a href="https://www.meetup.com/Manhattan-AIR/">New York</a> - 
-            <a href="https://www.meetup.com/HalifaxAIG/">Halifax</a>
-        </li> 
+      <li>
+        <a href="https://www.meetup.com/SocialAI/">Toronto</a> -
+        <a href="https://www.meetup.com/Manhattan-AIR/">New York</a> -
+        <a href="https://www.meetup.com/HalifaxAIG/">Halifax</a>
+      </li>
     </ul>
-</div>
-<div class="welcome">
+  </div>
+  <div class="welcome">
     <h3>Powered by<br>DNA-CFS<br>algorithm</h3>
 
     <h1 id="thankyou-title">- Thank Yous -</h1>
@@ -768,7 +760,9 @@
     <p>thosands supporters, advisers & testers</p>
     <p>-</p>
     <h3 id="thankyou-title">inspired by</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;web assembley</p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;web
+      assembley</p>
     <p>W3C</p>
     <p>TCP/IP</p>
     <p>git SCM</p>
@@ -791,15 +785,17 @@
     <p>Eric Maskin</p>
     <p>Linus Torvalds</p>
     <p>Vlad the Dragon</p>
-    <p>Mark Zuckerberg</p>   
+    <p>Mark Zuckerberg</p>
     <p>Satoshi Nakamoto</p>
     <p>Alfred North Whitehead</p>
     <p>-</p>
 
-</div>
+  </div>
 
   <ul class="footer">
-    <li><a href="https://github.com/W3AI/Global-OS">clone DNA js kernel @ github</a></li>
-    <li>DNA js PoC 0.8</li>
-    <li>© Ianta Labs / MIT License</li>  
-</ul>
+    <li><a href="https://github.com/W3AI/Global-OS">clone dna os kernel @ github</a></li>
+    <li>dna os PoC 0.8</li>
+    <li>© Ianta Labs / MIT License</li>
+  </ul>
+
+</section>

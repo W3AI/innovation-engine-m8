@@ -204,6 +204,27 @@ a.ppt-links {
     padding: 4px;
 }
 
+#pairing {
+    width: 300px;
+    height: 330px;
+}
+
+.dna-reg {
+    width: 22px;
+    height: 6px;
+    position: relative;
+    z-index: 50;
+    background-color: red;
+}
+
+.rna-exe {
+    width: 22px;
+    height: 6px;
+    position: relative;
+    z-index: 50;
+    background-color: blue;
+}
+
 .project-service-container {
     overflow: auto;
 }
@@ -543,7 +564,9 @@ p {
 
 #south-globe {
     text-align: center;
-    margin: 5 0 0px;
+    margin: 0px;
+    position: relative;
+    top: -305px;
 }
 
 .welcome {
