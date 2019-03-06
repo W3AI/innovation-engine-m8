@@ -336,19 +336,59 @@
         
         </div>
 
-        <div id="pairing" fxLayout="column" fxLayoutGap="60px" fxLayoutAlign="center center">
-          <div id="governance" fxLayout="column" fxLayoutGap="32px" fxLayoutAlign="center center"
-          style="position: relative; top: 12px;">
-            <div class="dna-reg" id="script-sched-in"></div>
-            <div class="dna-reg" id="script-sched-mid"></div>
-            <div class="dna-reg" id="script-sched-out"></div>
+        <div id="pairing" fxLayout="row" fxLayoutGap="0px" fxLayoutAlign="center center">
+        
+          <div class="viz-prj" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center center"
+          style="position: relative; top: 15px;">
+            <div id="prj-owner" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-evenly center"
+            style="position: relative; top: 0px;">
+              <div class="po-step" id="po-script-in">PO step 1</div>
+              <div class="po-step" id="po-script-mid">PO step 2</div>
+              <div class="po-step" id="po-script-out">PO step 3</div>
+              <div class="po-step" id="po-script-deal">PO step 4</div>
+            </div>
+            <div id="prj-state" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-evenly center"
+            style="position: relative; top:0px;">
+              <div class="ps-step" id="ps-script-in">PS step 1</div>
+              <div class="ps-step" id="ps-script-mid">PS step 2</div>
+              <div class="ps-step" id="ps-script-out">PS step 3</div>
+              <div class="ps-step" id="ps-script-deal">PS step 4</div>
+            </div>
           </div>
-          <div id="execution" fxLayout="column" fxLayoutGap="32px" fxLayoutAlign="center center"
-          style="position: relative; top: 20px;">
-            <div class="rna-exe" id="script-exe-in"></div>
-            <div class="rna-exe" id="script-exe-mid"></div>
-            <div class="rna-exe" id="script-exe-out"></div>
+
+          <div class="viz-links" fxLayout="column" fxLayoutGap="60px" fxLayoutAlign="center center">
+            <div id="dna-links" fxLayout="column" fxLayoutGap="32px" fxLayoutAlign="center center"
+              style="position: relative; top: 12px;">
+              <div class="dna-reg" id="dna-link-in"></div>
+              <div class="dna-reg" id="dna-link-mid"></div>
+              <div class="dna-reg" id="dna-link-out"></div>
+            </div>
+            <div id="rna-links" fxLayout="column" fxLayoutGap="32px" fxLayoutAlign="center center"
+              style="position: relative; top: 20px;">
+              <div class="rna-exe" id="rna-link-in"></div>
+              <div class="rna-exe" id="rna-link-mid"></div>
+              <div class="rna-exe" id="rna-link-out"></div>
+            </div>
           </div>
+
+          <div class="viz-srv" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center center"
+          style="position: relative; top: 15px;">
+              <div id="srv-owner" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-evenly center"
+              style="position: relative; top: 0px;">
+                <div class="so-step" id="so-script-in">SO step 1</div>
+                <div class="so-step" id="so-script-mid">SO step 2</div>
+                <div class="so-step" id="so-script-out">SO step 3</div>
+                <div class="so-step" id="so-script-deal">SO step 4</div>
+              </div>
+              <div id="task-state" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-evenly center"
+              style="position: relative; top: 0px;">
+                <div class="ts-step" id="ts-script-in">TS step 1</div>
+                <div class="ts-step" id="ts-script-mid">TS step 2</div>
+                <div class="ts-step" id="ts-script-out">TS step 3</div>
+                <div class="ts-step" id="ts-script-deal">TS step 4</div>
+              </div>
+            </div>
+        
         </div>
 
         <div id="project-service-container" fxLayout="row" fxLayoutGap="0px" 

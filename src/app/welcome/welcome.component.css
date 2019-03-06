@@ -209,6 +209,24 @@ a.ppt-links {
     height: 330px;
 }
 
+
+.po-step {
+    height: 37.5px;
+    width: 139px;
+    position: relative;
+    z-index: 50;
+    background-color: rgba(217, 190, 190, 0.5)
+}
+
+
+.ps-step {
+    height: 37.5px;
+    width: 139px;
+    position: relative;
+    z-index: 50;
+    background-color: rgba(217, 190, 190, 0.5)
+}
+
 .dna-reg {
     width: 22px;
     height: 6px;
@@ -223,6 +241,22 @@ a.ppt-links {
     position: relative;
     z-index: 50;
     background-color: blue;
+}
+
+.so-step {
+    height: 37.5px;
+    width: 139px;
+    position: relative;
+    z-index: 50;
+    background-color: rgba(217, 190, 190, 0.5)
+}
+
+.ts-step {
+    height: 37.5px;
+    width: 139px;
+    position: relative;
+    z-index: 50;
+    background-color: rgba(217, 190, 190, 0.5)
 }
 
 .project-service-container {
