@@ -434,14 +434,58 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
         this.prj_state = this.p.toString();
         this.srv_state = this.s.toString();
 
-        // [ ToDo ] - If (s=p=1/demo or prj[p] && srv[s] include dna/js scripts ) Here to insert the function/call to
-        // 1 - switch the set interval to a slower human readable pace
-        // 2 - progress through the 8/16/32... steps of Governance and Execution for Projects and Services
-        // 3 - switch back to the  
-
         break;
 
       }
+
+      // [ ToDo ] - If (s=p=1/demo or prj[p] && srv[s] include dna/js scripts ) Here to insert the function/call to
+      // 1 - switch the set interval to a slower human readable pace
+      // 2 - progress through the 8/16/32... steps of Governance and Execution for Projects and Services
+      // 3 - switch back to the  
+      if ((this.p < 1) && (this.s < 1)) {
+        this.po_script_in = this.po_script_in_dev;
+        this.po_script_mid = this.po_script_mid_dev;
+        this.po_script_out = this.po_script_out_dev;
+        this.po_script_deal = this.po_script_deal_dev;
+
+        this.ps_script_in = this.ps_script_in_dev;
+        this.ps_script_mid = this.ps_script_mid_dev;
+        this.ps_script_out = this.ps_script_out_dev;
+        this.ps_script_deal = this.ps_script_deal_dev;
+
+        this.so_script_in = this.so_script_in_dev;
+        this.so_script_mid = this.so_script_mid_dev;
+        this.so_script_out = this.so_script_out_dev;
+        this.so_script_deal = this.so_script_deal_dev;
+
+        this.ts_script_in = this.ts_script_in_dev;
+        this.ts_script_mid = this.ts_script_mid_dev;
+        this.ts_script_out = this.ts_script_out_dev;
+        this.ts_script_deal = this.ts_script_deal_dev;
+
+      } else {
+        this.po_script_in = '';
+        this.po_script_mid = '';
+        this.po_script_out = '';
+        this.po_script_deal = '';
+
+        this.ps_script_in = '';
+        this.ps_script_mid = '';
+        this.ps_script_out = '';
+        this.ps_script_deal = '';
+
+        this.so_script_in = '';
+        this.so_script_mid = '';
+        this.so_script_out = '';
+        this.so_script_deal = '';
+
+        this.ts_script_in = '';
+        this.ts_script_mid = '';
+        this.ts_script_out = '';
+        this.ts_script_deal = '';
+      }
+
+
 
       // [ ToDo ] - Update Queue with the latest Interest tags, Projects (interests) and Services (interests)
       // if ( !this.queueUpdated ) {
