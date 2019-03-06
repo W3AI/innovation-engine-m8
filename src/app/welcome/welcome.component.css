@@ -211,6 +211,8 @@ a.ppt-links {
 
 
 .po-step {
+    font-size: 9px;
+    text-align: right;
     height: 37.5px;
     width: 139px;
     position: relative;
@@ -220,6 +222,8 @@ a.ppt-links {
 
 
 .ps-step {
+    font-size: 9px;
+    text-align: right;
     height: 37.5px;
     width: 139px;
     position: relative;
@@ -244,6 +248,7 @@ a.ppt-links {
 }
 
 .so-step {
+    font-size: 9px;
     height: 37.5px;
     width: 139px;
     position: relative;
@@ -252,6 +257,7 @@ a.ppt-links {
 }
 
 .ts-step {
+    font-size: 9px;
     height: 37.5px;
     width: 139px;
     position: relative;

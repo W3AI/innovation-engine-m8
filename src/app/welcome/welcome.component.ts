@@ -109,14 +109,56 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   prj_state: string = '0';
   srv_state: string = '0';
 
-  // Manual visualization vars
-  // p1_Owner_Img: string = '001';     // [ ToDo ] - setup first prjs/sers / Owners / etc as a Demo animation  
-  // p2_Owner_Img: string = '002';
-  // p3_Owner_Img: string = '003';
-  // p4_Owner_Img: string = '004';
-  // p5_Owner_Img: string = '005';
-  // p6_Owner_Img: string = '006';
-  // p7_Owner_Img: string = '007';
+  // Governance and Execution steps vars for Projects and Services
+  // Project ===========
+  //    Governance ----- 'o' - owner
+  po_script_in: string = '';
+  po_script_mid: string = '';
+  po_script_out: string = '';
+  po_script_deal: string = '';
+  //    Execution ------- 's' - state
+  ps_script_in: string = '';
+  ps_script_mid: string = '';
+  ps_script_out: string = '';
+  ps_script_deal: string = '';
+  // Service ===========
+  //    Governance -----  'o' - owner
+  so_script_in: string = '';
+  so_script_mid: string = '';
+  so_script_out: string = '';
+  so_script_deal: string = '';
+  //    Execution ------- 't' - task; 's' - state
+  ts_script_in: string = '';
+  ts_script_mid: string = '';
+  ts_script_out: string = '';
+  ts_script_deal: string = '';
+
+
+  // dev Governance and Execution steps vars for Projects and Services
+  // Project ===========
+  //    Governance ----- 'o' - owner
+  po_script_in_dev: string = 'query service terms -> ';
+  po_script_mid_dev: string = 'process service terms <- ';
+  po_script_out_dev: string = 'send deal proposal -> ';
+  po_script_deal_dev: string = 'confirm deal <-> ';
+  //    Execution ------- 's' - state
+  ps_script_in_dev: string = 'query service state -> ';
+  ps_script_mid_dev: string = 'process service result <- ';
+  ps_script_out_dev: string = 'test progress -> ';
+  ps_script_deal_dev: string = 'book payment <-> ';
+  // Service ===========
+  //    Governance -----  'o' - owner
+  so_script_in_dev: string = ' <- query project terms';
+  so_script_mid_dev: string = ' -> process project terms';
+  so_script_out_dev: string = ' <- send deal proposal';
+  so_script_deal_dev: string = ' <-> confirm deal';
+  //    Execution ------- 't' - task; 's' - state
+  ts_script_in_dev: string = ' <- query project state';
+  ts_script_mid_dev: string = ' -> process task';
+  ts_script_out_dev: string = ' <- update project';
+  ts_script_deal_dev: string = ' <-> book payment';
+
+
 
   // This tile array was a prep experiment for bot messaging / sonar animation over the social network matrix 
   tiles: Tile[] = [
@@ -391,6 +433,11 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
         this.prj_state = this.p.toString();
         this.srv_state = this.s.toString();
+
+        // [ ToDo ] - If (s=p=1/demo or prj[p] && srv[s] include dna/js scripts ) Here to insert the function/call to
+        // 1 - switch the set interval to a slower human readable pace
+        // 2 - progress through the 8/16/32... steps of Governance and Execution for Projects and Services
+        // 3 - switch back to the  
 
         break;
 
