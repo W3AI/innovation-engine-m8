@@ -87,6 +87,17 @@ export interface Tile {
     transition('4 => 5', animate(300)),
     transition('5 => 6', animate(300)),
     transition('6 => 0', animate(300))
+  ]),
+
+  trigger('poScriptOn', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX(-139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(50))
   ])
 
   ]
@@ -108,6 +119,8 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   // project and service state for the manual/visual loop - 2 values new | same as the loop goes thought each p|s combinations
   prj_state: string = '0';
   srv_state: string = '0';
+  // On / Off states for the regulatory scripts
+  po_in_state: string = 'off';
 
   // Governance and Execution steps vars for Projects and Services
   // Project ===========
@@ -442,8 +455,11 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
       // 1 - switch the set interval to a slower human readable pace
       // 2 - progress through the 8/16/32... steps of Governance and Execution for Projects and Services
       // 3 - switch back to the  
-      if ((this.p < 1) && (this.s < 1)) {
-        this.po_script_in = this.po_script_in_dev;
+      if ((this.p <= 1) && (this.s <= 1)) {
+
+        this.po_script_in = this.po_script_in_dev + ' = ' + this.po_in_state;
+        this.po_in_state = 'on'; // [ ToDo ] - Add function call to run po_script_in
+
         this.po_script_mid = this.po_script_mid_dev;
         this.po_script_out = this.po_script_out_dev;
         this.po_script_deal = this.po_script_deal_dev;
@@ -464,7 +480,9 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
         this.ts_script_deal = this.ts_script_deal_dev;
 
       } else {
-        this.po_script_in = '';
+        this.po_in_state = 'off';
+        this.po_script_in = ' = ' + this.po_in_state;
+
         this.po_script_mid = '';
         this.po_script_out = '';
         this.po_script_deal = '';
@@ -485,8 +503,6 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
         this.ts_script_deal = '';
       }
 
-
-
       // [ ToDo ] - Update Queue with the latest Interest tags, Projects (interests) and Services (interests)
       // if ( !this.queueUpdated ) {
       // [ ToDo ] - Update queue function
@@ -502,13 +518,15 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
       // Loop through the Link combinatorics Stack and pass each pair of ( Prj, Srv) through a visualization function
       // for top/bottom (or in/out) projects and services with increased z-index for animating ins and outs
 
-
-
     }
 
     this.row = (this.i+2)%this.nrLinks; // calculate the row in the queue array to display in the manual table
     this.shares = 10 + Math.floor(Math.random() * Math.floor(1000))
     this.w3aiStats();
+  }
+
+  animPoInDone() {
+    this.po_in_state = 'off';
   }
 
   getStatusButtonManual() {
