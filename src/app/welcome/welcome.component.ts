@@ -97,8 +97,38 @@ export interface Tile {
       transform: 'translateX(-139px)'
     })),
     transition('off => on', animate(500)),
-    transition('on => off', animate(50))
-  ])
+    transition('on => off', animate(500))
+  ]),
+  trigger('poScriptMid', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX(-139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('poScriptOff', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX(-139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('poScriptDeal', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX(-139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
 
   ]
 })
@@ -121,6 +151,9 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   srv_state: string = '0';
   // On / Off states for the regulatory scripts
   po_in_state: string = 'off';
+  po_mid_state: string = 'off';
+  po_out_state: string = 'off';
+  po_deal_state: string = 'off';
 
   // Governance and Execution steps vars for Projects and Services
   // Project ===========
@@ -224,8 +257,8 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   isAuth$: Observable<boolean>;
 
   timer: number;
-  interval: number = 3000;   // set initial interval timer 
-  newInterval: number = 300;
+  interval: number = 4000;   // set initial interval timer 
+  newInterval: number = 400;
   setupCycle: number = 1000;   // well use this setupCycle updated from the Setup page 
                               // to increase / decrease the time interval
 
@@ -457,46 +490,59 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
       // 3 - switch back to the  
       if ((this.p <= 1) && (this.s <= 1)) {
 
-        this.po_script_in = this.po_script_in_dev + ' = ' + this.po_in_state;
+        // Regulatory Project Owner scripts Start
+        this.po_script_in = this.po_script_in_dev;
         this.po_in_state = 'on'; // [ ToDo ] - Add function call to run po_script_in
-
         this.po_script_mid = this.po_script_mid_dev;
+        this.po_mid_state = 'on'; // [ ToDo ] - Add function call to run po_script_mid
         this.po_script_out = this.po_script_out_dev;
+        this.po_out_state = 'on'; // [ ToDo ] - Add function call to run po_script_out
         this.po_script_deal = this.po_script_deal_dev;
+        this.po_deal_state = 'on'; // [ ToDo ] - Add function call to run po_script_deal
 
+        // Executive Project Status scripts Start
         this.ps_script_in = this.ps_script_in_dev;
         this.ps_script_mid = this.ps_script_mid_dev;
         this.ps_script_out = this.ps_script_out_dev;
         this.ps_script_deal = this.ps_script_deal_dev;
 
+        // Regulatory Service Owner scripts Start
         this.so_script_in = this.so_script_in_dev;
         this.so_script_mid = this.so_script_mid_dev;
         this.so_script_out = this.so_script_out_dev;
         this.so_script_deal = this.so_script_deal_dev;
 
+        // Execute Task Status scripts Start
         this.ts_script_in = this.ts_script_in_dev;
         this.ts_script_mid = this.ts_script_mid_dev;
         this.ts_script_out = this.ts_script_out_dev;
         this.ts_script_deal = this.ts_script_deal_dev;
 
       } else {
+
+        // Regulatory Project Owner scripts Done
+        this.po_script_in = 'result( po_script_in )';
         this.po_in_state = 'off';
-        this.po_script_in = ' = ' + this.po_in_state;
+        this.po_script_mid = 'result( po_script_mid )';
+        this.po_mid_state = 'off';
+        this.po_script_out = 'result( po_script_out )';
+        this.po_out_state = 'off';
+        this.po_script_deal = 'result( po_script_deal )';
+        this.po_deal_state = 'off';
 
-        this.po_script_mid = '';
-        this.po_script_out = '';
-        this.po_script_deal = '';
-
+        // Executive Project Status scripts Done
         this.ps_script_in = '';
         this.ps_script_mid = '';
         this.ps_script_out = '';
         this.ps_script_deal = '';
 
+        // Regulatory Service Owner scripts Done
         this.so_script_in = '';
         this.so_script_mid = '';
         this.so_script_out = '';
         this.so_script_deal = '';
 
+        // Execute Task Status scripts Done
         this.ts_script_in = '';
         this.ts_script_mid = '';
         this.ts_script_out = '';
@@ -525,8 +571,18 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.w3aiStats();
   }
 
+  // Continuation callbacks for Project Owner / Governance
   animPoInDone() {
     this.po_in_state = 'off';
+  }
+  animPoMidDone() {
+    this.po_mid_state = 'off';
+  }
+  animPoOutDone() {
+    this.po_out_state = 'off';
+  }
+  animPoDealDone() {
+    this.po_deal_state = 'off';
   }
 
   getStatusButtonManual() {

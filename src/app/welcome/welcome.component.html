@@ -4,7 +4,7 @@
 
   <div class="mission">
     <h4 id="leaders">
-      f a i r &nbsp; &nbsp; &nbsp; &nbsp; f u n &nbsp; &nbsp; &nbsp; &nbsp; f a s t
+      f a s t &nbsp; &nbsp; &nbsp; &nbsp; a n d &nbsp; &nbsp; &nbsp; &nbsp; f a i r
       </h4>
   </div>
 
@@ -344,10 +344,24 @@
             style="position: relative; top: 0px;">
               <div class="po-step" id="po-script-in"
               [@poScriptOn]="po_in_state"
-              (@poScriptOn.done)="animPoInDone()">{{ po_script_in }}</div>
-              <div class="po-step" id="po-script-mid">{{ po_script_mid }}</div>
-              <div class="po-step" id="po-script-out">{{ po_script_out }}</div>
-              <div class="po-step" id="po-script-deal">{{ po_script_deal }}</div>
+              (@poScriptOn.done)="animPoInDone()">
+                {{ po_script_in }}
+              </div>
+              <div class="po-step" id="po-script-mid"
+              [@poScriptMid]="po_mid_state"
+              (@poScriptMid.done)="animPoMidDone()">
+                {{ po_script_mid }}
+              </div>
+              <div class="po-step" id="po-script-out"
+              [@poScriptOff]="po_out_state"
+              (@poScriptOff.done)="animPoOutDone()">
+                {{ po_script_out }}
+              </div>
+              <div class="po-step" id="po-script-deal"
+              [@poScriptDeal]="po_deal_state"
+              (@poScriptDeal.done)="animPoDealDone()">
+                {{ po_script_deal }}
+              </div>
             </div>
             <div id="prj-state" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-evenly center"
             style="position: relative; top:0px;">
