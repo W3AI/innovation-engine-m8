@@ -494,11 +494,11 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
         this.po_script_in = this.po_script_in_dev;
         this.po_in_state = 'on'; // [ ToDo ] - Add function call to run po_script_in
         this.po_script_mid = this.po_script_mid_dev;
-        this.po_mid_state = 'on'; // [ ToDo ] - Add function call to run po_script_mid
+        // this.po_mid_state = 'on'; // [ ToDo ] - Add function call to run po_script_mid
         this.po_script_out = this.po_script_out_dev;
-        this.po_out_state = 'on'; // [ ToDo ] - Add function call to run po_script_out
+        // this.po_out_state = 'on'; // [ ToDo ] - Add function call to run po_script_out
         this.po_script_deal = this.po_script_deal_dev;
-        this.po_deal_state = 'on'; // [ ToDo ] - Add function call to run po_script_deal
+        // this.po_deal_state = 'on'; // [ ToDo ] - Add function call to run po_script_deal
 
         // Executive Project Status scripts Start
         this.ps_script_in = this.ps_script_in_dev;
@@ -575,18 +575,22 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   animPoInDone() {
     this.po_script_in = 'result( po_script_in() )';
     this.po_in_state = 'off';
+    this.po_mid_state = 'on';
   }
   animPoMidDone() {
     this.po_script_mid = 'result( po_script_mid() )';
     this.po_mid_state = 'off';
+    this.po_out_state = 'on';
   }
   animPoOutDone() {
     this.po_script_out = 'result( po_script_out() )';
     this.po_out_state = 'off';
+    this.po_deal_state = 'on';
   }
   animPoDealDone() {
     this.po_script_deal = 'result( po_script_deal() )';
     this.po_deal_state = 'off';
+
   }
 
   getStatusButtonManual() {
