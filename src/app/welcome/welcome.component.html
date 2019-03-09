@@ -111,17 +111,17 @@
     <div fxLayout="row" xLayoutAlign="center center" fxLayoutGap="20px"  fxLayoutGap.gt-xs="20px">
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetManual(4000)"
-            [ngStyle]="{color: getStatusButtonManual()}"><b>fair</b></button></div>
+            [ngStyle]="{color: getStatusButtonManual()}"><b>f a i r</b></button></div>
             <div class="speed-type">a f a p</div>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetSprint(100)"
-            [ngStyle]="{color: getStatusButtonMarathon()}"><b>fun</b></button></div>
+            [ngStyle]="{color: getStatusButtonMarathon()}"><b>f u n</b></button></div>
             <div class="speed-type">f & f</div>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <div><button class="W3AI-button" mat-button (click)="onSetRun(10)"
-            [ngStyle]="{color: getStatusButtonHackathon()}"><b>fast</b></button></div>
+            [ngStyle]="{color: getStatusButtonHackathon()}"><b>f a s t</b></button></div>
             <div class="speed-type">a s a p</div>
       </div>
     </div>
@@ -365,10 +365,26 @@
             </div>
             <div id="prj-state" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-evenly center"
             style="position: relative; top:0px;">
-              <div class="ps-step" id="ps-script-in">{{ ps_script_in }}</div>
-              <div class="ps-step" id="ps-script-mid">{{ ps_script_mid }}</div>
-              <div class="ps-step" id="ps-script-out">{{ ps_script_out }}</div>
-              <div class="ps-step" id="ps-script-deal">{{ ps_script_deal }}</div>
+              <div class="ps-step" id="ps-script-in"
+              [@psScriptOn]="ps_in_state"
+              (@psScriptOn.done)="animPsInDone()">
+                {{ ps_script_in }}
+              </div>
+              <div class="ps-step" id="ps-script-mid"
+              [@psScriptMid]="ps_mid_state"
+              (@psScriptMid.done)="animPsMidDone()">
+                {{ ps_script_mid }}
+              </div>
+              <div class="ps-step" id="ps-script-out"
+              [@psScriptOff]="ps_out_state"
+              (@psScriptOff.done)="animPsOutDone()">
+                {{ ps_script_out }}
+              </div>
+              <div class="ps-step" id="ps-script-deal"
+              [@psScriptDeal]="ps_deal_state"
+              (@psScriptDeal.done)="animPsDealDone()">
+                {{ ps_script_deal }}
+              </div>
             </div>
           </div>
 

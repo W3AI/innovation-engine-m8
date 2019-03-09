@@ -130,6 +130,47 @@ export interface Tile {
     transition('on => off', animate(500))
   ]),
 
+  trigger('psScriptOn', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX(-139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('psScriptMid', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX(-139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('psScriptOff', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX(-139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('psScriptDeal', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX(-139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+
   ]
 })
 export class WelcomeComponent implements OnInit, AfterContentInit {
@@ -150,10 +191,17 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   prj_state: string = '0';
   srv_state: string = '0';
   // On / Off states for the regulatory scripts
+  // Project Owner governance scripts
   po_in_state: string = 'off';
   po_mid_state: string = 'off';
   po_out_state: string = 'off';
   po_deal_state: string = 'off';
+  // Project Status execution scripts
+  ps_in_state: string = 'off';
+  ps_mid_state: string = 'off';
+  ps_out_state: string = 'off';
+  ps_deal_state: string = 'off';
+
 
   // Governance and Execution steps vars for Projects and Services
   // Project ===========
@@ -522,13 +570,9 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
         // Regulatory Project Owner scripts Done
         this.po_script_in = '';
-        // this.po_in_state = 'off';
         this.po_script_mid = '';
-        // this.po_mid_state = 'off';
         this.po_script_out = '';
-        // this.po_out_state = 'off';
         this.po_script_deal = '';
-        // this.po_deal_state = 'off';
 
         // Executive Project Status scripts Done
         this.ps_script_in = '';
@@ -590,8 +634,31 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   animPoDealDone() {
     this.po_script_deal = 'result( po_script_deal() )';
     this.po_deal_state = 'off';
-
+    this.ps_in_state = 'on';    // 'on' - if there is a deal to plan execution
   }
+  // Continuation callbacks for Project Status / Execution
+  animPsInDone() {
+    this.ps_script_in = 'result( ps_script_in() )';
+    this.ps_in_state = 'off';
+    this.ps_mid_state = 'on';
+  }
+  animPsMidDone() {
+    this.ps_script_mid = 'result( ps_script_mid() )';
+    this.ps_mid_state = 'off';
+    this.ps_out_state = 'on';
+  }
+  animPsOutDone() {
+    this.ps_script_out = 'result( ps_script_out() )';
+    this.ps_out_state = 'off';
+    this.ps_deal_state = 'on';
+  }
+  animPsDealDone() {
+    this.ps_script_deal = 'result( ps_script_deal() )';
+    this.ps_deal_state = 'off';
+    // Task was executed and Project Manager to schedule/approve payment
+  }
+
+  // Continuation callbacks for Service Owner / Governance
 
   getStatusButtonManual() {
     return this.setup === 'manual' ? this.bot_red : 'whitesmoke';
