@@ -521,14 +521,14 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
       } else {
 
         // Regulatory Project Owner scripts Done
-        this.po_script_in = 'result( po_script_in )';
-        this.po_in_state = 'off';
-        this.po_script_mid = 'result( po_script_mid )';
-        this.po_mid_state = 'off';
-        this.po_script_out = 'result( po_script_out )';
-        this.po_out_state = 'off';
-        this.po_script_deal = 'result( po_script_deal )';
-        this.po_deal_state = 'off';
+        this.po_script_in = '';
+        // this.po_in_state = 'off';
+        this.po_script_mid = '';
+        // this.po_mid_state = 'off';
+        this.po_script_out = '';
+        // this.po_out_state = 'off';
+        this.po_script_deal = '';
+        // this.po_deal_state = 'off';
 
         // Executive Project Status scripts Done
         this.ps_script_in = '';
@@ -573,15 +573,19 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
   // Continuation callbacks for Project Owner / Governance
   animPoInDone() {
+    this.po_script_in = 'result( po_script_in() )';
     this.po_in_state = 'off';
   }
   animPoMidDone() {
+    this.po_script_mid = 'result( po_script_mid() )';
     this.po_mid_state = 'off';
   }
   animPoOutDone() {
+    this.po_script_out = 'result( po_script_out() )';
     this.po_out_state = 'off';
   }
   animPoDealDone() {
+    this.po_script_deal = 'result( po_script_deal() )';
     this.po_deal_state = 'off';
   }
 
