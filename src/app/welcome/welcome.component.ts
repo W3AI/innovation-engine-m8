@@ -171,6 +171,88 @@ export interface Tile {
     transition('on => off', animate(500))
   ]),
 
+  trigger('soScriptOn', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX( 139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('soScriptMid', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX( 139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('soScriptOff', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX( 139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('soScriptDeal', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX( 139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+
+  trigger('tsScriptOn', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX( 139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('tsScriptMid', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX( 139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('tsScriptOff', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX( 139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+  trigger('tsScriptDeal', [
+    state('off', style({
+      transform: 'translateX(0px)'
+    })),
+    state('on', style({
+      transform: 'translateX( 139px)'
+    })),
+    transition('off => on', animate(500)),
+    transition('on => off', animate(500))
+  ]),
+
   ]
 })
 export class WelcomeComponent implements OnInit, AfterContentInit {
@@ -190,7 +272,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   // project and service state for the manual/visual loop - 2 values new | same as the loop goes thought each p|s combinations
   prj_state: string = '0';
   srv_state: string = '0';
-  // On / Off states for the regulatory scripts
+  // On / Off states for the regulatory and execution scripts
   // Project Owner governance scripts
   po_in_state: string = 'off';
   po_mid_state: string = 'off';
@@ -201,6 +283,16 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   ps_mid_state: string = 'off';
   ps_out_state: string = 'off';
   ps_deal_state: string = 'off';
+  // Service Owner governance scripts
+  so_in_state: string = 'off';
+  so_mid_state: string = 'off';
+  so_out_state: string = 'off';
+  so_deal_state: string = 'off';
+  // Task Status execution scripts
+  ts_in_state: string = 'off';
+  ts_mid_state: string = 'off';
+  ts_out_state: string = 'off';
+  ts_deal_state: string = 'off';
 
 
   // Governance and Execution steps vars for Projects and Services
@@ -556,6 +648,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
         // Regulatory Service Owner scripts Start
         this.so_script_in = this.so_script_in_dev;
+        this.so_in_state = 'on'; // [ ToDo ] - Add function call to run so_script_in
         this.so_script_mid = this.so_script_mid_dev;
         this.so_script_out = this.so_script_out_dev;
         this.so_script_deal = this.so_script_deal_dev;
@@ -659,6 +752,47 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   }
 
   // Continuation callbacks for Service Owner / Governance
+  animSoInDone() {
+    this.so_script_in = 'result( so_script_in() )';
+    this.so_in_state = 'off';
+    this.so_mid_state = 'on';
+  }
+  animSoMidDone() {
+    this.so_script_mid = 'result( so_script_mid() )';
+    this.so_mid_state = 'off';
+    this.so_out_state = 'on';
+  }
+  animSoOutDone() {
+    this.so_script_out = 'result( so_script_out() )';
+    this.so_out_state = 'off';
+    this.so_deal_state = 'on';
+  }
+  animSoDealDone() {
+    this.so_script_deal = 'result( so_script_deal() )';
+    this.so_deal_state = 'off';
+    this.ts_in_state = 'on';    // 'on' - if there is a deal to plan task execution
+  }
+  // Continuation callbacks for Task Status / Execution
+  animTsInDone() {
+    this.ts_script_in = 'result( ts_script_in() )';
+    this.ts_in_state = 'off';
+    this.ts_mid_state = 'on';
+  }
+  animTsMidDone() {
+    this.ts_script_mid = 'result( ts_script_mid() )';
+    this.ts_mid_state = 'off';
+    this.ts_out_state = 'on';
+  }
+  animTsOutDone() {
+    this.ts_script_out = 'result( ts_script_out() )';
+    this.ts_out_state = 'off';
+    this.ts_deal_state = 'on';
+  }
+  animTsDealDone() {
+    this.ts_script_deal = 'result( ts_script_deal() )';
+    this.ts_deal_state = 'off';
+    // Task was executed and Project Manager to schedule/approve payment
+  }
 
   getStatusButtonManual() {
     return this.setup === 'manual' ? this.bot_red : 'whitesmoke';

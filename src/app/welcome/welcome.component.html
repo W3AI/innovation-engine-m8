@@ -407,17 +407,49 @@
           style="position: relative; top: 15px;">
               <div id="srv-owner" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-evenly center"
               style="position: relative; top: 0px;">
-                <div class="so-step" id="so-script-in">{{ so_script_in }}</div>
-                <div class="so-step" id="so-script-mid">{{ so_script_mid }}</div>
-                <div class="so-step" id="so-script-out">{{ so_script_out }}</div>
-                <div class="so-step" id="so-script-deal">{{ so_script_deal }}</div>
+                <div class="so-step" id="so-script-in"
+                [@soScriptOn]="so_in_state"
+                (@soScriptOn.done)="animSoInDone()">
+                  {{ so_script_in }}
+                </div>
+                <div class="so-step" id="so-script-mid"
+                [@soScriptMid]="so_mid_state"
+                (@soScriptMid.done)="animSoMidDone()">
+                  {{ so_script_mid }}
+                </div>
+                <div class="so-step" id="so-script-out"
+                [@soScriptOff]="so_out_state"
+                (@soScriptOff.done)="animSoOutDone()">
+                  {{ so_script_out }}
+                </div>
+                <div class="so-step" id="so-script-deal"
+                [@soScriptDeal]="so_deal_state"
+                (@soScriptDeal.done)="animSoDealDone()">
+                  {{ so_script_deal }}
+                </div>
               </div>
               <div id="task-state" fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="space-evenly center"
               style="position: relative; top: 0px;">
-                <div class="ts-step" id="ts-script-in">{{ ts_script_in }}</div>
-                <div class="ts-step" id="ts-script-mid">{{ ts_script_mid }}</div>
-                <div class="ts-step" id="ts-script-out">{{ ts_script_out }}</div>
-                <div class="ts-step" id="ts-script-deal">{{ ts_script_deal }}</div>
+                <div class="ts-step" id="ts-script-in"
+                [@tsScriptOn]="ts_in_state"
+                (@tsScriptOn.done)="animTsInDone()">
+                  {{ ts_script_in }}
+                </div>
+                <div class="ts-step" id="ts-script-mid"
+                [@tsScriptMid]="ts_mid_state"
+                (@tsScriptMid.done)="animTsMidDone()">
+                  {{ ts_script_mid }}
+                </div>
+                <div class="ts-step" id="ts-script-out"
+                [@tsScriptOff]="ts_out_state"
+                (@tsScriptOff.done)="animTsOutDone()">
+                  {{ ts_script_out }}
+                </div>
+                <div class="ts-step" id="ts-script-deal"
+                [@tsScriptDeal]="ts_deal_state"
+                (@tsScriptDeal.done)="animTsDealDone()">
+                  {{ ts_script_deal }}
+                </div>
               </div>
             </div>
         
