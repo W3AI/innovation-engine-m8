@@ -581,6 +581,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
         this.srv_state = '0';
       }
 
+      // The loop for combaining pairs of related (project, service) 
       while ( this.c <= this.combNo && this.combInProgress == true) {
 
         this.c++;
@@ -628,7 +629,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
       // 1 - switch the set interval to a slower human readable pace
       // 2 - progress through the 8/16/32... steps of Governance and Execution for Projects and Services
       // 3 - switch back to the  
-      if ((this.p <= 1) && (this.s <= 1)) {
+      if ((this.p < 1) && (this.s < 1)) {
 
         // Regulatory Project Owner scripts Start
         this.po_script_in = this.po_script_in_dev;
