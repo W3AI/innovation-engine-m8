@@ -261,6 +261,10 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   // + reading from cloud spreadsheets or from a realtime db / Firestore
   queueUpdated: boolean = true;
 
+  // The domain of interests: e.g.: world, politics, business, math, programming, RPA, etc  
+  domain: string = 'world';   // Should refer to world leaders, investors, technologists
+  // [ ToDo ] - Arrange a domain filter/selection in the setup module
+
   // project prj and service ssrv index within an interest/tag pair
   // e.g. for one interest tag/link we could have 2 projects (prj=2) and 3 services (srv=3)
   // that are linked through that interest tag
@@ -272,6 +276,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   // project and service state for the manual/visual loop - 2 values new | same as the loop goes thought each p|s combinations
   prj_state: string = '0';
   srv_state: string = '0';
+
   // On / Off states for the regulatory and execution scripts
   // Project Owner governance scripts
   po_in_state: string = 'off';
@@ -1113,14 +1118,36 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
   // Dynamic Owner images
   // type: prj | srv; rank: 1 - 7 ; id: from Queue/List ; mode: normal | demo | dev/random
-  setOwnerImage(type: string, rank: number, id: number, mode: string) {
+  setOwnerImage(type: string, rank: number, id: number) {
 
-    let imagePath = 'url(/assets/img/innovators/innovator-190219'
+    let imagePath = '';
     let devId = 0;
     let devIdString = '';
 
-    switch (mode) {
-      case 'dev' : 
+    switch (this.domain) {
+
+      // A dev & show mode based on news on Projects/Services of
+      case 'world' :  
+
+      // 100px folder for World leaders Mar 2019
+      imagePath = 'url(/assets/img/100-leaders/';
+      devId = 0;
+      devIdString = '';
+
+      // Random nr from 201 to 300
+      devId = Math.floor(201 + 100 * Math.random());
+      devIdString = devId.toString();
+      imagePath += devIdString;
+      imagePath += '.png)';
+      break;
+
+      // also a development mode with innovators from meetups
+      case 'meetups' : 
+        
+        imagePath = 'url(/assets/img/innovators/innovator-190219';
+        devId = 0;
+        devIdString = '';
+
         devId = Math.floor(rank + id + 100 * Math.random());
         if (devId < 10 ) {
           devIdString = '00' + devId.toString();        
@@ -1130,13 +1157,13 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
           devIdString = devId.toString();
         }
         imagePath += devIdString;
+        imagePath += '.jpeg)';
         break;
 
       default: 
         imagePath += '000';   // [ ToDo ] - Set lower number images '000' for self Projects / Opportunities !!!
     }
 
-    imagePath += '.jpeg)';
 
     return imagePath;
   }
