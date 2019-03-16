@@ -467,7 +467,7 @@
               <div class="project-title">1. {{ problems[(i) % nrLinks][0] }}</div>
 
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-image" [ngStyle]="{'background-image': setOwnerImage('prj', 1, 0) }">
+                <div class="project-owner-image" [ngStyle]="{'background-image': setPrjOwnerImage(0, 0) }">
                   <img src="/assets/img/3-scripts-dna-left-150.png"></div>
                 <div class="project-owner-badges">1. Innovator<br>
                   Canada<br>
@@ -490,7 +490,7 @@
 
               <div class="project-owner-container" fxLayout="row">
                 <div class="project-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('prj', 2, 0) }">
+                [ngStyle]="{'background-image': setPrjOwnerImage(1, 0) }">
                 <img src="/assets/img/manual-business-process-150.png"></div>
                 <div class="project-owner-badges">2. Innovator </div>
               </div>
@@ -508,7 +508,7 @@
 
               <div class="project-owner-container" fxLayout="row">
                 <div class="project-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('prj', 3, 0) }"></div>
+                [ngStyle]="{'background-image': setPrjOwnerImage(2, 0) }"></div>
                 <div class="project-owner-badges">3. Innovator</div>
               </div>
 
@@ -525,7 +525,7 @@
 
               <div class="project-owner-container" fxLayout="row">                
                 <div class="project-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('prj', 4, 0) }"></div>
+                [ngStyle]="{'background-image': setPrjOwnerImage(3, 0) }"></div>
                 <div class="project-owner-badges">4. Innovator</div>
               </div>
 
@@ -542,7 +542,7 @@
 
               <div class="project-owner-container" fxLayout="row">
                 <div class="project-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('prj', 5, 0) }"></div>
+                [ngStyle]="{'background-image': setPrjOwnerImage( 4, 0) }"></div>
                 <div class="project-owner-badges">5. Innovator</div>
               </div>
 
@@ -559,7 +559,7 @@
 
               <div class="project-owner-container" fxLayout="row">
                 <div class="project-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('prj', 6, 0) }"></div>
+                [ngStyle]="{'background-image': setPrjOwnerImage( 5, 0) }"></div>
                 <div class="project-owner-badges">6. Innovator</div>
               </div>
 
@@ -576,7 +576,7 @@
 
               <div class="project-owner-container" fxLayout="row">
                 <div class="project-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('prj', 7, 0) }"></div>
+                [ngStyle]="{'background-image': setPrjOwnerImage( 6, 0) }"></div>
                 <div class="project-owner-badges">7. Innovator</div>
               </div>
               <div class="project-state-container" fxLayout="row">
@@ -597,7 +597,7 @@
               <div class="service-title">7. {{ services[(i) % nrLinks][6] }}</div>
               <div class="service-owner-container" fxLayout="row">
                 <div class="service-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('srv', 7, 1) }"></div>
+                [ngStyle]="{'background-image': setSrvOwnerImage( 6, 1) }"></div>
                 <div class="service-owner-badges">7. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
@@ -610,7 +610,7 @@
               <div class="service-title">6. {{ services[(i) % nrLinks][5] }}</div>
               <div class="service-owner-container" fxLayout="row">
                 <div class="service-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('srv', 6, 1) }"></div>
+                [ngStyle]="{'background-image': setSrvOwnerImage( 5, 1) }"></div>
                 <div class="service-owner-badges">6. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
@@ -623,7 +623,7 @@
               <div class="service-title">5. {{ services[(i) % nrLinks][4] }}</div>
               <div class="service-owner-container" fxLayout="row">
                 <div class="service-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('srv', 5, 1) }"></div>
+                [ngStyle]="{'background-image': setSrvOwnerImage( 4, 1) }"></div>
                 <div class="service-owner-badges">5. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
@@ -636,7 +636,7 @@
               <div class="service-title">4. {{ services[(i) % nrLinks][3] }}</div>
               <div class="service-owner-container" fxLayout="row">
                 <div class="service-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('srv', 4, 1) }"></div>
+                [ngStyle]="{'background-image': setSrvOwnerImage( 3, 1) }"></div>
                 <div class="service-owner-badges">4. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
@@ -649,7 +649,7 @@
               <div class="service-title">3. {{ services[(i) % nrLinks][2] }}</div>
               <div class="service-owner-container" fxLayout="row">
                 <div class="service-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('srv', 3, 1) }"></div>
+                [ngStyle]="{'background-image': setSrvOwnerImage( 2, 1) }"></div>
                 <div class="service-owner-badges">3. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
@@ -662,7 +662,7 @@
               <div class="service-title">2. {{ services[(i) % nrLinks][1] }}</div>
               <div class="service-owner-container" fxLayout="row">
                 <div class="service-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('srv', 2, 1) }">
+                [ngStyle]="{'background-image': setSrvOwnerImage( 1, 1) }">
                 <img src="/assets/img/manual-engage-process-150.png"></div>
                 <div class="service-owner-badges">2. Owner</div>
               </div>
@@ -677,7 +677,7 @@
               <div class="service-title">1. {{ services[(i) % nrLinks][0] }}</div>
               <div class="service-owner-container" fxLayout="row">
                 <div class="service-owner-image"
-                [ngStyle]="{'background-image': setOwnerImage('srv', 1, 1) }">
+                [ngStyle]="{'background-image': setSrvOwnerImage( 0, 1) }">
                 <img src="/assets/img/3-scripts-dna-right-150.png" width="150px;" height="150px;"></div>
                 <div class="service-owner-badges">1. Owner</div>
               </div>

@@ -261,7 +261,13 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   // + reading from cloud spreadsheets or from a realtime db / Firestore
   queueUpdated: boolean = true;
 
-  // The domain of interests: e.g.: world, politics, business, math, programming, RPA, etc  
+  // Project and Service Update Arrays
+  // 0 - not updated
+  // number - updated - [ ToDo ] - set the number as the update time/int of the update
+  prjUpdated = [0, 0, 0, 0, 0, 0, 0];
+  srvUpdated = [0, 0, 0, 0, 0, 0, 0];
+
+  // The domain of interests: e.g.: meetups, world, politics, business, math, programming, RPA, etc  
   domain: string = 'world';   // Should refer to world leaders, investors, technologists
   // [ ToDo ] - Arrange a domain filter/selection in the setup module
 
@@ -273,7 +279,8 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   // p and s - project and service indexes for going through the list of prj and srv of an interest lin/tag
   p: number = 0;
   s: number = 0;
-  // project and service state for the manual/visual loop - 2 values new | same as the loop goes thought each p|s combinations
+  // project and service state for the manual/visual loop - 7 values 0-6 as the loop goes thought each p|s combinations
+  // [ ToDo ] - change prj/srv_state to prj/srv_rank - to reflect the rank in the query loop/table
   prj_state: string = '0';
   srv_state: string = '0';
 
@@ -576,20 +583,36 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
           }
         }
 
+        // To ensure the setting is done only once at the begining
+        // of the combinatorial loop
         this.combInProgress = true;
+
         // initialize combinations index c, project index p and service index s
         this.c = 0;
         this.p = 0;
         this.s = 0;
 
+        // 
         this.prj_state = '0';
         this.srv_state = '0';
+
+        // Initialize Projects Updated array
+        for ( let rank = 0; rank < this.prjUpdated.length; rank++) {
+          this.prjUpdated[rank] = 0;  // 0 - not updated
+        }
+
+        // Initialize Services Updated array
+        for ( let rank = 0; rank < this.srvUpdated.length; rank++) {
+          this.srvUpdated[rank] = 0;  // 0 - not updated
+        }
+
       }
 
       // The loop for combaining pairs of related (project, service) 
       while ( this.c <= this.combNo && this.combInProgress == true) {
 
         // Increment the index of combinations
+        // here or at the end of the while ???
         this.c++;
 
         if ( this.c == this.combNo ) {
@@ -1117,57 +1140,126 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     return this.tag[(this.i+2)%this.nrLinks][5]> 0 ? 'green' : 'red';
   }
 
-  // Dynamic Owner images
-  // type: prj | srv; rank: 1 - 7 ; id: from Queue/List ; mode: normal | demo | dev/random
-  setOwnerImage(type: string, rank: number, id: number) {
+  // Dynamic Project Owner images
+  // rank: 1 - 7 ; id: row index from Queue/List ;
+  // [ ToDo ] - code the real function to read from projects table not get random images
+  setPrjOwnerImage(rank: number, id: number) {
 
     let imagePath = '';
     let devId = 0;
     let devIdString = '';
 
-    switch (this.domain) {
+    if ( this.prjUpdated[rank] == 0 ) {
 
-      // A dev & show mode based on news on Projects/Services of
-      case 'world' :  
+      // Set as updated with the time of the update
+      this.prjUpdated[rank] = Date.now();
 
-      // 100px folder for World leaders Mar 2019
-      imagePath = 'url(/assets/img/100-leaders/';
-      devId = 0;
-      devIdString = '';
+      // Update the image
+      switch (this.domain) {
 
-      // Random nr from 201 to 300
-      devId = Math.floor(201 + 100 * Math.random());
-      devIdString = devId.toString();
-      imagePath += devIdString;
-      imagePath += '.png)';
-      break;
-
-      // also a development mode with innovators from meetups
-      case 'meetups' : 
-        
-        imagePath = 'url(/assets/img/innovators/innovator-190219';
-        devId = 0;
-        devIdString = '';
-
-        devId = Math.floor(rank + id + 100 * Math.random());
-        if (devId < 10 ) {
-          devIdString = '00' + devId.toString();        
-        } else if ( devId < 100 ) {
-          devIdString = '0' + devId.toString();
-        } else {
+        // A dev & show mode based on news on Projects/Services of
+        case 'world' :  
+  
+          // 100px folder for World leaders Mar 2019
+          imagePath = 'url(/assets/img/100-leaders/';
+          devId = 0;
+          devIdString = '';
+  
+          // Random nr from 201 to 300
+          devId = Math.floor(201 + 100 * Math.random());
           devIdString = devId.toString();
-        }
-        imagePath += devIdString;
-        imagePath += '.jpeg)';
-        break;
+          imagePath += devIdString;
+          imagePath += '.png)';
+          break;
+  
+        // also a development mode with innovators from meetups
+        case 'meetups' : 
+          
+          imagePath = 'url(/assets/img/innovators/innovator-190219';
+          devId = 0;
+          devIdString = '';
+  
+          devId = Math.floor(rank + id + 100 * Math.random());
+          if (devId < 10 ) {
+            devIdString = '00' + devId.toString();        
+          } else if ( devId < 100 ) {
+            devIdString = '0' + devId.toString();
+          } else {
+            devIdString = devId.toString();
+          }
+          imagePath += devIdString;
+          imagePath += '.jpeg)';
+          break;
+  
+        default: 
+          imagePath += '000';   // [ ToDo ] - Set lower number images '000' for self Projects / Opportunities !!!
+      }  
 
-      default: 
-        imagePath += '000';   // [ ToDo ] - Set lower number images '000' for self Projects / Opportunities !!!
     }
-
 
     return imagePath;
   }
+
+  // Dynamic Project Owner images
+  // rank: 1 - 7 ; id: row index from Queue/List ;
+  // [ ToDo ] - code the real function to read from projects table not get random images
+  setSrvOwnerImage(rank: number, id: number) {
+
+    let imagePath = '';
+    let devId = 0;
+    let devIdString = '';
+
+    if ( this.srvUpdated[rank] == 0 ) {
+
+      // Set as updated with the time of the update
+      this.srvUpdated[rank] = Date.now();
+
+      // Update the image
+      switch (this.domain) {
+
+        // A dev & show mode based on news on Projects/Services of
+        case 'world' :  
+  
+          // 100px folder for World leaders Mar 2019
+          imagePath = 'url(/assets/img/100-leaders/';
+          devId = 0;
+          devIdString = '';
+  
+          // Random nr from 201 to 300
+          devId = Math.floor(201 + 100 * Math.random());
+          devIdString = devId.toString();
+          imagePath += devIdString;
+          imagePath += '.png)';
+          break;
+  
+        // also a development mode with innovators from meetups
+        case 'meetups' : 
+          
+          imagePath = 'url(/assets/img/innovators/innovator-190219';
+          devId = 0;
+          devIdString = '';
+  
+          devId = Math.floor(rank + id + 100 * Math.random());
+          if (devId < 10 ) {
+            devIdString = '00' + devId.toString();        
+          } else if ( devId < 100 ) {
+            devIdString = '0' + devId.toString();
+          } else {
+            devIdString = devId.toString();
+          }
+          imagePath += devIdString;
+          imagePath += '.jpeg)';
+          break;
+  
+        default: 
+          imagePath += '000';   // [ ToDo ] - Set lower number images '000' for self Projects / Opportunities !!!
+      }  
+
+    }
+
+    return imagePath;
+  }
+
 
   getPrjFlag1() {
     let flagPath = 'url(/assets/flags/';
