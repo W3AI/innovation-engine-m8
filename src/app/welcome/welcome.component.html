@@ -463,97 +463,121 @@
             <div id="project-list" [@prjState]="prj_state">
 
             <div class="project-container">
+
               <div class="project-title">1. {{ problems[(i) % nrLinks][0] }}</div>
+
               <div class="project-owner-container" fxLayout="row">
+                <div class="project-owner-image" [ngStyle]="{'background-image': setOwnerImage('prj', 1, 0) }">
+                  <img src="/assets/img/3-scripts-dna-left-150.png"></div>
                 <div class="project-owner-badges">1. Innovator<br>
                   Canada<br>
                   Meetup: TCP1P<br>
                   Toronto
                 </div>
-                <div class="project-owner-image" 
-                [ngStyle]="{'background-image': setOwnerImage('prj', 1, 0) }">
-                  <img src="/assets/img/3-scripts-dna-left-150.png"></div>
               </div>
+
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status</div>
-                <div class="project-state-badges">
+                <div class="project-state-image">
                   <img src="/assets/img/3-scripts-dna-left-150.png"></div>
+                <div class="project-state-badges">1. Tags -</div>
               </div>
+
             </div>
 
             <div class="project-container">
+
               <div class="project-title">2. {{ problems[(i) % nrLinks][1] }}</div>
+
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">2. Innovator </div>
                 <div class="project-owner-image" 
                 [ngStyle]="{'background-image': setOwnerImage('prj', 2, 0) }">
                 <img src="/assets/img/manual-business-process-150.png"></div>
+                <div class="project-owner-badges">2. Innovator </div>
               </div>
+
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">Project Status</div>
-                <div class="project-state-badges">
-                  <img src="/assets/img/manual-project-manager-150.png"></div>
+                <div class="project-state-image"><img src="/assets/img/manual-project-manager-150.png"></div>
+                <div class="project-state-badges">2. Tags -</div>
               </div>
+
             </div>
 
             <div class="project-container">
+
               <div class="project-title">3. {{ problems[(i) % nrLinks][2] }}</div>
+
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">3. Innovator</div>
                 <div class="project-owner-image" 
                 [ngStyle]="{'background-image': setOwnerImage('prj', 3, 0) }"></div>
+                <div class="project-owner-badges">3. Innovator</div>
               </div>
+
               <div class="project-state-container" fxLayout="row">
                 <div class="project-state-image">Project Status: </div>
                 <div class="project-state-badges">3. Tags -</div>
               </div>
+
             </div>
             
             <div class="project-container">
+
               <div class="project-title">4. {{ problems[(i) % nrLinks][3] }}</div>
-              <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">4. Innovator</div>
+
+              <div class="project-owner-container" fxLayout="row">                
                 <div class="project-owner-image" 
                 [ngStyle]="{'background-image': setOwnerImage('prj', 4, 0) }"></div>
+                <div class="project-owner-badges">4. Innovator</div>
               </div>
+
               <div class="project-state-container" fxLayout="row">
                 <div class="project-state-image">Project Status: </div>
                 <div class="project-state-badges">4. Tags -</div>
               </div>
+
             </div>
             
             <div class="project-container">
+
               <div class="project-title">5. {{ problems[(i) % nrLinks][4] }}</div>
+
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">5. Innovator</div>
                 <div class="project-owner-image" 
                 [ngStyle]="{'background-image': setOwnerImage('prj', 5, 0) }"></div>
+                <div class="project-owner-badges">5. Innovator</div>
               </div>
+
               <div class="project-state-container" fxLayout="row">
                 <div class="project-state-image">Project Status: </div>
                 <div class="project-state-badges">5. Tags -</div>
               </div>
+
             </div>
             
             <div class="project-container">
+
               <div class="project-title">6. {{ problems[(i) % nrLinks][5] }}</div>
+
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">6. Innovator</div>
                 <div class="project-owner-image" 
                 [ngStyle]="{'background-image': setOwnerImage('prj', 6, 0) }"></div>
+                <div class="project-owner-badges">6. Innovator</div>
               </div>
+
               <div class="project-state-container" fxLayout="row">
                 <div class="project-state-image">Project Status: </div>
                 <div class="project-state-badges">6. Tags -</div>
               </div>
+
             </div>
             
             <div class="project-container">
+
               <div class="project-title">7. {{ problems[(i) % nrLinks][6] }}</div>
+
               <div class="project-owner-container" fxLayout="row">
-                <div class="project-owner-badges">7. Innovator</div>
                 <div class="project-owner-image" 
                 [ngStyle]="{'background-image': setOwnerImage('prj', 7, 0) }"></div>
+                <div class="project-owner-badges">7. Innovator</div>
               </div>
               <div class="project-state-container" fxLayout="row">
                 <div class="project-state-image">Project Status: </div>

@@ -589,6 +589,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
       // The loop for combaining pairs of related (project, service) 
       while ( this.c <= this.combNo && this.combInProgress == true) {
 
+        // Increment the index of combinations
         this.c++;
 
         if ( this.c == this.combNo ) {
