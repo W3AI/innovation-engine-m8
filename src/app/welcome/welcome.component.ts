@@ -267,6 +267,11 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   prjUpdated = [0, 0, 0, 0, 0, 0, 0];
   srvUpdated = [0, 0, 0, 0, 0, 0, 0];
 
+  // Project Owner Image Ids array for 7 ranks in the Interest Query Table (prj+srv)
+  prjOwnerImgId = [101, 102, 103, 104, 105, 106, 107];
+  // Service Owner Image Ids array for 7 ranks in the Interest Query Table (prj+srv)
+  srvOwnerImgId = [101, 102, 103, 104, 105, 106, 107];
+
   // The domain of interests: e.g.: meetups, world, politics, business, math, programming, RPA, etc  
   domain: string = 'world';   // Should refer to world leaders, investors, technologists
   // [ ToDo ] - Arrange a domain filter/selection in the setup module
@@ -592,18 +597,22 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
         this.p = 0;
         this.s = 0;
 
-        // 
+        // prj and srv _state should be changed to "rank"
         this.prj_state = '0';
         this.srv_state = '0';
 
-        // Initialize Projects Updated array
+        // Initialize Projects Updated arrays
         for ( let rank = 0; rank < this.prjUpdated.length; rank++) {
           this.prjUpdated[rank] = 0;  // 0 - not updated
+          // [ ToDo ] - change 201 below dynamically based on demo / dev settings
+          this.prjOwnerImgId[rank] = Math.floor(201 + 100 * Math.random());
         }
 
         // Initialize Services Updated array
         for ( let rank = 0; rank < this.srvUpdated.length; rank++) {
           this.srvUpdated[rank] = 0;  // 0 - not updated
+          // [ ToDo ] - change 201 below dynamically based on demo / dev settings
+          this.srvOwnerImgId[rank] = Math.floor(201 + 100 * Math.random());
         }
 
       }
@@ -731,7 +740,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
       // Loop through the Link combinatorics Stack and pass each pair of ( Prj, Srv) through a visualization function
       // for top/bottom (or in/out) projects and services with increased z-index for animating ins and outs
 
-    }
+    }   // END of If 'manual' now called 'fair' - for vizualization of combinations
 
     this.row = (this.i+2)%this.nrLinks; // calculate the row in the queue array to display in the manual table
     this.shares = 10 + Math.floor(Math.random() * Math.floor(1000))
@@ -1149,7 +1158,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     let devId = 0;
     let devIdString = '';
 
-    if ( this.prjUpdated[rank] == 0 ) {
+    if ( this.prjUpdated[rank] >= 0 ) {
 
       // Set as updated with the time of the update
       this.prjUpdated[rank] = Date.now();
@@ -1166,7 +1175,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
           devIdString = '';
   
           // Random nr from 201 to 300
-          devId = Math.floor(201 + 100 * Math.random());
+          devId = this.prjOwnerImgId[rank];
           devIdString = devId.toString();
           imagePath += devIdString;
           imagePath += '.png)';
@@ -1209,7 +1218,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     let devId = 0;
     let devIdString = '';
 
-    if ( this.srvUpdated[rank] == 0 ) {
+    if ( this.srvUpdated[rank] >= 0 ) {
 
       // Set as updated with the time of the update
       this.srvUpdated[rank] = Date.now();
@@ -1226,7 +1235,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
           devIdString = '';
   
           // Random nr from 201 to 300
-          devId = Math.floor(201 + 100 * Math.random());
+          devId = this.srvOwnerImgId[rank];
           devIdString = devId.toString();
           imagePath += devIdString;
           imagePath += '.png)';
