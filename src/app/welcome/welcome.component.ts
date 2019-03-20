@@ -749,86 +749,86 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
   // Continuation callbacks for Project Owner / Governance
   animPoInDone() {
-    this.po_script_in = 'result( po_script_in() )';
+    this.po_script_in = 'prdOwnerScriptIn(Agile_DNA.xls)';
     this.po_in_state = 'off';
     this.po_mid_state = 'on';
   }
   animPoMidDone() {
-    this.po_script_mid = 'result( po_script_mid() )';
+    this.po_script_mid = 'prdOwnerScriptMid(Agile_DNA.xls)';
     this.po_mid_state = 'off';
     this.po_out_state = 'on';
   }
   animPoOutDone() {
-    this.po_script_out = 'result( po_script_out() )';
+    this.po_script_out = 'prdOwnerScriptOut(Agile_DNA.xls)';
     this.po_out_state = 'off';
     this.po_deal_state = 'on';
   }
   animPoDealDone() {
-    this.po_script_deal = 'result( po_script_deal() )';
+    this.po_script_deal = 'prdOwnerScriptDeal(Agile_DNA.xls)';
     this.po_deal_state = 'off';
     this.ps_in_state = 'on';    // 'on' - if there is a deal to plan execution
   }
   // Continuation callbacks for Project Status / Execution
   animPsInDone() {
-    this.ps_script_in = 'result( ps_script_in() )';
+    this.ps_script_in = 'prjStatusScriptIn(Agile_DNA.xls)';
     this.ps_in_state = 'off';
     this.ps_mid_state = 'on';
   }
   animPsMidDone() {
-    this.ps_script_mid = 'result( ps_script_mid() )';
+    this.ps_script_mid = 'prjStatusScriptMid(Agile_DNA.xls)';
     this.ps_mid_state = 'off';
     this.ps_out_state = 'on';
   }
   animPsOutDone() {
-    this.ps_script_out = 'result( ps_script_out() )';
+    this.ps_script_out = 'prjStatusScriptOut(Agile_DNA.xls)';
     this.ps_out_state = 'off';
     this.ps_deal_state = 'on';
   }
   animPsDealDone() {
-    this.ps_script_deal = 'result( ps_script_deal() )';
+    this.ps_script_deal = 'prjStatusScriptDeal(Agile_DNA.xls)';
     this.ps_deal_state = 'off';
     // Task was executed and Project Manager to schedule/approve payment
   }
 
   // Continuation callbacks for Service Owner / Governance
   animSoInDone() {
-    this.so_script_in = 'result( so_script_in() )';
+    this.so_script_in = 'srvOwnerScriptIn(Agile_DNA.xls)';
     this.so_in_state = 'off';
     this.so_mid_state = 'on';
   }
   animSoMidDone() {
-    this.so_script_mid = 'result( so_script_mid() )';
+    this.so_script_mid = 'srvOwnerScriptMid(Agile_DNA.xls)';
     this.so_mid_state = 'off';
     this.so_out_state = 'on';
   }
   animSoOutDone() {
-    this.so_script_out = 'result( so_script_out() )';
+    this.so_script_out = 'srvOwnerScriptOut(Agile_DNA.xls)';
     this.so_out_state = 'off';
     this.so_deal_state = 'on';
   }
   animSoDealDone() {
-    this.so_script_deal = 'result( so_script_deal() )';
+    this.so_script_deal = 'srvOwnerScriptDeal(Agile_DNA.xls)';
     this.so_deal_state = 'off';
     this.ts_in_state = 'on';    // 'on' - if there is a deal to plan task execution
   }
   // Continuation callbacks for Task Status / Execution
   animTsInDone() {
-    this.ts_script_in = 'result( ts_script_in() )';
+    this.ts_script_in = 'taskStatusScriptIn(Agile_DNA.xls)';
     this.ts_in_state = 'off';
     this.ts_mid_state = 'on';
   }
   animTsMidDone() {
-    this.ts_script_mid = 'result( ts_script_mid() )';
+    this.ts_script_mid = 'taskStatusScriptMid(Agile_DNA.xls)';
     this.ts_mid_state = 'off';
     this.ts_out_state = 'on';
   }
   animTsOutDone() {
-    this.ts_script_out = 'result( ts_script_out() )';
+    this.ts_script_out = 'taskStatusScriptOut(Agile_DNA.xls)';
     this.ts_out_state = 'off';
     this.ts_deal_state = 'on';
   }
   animTsDealDone() {
-    this.ts_script_deal = 'result( ts_script_deal() )';
+    this.ts_script_deal = 'taskStatusScriptDeal(Agile_DNA.xls)';
     this.ts_deal_state = 'off';
     // Task was executed and Project Manager to schedule/approve payment
   }
