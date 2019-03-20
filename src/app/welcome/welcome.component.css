@@ -312,9 +312,9 @@ a.ppt-links {
 }
 
 .project-state-image {
-    padding: 4px;
     width: 150px; 
     height: 150px; 
+    background-size:  cover;
 }
 
 .project-state-badges {
