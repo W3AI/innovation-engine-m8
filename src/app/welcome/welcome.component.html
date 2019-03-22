@@ -4,7 +4,7 @@
 
   <div class="mission">
     <h4 id="leaders">
-      w e &nbsp; c a r e &nbsp; e l e c t i o n s &nbsp; 2 0 2 0
+      2 4 / 7 &nbsp; p r i o r i t i e s &nbsp; 2 0 2 0
     </h4>
   </div>
 
@@ -477,7 +477,7 @@
               </div>
 
               <div class="project-state-container" fxLayout="row">
-                <div class="project-state-image">
+                <div class="project-state-image" [ngStyle]="{'background-image': setPrjStateImage() }">
                   <img src="/assets/img/3-scripts-dna-left-150.png"></div>
                 <div class="project-state-badges">1. Tags -</div>
               </div>
@@ -682,8 +682,10 @@
                 <div class="service-owner-badges">1. Owner</div>
               </div>
               <div class="service-state-container" fxLayout="row">
-                  <div class="service-state-badges"><img src="/assets/img/3-scripts-dna-right-150.png" width="150px;" height="150px;"></div>
-                <div class="service-state-image">Service Status: </div>
+                <div class="service-state-image" [ngStyle]="{'background-image': setSrvStateImage() }">
+                  <img src="/assets/img/3-scripts-dna-right-150.png">
+                </div>
+                  <div class="service-state-badges">Service Status</div>
               </div>
             </div>
 

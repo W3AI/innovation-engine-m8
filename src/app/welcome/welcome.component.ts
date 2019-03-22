@@ -1209,7 +1209,11 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     return imagePath;
   }
 
-  // Dynamic Project Owner images
+  setPrjStateImage() {
+    return 'url(/assets/img/5-steps-backlog.png';
+  }
+
+  // Dynamic Service Owner images
   // rank: 1 - 7 ; id: row index from Queue/List ;
   // [ ToDo ] - code the real function to read from projects table not get random images
   setSrvOwnerImage(rank: number, id: number) {
@@ -1267,6 +1271,10 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     }
 
     return imagePath;
+  }
+
+  setSrvStateImage() {
+    return 'url(/assets/img/3-steps-forelog.png';
   }
 
 
