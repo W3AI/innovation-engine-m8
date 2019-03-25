@@ -1210,7 +1210,14 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   }
 
   setPrjStateImage() {
-    return 'url(/assets/img/5-steps-backlog.png';
+    let statusImgPath = 'url(/assets/img/grid-';
+    let devStatusId = 0;
+    let devStatusIdString = '';
+    devStatusId = Math.floor(10 * Math.random());
+    devStatusIdString = devStatusId.toString();
+    statusImgPath += devStatusIdString;
+    statusImgPath += '.png)';
+    return statusImgPath;
   }
 
   // Dynamic Service Owner images
@@ -1274,7 +1281,14 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   }
 
   setSrvStateImage() {
-    return 'url(/assets/img/3-steps-forelog.png';
+    let statusImgPath = 'url(/assets/img/grid-';
+    let devStatusId = 0;
+    let devStatusIdString = '';
+    devStatusId = Math.floor(10 * Math.random());
+    devStatusIdString = devStatusId.toString();
+    statusImgPath += devStatusIdString;
+    statusImgPath += '.png)';
+    return statusImgPath;
   }
 
 
