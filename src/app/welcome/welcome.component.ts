@@ -272,6 +272,13 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   // Service Owner Image Ids array for 7 ranks in the Interest Query Table (prj+srv)
   srvOwnerImgId = [101, 102, 103, 104, 105, 106, 107];
 
+  // Project State Image code array for 7 ranks in the Interest Query Table (prj+srv)
+  prjStateImgPath = 'url(/assets/img/dna/';
+  prjStateImg = ['ntt', 'ntt', 'ntt', 'ntt', 'ntt', 'ntt', 'ntt'];
+  // Service State Image code array for 7 ranks in the Interest Query Table (prj+srv)
+  srvStateImgPath = 'url(/assets/img/rna/';
+  srvStateImg = ['ntt', 'ntt', 'ntt', 'ntt', 'ntt', 'ntt', 'ntt'];
+
   // The domain of interests: e.g.: meetups, world, politics, business, math, programming, RPA, etc  
   domain: string = 'world';   // Should refer to world leaders, investors, technologists
   // [ ToDo ] - Arrange a domain filter/selection in the setup module
@@ -752,21 +759,25 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.po_script_in = 'prdOwnerScriptIn(Agile_DNA.xls)';
     this.po_in_state = 'off';
     this.po_mid_state = 'on';
+    this.prjStateImg[0] = 'gtt';
   }
   animPoMidDone() {
     this.po_script_mid = 'prdOwnerScriptMid(Agile_DNA.xls)';
     this.po_mid_state = 'off';
     this.po_out_state = 'on';
+    this.prjStateImg[0] = 'gnt';
   }
   animPoOutDone() {
     this.po_script_out = 'prdOwnerScriptOut(Agile_DNA.xls)';
     this.po_out_state = 'off';
     this.po_deal_state = 'on';
+    this.prjStateImg[0] = 'ggn';
   }
   animPoDealDone() {
     this.po_script_deal = 'prdOwnerScriptDeal(Agile_DNA.xls)';
     this.po_deal_state = 'off';
     this.ps_in_state = 'on';    // 'on' - if there is a deal to plan execution
+    this.prjStateImg[0] = 'ggg';
   }
   // Continuation callbacks for Project Status / Execution
   animPsInDone() {
@@ -1209,13 +1220,12 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     return imagePath;
   }
 
-  setPrjStateImage() {
-    let statusImgPath = 'url(/assets/img/grid-';
-    let devStatusId = 0;
-    let devStatusIdString = '';
-    devStatusId = Math.floor(10 * Math.random());
-    devStatusIdString = devStatusId.toString();
-    statusImgPath += devStatusIdString;
+  // Dynamic Project State images
+  // rank: 1 - 7 ; ? id: row index from Queue/List ;
+  // [ ToDo ] - code the real function to read from projects table not get random images
+  setPrjStateImage(rank: number) {
+    let statusImgPath = this.prjStateImgPath;
+    statusImgPath += this.prjStateImg[rank];
     statusImgPath += '.png)';
     return statusImgPath;
   }
@@ -1280,13 +1290,12 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     return imagePath;
   }
 
-  setSrvStateImage() {
-    let statusImgPath = 'url(/assets/img/grid-';
-    let devStatusId = 0;
-    let devStatusIdString = '';
-    devStatusId = Math.floor(10 * Math.random());
-    devStatusIdString = devStatusId.toString();
-    statusImgPath += devStatusIdString;
+  // Dynamic Service State images
+  // rank: 1 - 7 ; ? id: row index from Queue/List ;
+  // [ ToDo ] - code the real function to read from projects table not get random images
+  setSrvStateImage(rank: number) {
+    let statusImgPath = this.srvStateImgPath;
+    statusImgPath += this.srvStateImg[rank];
     statusImgPath += '.png)';
     return statusImgPath;
   }
