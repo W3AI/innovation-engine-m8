@@ -16,7 +16,7 @@ import { SetupService } from '../../setup.service';
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth$: Observable<boolean>;
-  appTitle = 'we care 24/7';
+  appTitle = 'agilemash';
 
   constructor(private store: Store<fromRoot.State>, 
               private authService: AuthService,
