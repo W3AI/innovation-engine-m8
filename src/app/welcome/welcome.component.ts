@@ -786,25 +786,25 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.ps_in_state = 'off';
     this.ps_mid_state = 'on';
     this.prjStateImgPath = 'url(/assets/img/dna/';
-    this.prjStateImg[0] = 'tgt_ttg_ttn';
+    this.prjStateImg[0] = 'tgt_ttg_tnt';
   }
   animPsMidDone() {
     this.ps_script_mid = 'prjStatusScriptMid(Agile_DNA.xls)';
     this.ps_mid_state = 'off';
     this.ps_out_state = 'on';
-    this.prjStateImg[0] = 'ttg_ttg_tnt';
+    this.prjStateImg[0] = 'ttg_tgt_ntt';
   }
   animPsOutDone() {
     this.ps_script_out = 'prjStatusScriptOut(Agile_DNA.xls)';
     this.ps_out_state = 'off';
     this.ps_deal_state = 'on';
-    this.prjStateImg[0] = 'ttg_tgt_ntt';
+    this.prjStateImg[0] = 'tgt_gtt_ttt';
   }
   animPsDealDone() {
     this.ps_script_deal = 'prjStatusScriptDeal(Agile_DNA.xls)';
     this.ps_deal_state = 'off';
     // Task was executed and Project Manager to schedule/approve payment
-    this.prjStateImg[0] = 'tgt_gtt_ttt';
+    this.prjStateImg[0] = 'ntt';
   }
 
   // Continuation callbacks for Service Owner / Governance
@@ -839,24 +839,24 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.ts_in_state = 'off';
     this.ts_mid_state = 'on';
     this.srvStateImgPath = 'url(/assets/img/rna/';
-    this.srvStateImg[0] = 'tgt_ttg_ttn';
+    this.srvStateImg[0] = 'tgt_ttg_tnt';
   }
   animTsMidDone() {
     this.ts_script_mid = 'taskStatusScriptMid(Agile_DNA.xls)';
     this.ts_mid_state = 'off';
     this.ts_out_state = 'on';
-    this.srvStateImg[0] = 'ttg_ttg_tnt';
+    this.srvStateImg[0] = 'ttg_tgt_ntt';
   }
   animTsOutDone() {
     this.ts_script_out = 'taskStatusScriptOut(Agile_DNA.xls)';
     this.ts_out_state = 'off';
     this.ts_deal_state = 'on';
-    this.srvStateImg[0] = 'ttg_tgt_ntt';
+    this.srvStateImg[0] = 'tgt_gtt_ttt';
   }
   animTsDealDone() {
     this.ts_script_deal = 'taskStatusScriptDeal(Agile_DNA.xls)';
     this.ts_deal_state = 'off';
-    this.srvStateImg[0] = 'tgt_gtt_ttt';
+    this.srvStateImg[0] = 'gtt';
     // Task was executed and Project Manager to schedule/approve payment
   }
 
