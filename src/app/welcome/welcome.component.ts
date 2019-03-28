@@ -785,26 +785,26 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.ps_script_in = 'prjStatusScriptIn(Agile_DNA.xls)';
     this.ps_in_state = 'off';
     this.ps_mid_state = 'on';
-    this.prjStateImgPath = 'url(/assets/img/rna/';
-    this.prjStateImg[0] = 'ntt';
+    this.prjStateImgPath = 'url(/assets/img/dna/';
+    this.prjStateImg[0] = 'tgt_ttg_ttn';
   }
   animPsMidDone() {
     this.ps_script_mid = 'prjStatusScriptMid(Agile_DNA.xls)';
     this.ps_mid_state = 'off';
     this.ps_out_state = 'on';
-    this.prjStateImg[0] = 'gnt';
+    this.prjStateImg[0] = 'ttg_ttg_tnt';
   }
   animPsOutDone() {
     this.ps_script_out = 'prjStatusScriptOut(Agile_DNA.xls)';
     this.ps_out_state = 'off';
     this.ps_deal_state = 'on';
-    this.prjStateImg[0] = 'ggn';
+    this.prjStateImg[0] = 'ttg_tgt_ntt';
   }
   animPsDealDone() {
     this.ps_script_deal = 'prjStatusScriptDeal(Agile_DNA.xls)';
     this.ps_deal_state = 'off';
     // Task was executed and Project Manager to schedule/approve payment
-    this.prjStateImg[0] = 'ggg';
+    this.prjStateImg[0] = 'tgt_gtt_ttt';
   }
 
   // Continuation callbacks for Service Owner / Governance
@@ -838,25 +838,25 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.ts_script_in = 'taskStatusScriptIn(Agile_DNA.xls)';
     this.ts_in_state = 'off';
     this.ts_mid_state = 'on';
-    this.srvStateImgPath = 'url(/assets/img/dna/';
-    this.srvStateImg[0] = 'ntt';
+    this.srvStateImgPath = 'url(/assets/img/rna/';
+    this.srvStateImg[0] = 'tgt_ttg_ttn';
   }
   animTsMidDone() {
     this.ts_script_mid = 'taskStatusScriptMid(Agile_DNA.xls)';
     this.ts_mid_state = 'off';
     this.ts_out_state = 'on';
-    this.srvStateImg[0] = 'gnt';
+    this.srvStateImg[0] = 'ttg_ttg_tnt';
   }
   animTsOutDone() {
     this.ts_script_out = 'taskStatusScriptOut(Agile_DNA.xls)';
     this.ts_out_state = 'off';
     this.ts_deal_state = 'on';
-    this.srvStateImg[0] = 'ggn';
+    this.srvStateImg[0] = 'ttg_tgt_ntt';
   }
   animTsDealDone() {
     this.ts_script_deal = 'taskStatusScriptDeal(Agile_DNA.xls)';
     this.ts_deal_state = 'off';
-    this.srvStateImg[0] = 'ggg';
+    this.srvStateImg[0] = 'tgt_gtt_ttt';
     // Task was executed and Project Manager to schedule/approve payment
   }
 
