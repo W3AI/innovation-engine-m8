@@ -347,26 +347,26 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   // dev Governance and Execution steps vars for Projects and Services
   // Project ===========
   //    Governance ----- 'o' - owner
-  po_script_in_dev: string = 'query service terms -> ';
-  po_script_mid_dev: string = 'process service terms <- ';
-  po_script_out_dev: string = 'send deal proposal -> ';
-  po_script_deal_dev: string = 'confirm deal <-> ';
+  po_script_in_dev: string = 'status';      // 'query service terms -> ';
+  po_script_mid_dev: string = 'rate';       // 'process service terms <- ';
+  po_script_out_dev: string = 'terms';      // 'send deal proposal -> ';
+  po_script_deal_dev: string = 'book';      // 'confirm deal <-> ';
   //    Execution ------- 's' - state
-  ps_script_in_dev: string = 'query service state -> ';
-  ps_script_mid_dev: string = 'process service result <- ';
-  ps_script_out_dev: string = 'test progress -> ';
-  ps_script_deal_dev: string = 'book payment <-> ';
+  ps_script_in_dev: string = 'input';       // 'query service state -> ';
+  ps_script_mid_dev: string = 'results';    // 'process service result <- ';
+  ps_script_out_dev: string = 'tests';      // 'test progress -> ';
+  ps_script_deal_dev: string = 'pay';      // 'book payment <-> ';
   // Service ===========
   //    Governance -----  'o' - owner
-  so_script_in_dev: string = ' <- query project terms';
-  so_script_mid_dev: string = ' -> process project terms';
-  so_script_out_dev: string = ' <- send deal proposal';
-  so_script_deal_dev: string = ' <-> confirm deal';
+  so_script_in_dev: string = 'status'; // ' <- query project terms';
+  so_script_mid_dev: string = 'rate'; // ' -> process project terms';
+  so_script_out_dev: string = 'terms'; // ' <- send deal proposal';
+  so_script_deal_dev: string = 'book'; // ' <-> confirm deal';
   //    Execution ------- 't' - task; 's' - state
-  ts_script_in_dev: string = ' <- query project state';
-  ts_script_mid_dev: string = ' -> process task';
-  ts_script_out_dev: string = ' <- update project';
-  ts_script_deal_dev: string = ' <-> book payment';
+  ts_script_in_dev: string = 'input'; // ' <- query project state';
+  ts_script_mid_dev: string = 'results'; // ' -> process task';
+  ts_script_out_dev: string = 'tests'; // ' <- update project';
+  ts_script_deal_dev: string = 'pay'; // ' <-> book payment';
 
 
 
@@ -756,52 +756,52 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
   // Continuation callbacks for Project Owner / Governance
   animPoInDone() {
-    this.po_script_in = 'prdOwnerScriptIn(Agile_DNA.xls)';
+    this.po_script_in = 'status ✔';
     this.po_in_state = 'off';
     this.po_mid_state = 'on';
     this.prjStateImgPath = 'url(/assets/img/dna/';
     this.prjStateImg[0] = 'gtt';
   }
   animPoMidDone() {
-    this.po_script_mid = 'prdOwnerScriptMid(Agile_DNA.xls)';
+    this.po_script_mid = 'rate ✔';
     this.po_mid_state = 'off';
     this.po_out_state = 'on';
     this.prjStateImg[0] = 'gnt';
   }
   animPoOutDone() {
-    this.po_script_out = 'prdOwnerScriptOut(Agile_DNA.xls)';
+    this.po_script_out = 'terms ✔';
     this.po_out_state = 'off';
     this.po_deal_state = 'on';
     this.prjStateImg[0] = 'ggn';
   }
   animPoDealDone() {
-    this.po_script_deal = 'prdOwnerScriptDeal(Agile_DNA.xls)';
+    this.po_script_deal = 'booked ✔';
     this.po_deal_state = 'off';
     this.ps_in_state = 'on';    // 'on' - if there is a deal to plan execution
     this.prjStateImg[0] = 'ggg';
   }
   // Continuation callbacks for Project Status / Execution
   animPsInDone() {
-    this.ps_script_in = 'prjStatusScriptIn(Agile_DNA.xls)';
+    this.ps_script_in = 'input ✔';
     this.ps_in_state = 'off';
     this.ps_mid_state = 'on';
     this.prjStateImgPath = 'url(/assets/img/dna/';
     this.prjStateImg[0] = 'tgt_ttg_tnt';
   }
   animPsMidDone() {
-    this.ps_script_mid = 'prjStatusScriptMid(Agile_DNA.xls)';
+    this.ps_script_mid = 'results ✔';
     this.ps_mid_state = 'off';
     this.ps_out_state = 'on';
     this.prjStateImg[0] = 'ttg_tgt_ntt';
   }
   animPsOutDone() {
-    this.ps_script_out = 'prjStatusScriptOut(Agile_DNA.xls)';
+    this.ps_script_out = 'tests ✔';
     this.ps_out_state = 'off';
     this.ps_deal_state = 'on';
     this.prjStateImg[0] = 'tgt_gtt_ttt';
   }
   animPsDealDone() {
-    this.ps_script_deal = 'prjStatusScriptDeal(Agile_DNA.xls)';
+    this.ps_script_deal = 'paid ✔';
     this.ps_deal_state = 'off';
     // Task was executed and Project Manager to schedule/approve payment
     this.prjStateImg[0] = 'ntt';
@@ -809,52 +809,52 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
   // Continuation callbacks for Service Owner / Governance
   animSoInDone() {
-    this.so_script_in = 'srvOwnerScriptIn(Agile_DNA.xls)';
+    this.so_script_in = '✔ status';
     this.so_in_state = 'off';
     this.so_mid_state = 'on';
     this.srvStateImgPath = 'url(/assets/img/rna/';
     this.srvStateImg[0] = 'gtt';
   }
   animSoMidDone() {
-    this.so_script_mid = 'srvOwnerScriptMid(Agile_DNA.xls)';
+    this.so_script_mid = '✔ rate';
     this.so_mid_state = 'off';
     this.so_out_state = 'on';
     this.srvStateImg[0] = 'gnt';
   }
   animSoOutDone() {
-    this.so_script_out = 'srvOwnerScriptOut(Agile_DNA.xls)';
+    this.so_script_out = '✔ terms';
     this.so_out_state = 'off';
     this.so_deal_state = 'on';
     this.srvStateImg[0] = 'ggn';
   }
   animSoDealDone() {
-    this.so_script_deal = 'srvOwnerScriptDeal(Agile_DNA.xls)';
+    this.so_script_deal = '✔ booked';
     this.so_deal_state = 'off';
     this.ts_in_state = 'on';    // 'on' - if there is a deal to plan task execution
     this.srvStateImg[0] = 'ggg';
   }
   // Continuation callbacks for Task Status / Execution
   animTsInDone() {
-    this.ts_script_in = 'taskStatusScriptIn(Agile_DNA.xls)';
+    this.ts_script_in = '✔ input';
     this.ts_in_state = 'off';
     this.ts_mid_state = 'on';
     this.srvStateImgPath = 'url(/assets/img/rna/';
     this.srvStateImg[0] = 'tgt_ttg_tnt';
   }
   animTsMidDone() {
-    this.ts_script_mid = 'taskStatusScriptMid(Agile_DNA.xls)';
+    this.ts_script_mid = '✔ results';
     this.ts_mid_state = 'off';
     this.ts_out_state = 'on';
     this.srvStateImg[0] = 'ttg_tgt_ntt';
   }
   animTsOutDone() {
-    this.ts_script_out = 'taskStatusScriptOut(Agile_DNA.xls)';
+    this.ts_script_out = '✔ tests';
     this.ts_out_state = 'off';
     this.ts_deal_state = 'on';
     this.srvStateImg[0] = 'tgt_gtt_ttt';
   }
   animTsDealDone() {
-    this.ts_script_deal = 'taskStatusScriptDeal(Agile_DNA.xls)';
+    this.ts_script_deal = '✔ paid';
     this.ts_deal_state = 'off';
     this.srvStateImg[0] = 'gtt';
     // Task was executed and Project Manager to schedule/approve payment
