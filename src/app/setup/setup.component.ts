@@ -57,7 +57,7 @@ export class SetupComponent implements OnInit {
     clearInterval(this.timer);
     // Line below is just to offer a bit of feedback onSetCycle change
     this.newInterval = this.interval;
-    setTimeout(1000);
+    // setTimeout(1000);
     this.startDnaLoop();
   }
 
