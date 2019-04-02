@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, AfterContentInit } from '@angular/cor
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { trigger, state, style, transition, animate, group } from '@angular/animations';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import * as fromRoot from '../app.reducer';
 import { AuthService } from '../auth/auth.service';
@@ -911,7 +912,8 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.startDnaLoop();
   }
 
-  constructor(private store: Store<fromRoot.State>, private authService: AuthService) {
+  constructor(private store: Store<fromRoot.State>, private authService: AuthService, 
+    private sanitizer: DomSanitizer) {
 
     // To detach ChangeDetector in order to eliminate ExpressionChangedAfterItHasBeenCheckedError
     //  as we loop through projects / services continually and change the background images
@@ -1320,7 +1322,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjFlag1() {
     let flagPath = 'url(/assets/flags/';
     if ( this.pF1 && (this.pF1 != '')) {
-      flagPath += this.pF1.toUpperCase() + '.png)';
+      flagPath += this.pF1 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1329,7 +1331,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjFlag2() {
     let flagPath = 'url(/assets/flags/';
     if ( this.pF2  && (this.pF2 != '')) {
-      flagPath += this.pF2.toUpperCase() + '.png';
+      flagPath += this.pF2 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1338,7 +1340,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjFlag3() {
     let flagPath = 'url(/assets/flags/';
     if ( this.pF3 && (this.pF3 != '' )) {
-      flagPath += this.pF3.toUpperCase() + '.png';
+      flagPath += this.pF3 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1347,7 +1349,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjFlag4() {
     let flagPath = 'url(/assets/flags/';
     if ( this.pF4 && (this.pF4 != '' )) {
-      flagPath += this.pF4.toUpperCase() + '.png';
+      flagPath += this.pF4 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1356,7 +1358,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjFlag5() {
     let flagPath = 'url(/assets/flags/';
     if ( this.pF5 && (this.pF5 != '' ) ) {
-      flagPath += this.pF5.toUpperCase() + '.png';
+      flagPath += this.pF5 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1365,7 +1367,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjFlag6() {
     let flagPath = 'url(/assets/flags/';
     if ( this.pF6 && (this.pF6 != '' ) ) {
-      flagPath += this.pF6.toUpperCase() + '.png';
+      flagPath += this.pF6 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1374,7 +1376,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjFlag7() {
     let flagPath = 'url(/assets/flags/';
     if ( this.pF7 && (this.pF7 != '' ) ) {
-      flagPath += this.pF7.toUpperCase() + '.png';
+      flagPath += this.pF7 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1384,7 +1386,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjStat1() {
     let statPath = 'url(/assets/img/s';
     if ( this.pStat1 && (this.pStat1 != '' ) ) {
-      statPath += this.pStat1 + '.png';
+      statPath += this.pStat1 + '.png)';
     } else {
       statPath = 'url(/assets/img/sbg.png)';
     }
@@ -1393,7 +1395,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjStat2() {
     let statPath = 'url(/assets/img/s';
     if ( this.pStat2 && (this.pStat2 != '' ) ) {
-      statPath += this.pStat2 + '.png';
+      statPath += this.pStat2 + '.png)';
     } else {
       statPath = 'url(/assets/img/sbg.png)';
     }
@@ -1402,7 +1404,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjStat3() {
     let statPath = 'url(/assets/img/s';
     if ( this.pStat3 && (this.pStat3 != '' ) ) {
-      statPath += this.pStat3 + '.png';
+      statPath += this.pStat3 + '.png)';
     } else {
       statPath = 'url(/assets/img/sbg.png)';
     }
@@ -1411,7 +1413,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjStat4() {
     let statPath = 'url(/assets/img/s';
     if ( this.pStat4 && (this.pStat4 != '' ) ) {
-      statPath += this.pStat4 + '.png';
+      statPath += this.pStat4 + '.png)';
     } else {
       statPath = 'url(/assets/img/sbg.png)';
     }
@@ -1420,7 +1422,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjStat5() {
     let statPath = 'url(/assets/img/s';
     if ( this.pStat5 && (this.pStat5 != '' ) ) {
-      statPath += this.pStat5 + '.png';
+      statPath += this.pStat5 + '.png)';
     } else {
       statPath = 'url(/assets/img/sbg.png)';
     }
@@ -1429,7 +1431,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjStat6() {
     let statPath = 'url(/assets/img/s';
     if ( this.pStat6 && (this.pStat6 != '' ) ) {
-      statPath += this.pStat6 + '.png';
+      statPath += this.pStat6 + '.png)';
     } else {
       statPath = 'url(/assets/img/sbg.png)';
     }
@@ -1438,7 +1440,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getPrjStat7() {
     let statPath = 'url(/assets/img/s';
     if ( this.pStat7 && (this.pStat7 != '' ) ) {
-      statPath += this.pStat7 + '.png';
+      statPath += this.pStat7 + '.png)';
     } else {
       statPath = 'url(/assets/img/sbg.png)';
     }
@@ -1449,7 +1451,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getSrvFlag1() {
     let flagPath = 'url(/assets/flags/';
     if ( this.sF1 && (this.sF1 != '')) {
-      flagPath += this.sF1.toUpperCase() + '.png';
+      flagPath += this.sF1 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1458,7 +1460,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getSrvFlag2() {
     let flagPath = 'url(/assets/flags/';
     if ( this.sF2  && (this.sF2 != '')) {
-      flagPath += this.sF2.toUpperCase() + '.png';
+      flagPath += this.sF2 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1467,7 +1469,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getSrvFlag3() {
     let flagPath = 'url(/assets/flags/';
     if ( this.sF3 && (this.sF3 != '' )) {
-      flagPath += this.sF3.toUpperCase() + '.png';
+      flagPath += this.sF3 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1476,7 +1478,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getSrvFlag4() {
     let flagPath = 'url(/assets/flags/';
     if ( this.sF4 && (this.sF4 != '' )) {
-      flagPath += this.sF4.toUpperCase() + '.png';
+      flagPath += this.sF4 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1485,7 +1487,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getSrvFlag5() {
     let flagPath = 'url(/assets/flags/';
     if ( this.sF5 && (this.sF5 != '' ) ) {
-      flagPath += this.sF5.toUpperCase() + '.png';
+      flagPath += this.sF5 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1494,7 +1496,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getSrvFlag6() {
     let flagPath = 'url(/assets/flags/';
     if ( this.sF6 && (this.sF6 != '' ) ) {
-      flagPath += this.sF6.toUpperCase() + '.png';
+      flagPath += this.sF6 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1503,7 +1505,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
   getSrvFlag7() {
     let flagPath = 'url(/assets/flags/';
     if ( this.sF7 && (this.sF7 != '' ) ) {
-      flagPath += this.sF7.toUpperCase() + '.png';
+      flagPath += this.sF7 + '.png)';
     } else {
       flagPath = 'url(/assets/flags/bg.png)';
     }
@@ -1514,7 +1516,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     getSrvStat1() {
       let statPath = 'url(/assets/img/s';
       if ( this.sStat1 && (this.sStat1 != '' ) ) {
-        statPath += this.sStat1 + '.png';
+        statPath += this.sStat1 + '.png)';
       } else {
         statPath = 'url(/assets/img/sbg.png)';
       }
@@ -1523,7 +1525,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     getSrvStat2() {
       let statPath = 'url(/assets/img/s';
       if ( this.sStat2 && (this.sStat2 != '' ) ) {
-        statPath += this.sStat2 + '.png';
+        statPath += this.sStat2 + '.png)';
       } else {
         statPath = 'url(/assets/img/sbg.png)';
       }
@@ -1532,7 +1534,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     getSrvStat3() {
       let statPath = 'url(/assets/img/s';
       if ( this.sStat3 && (this.sStat3 != '' ) ) {
-        statPath += this.sStat3 + '.png';
+        statPath += this.sStat3 + '.png)';
       } else {
         statPath = 'url(/assets/img/sbg.png)';
       }
@@ -1541,7 +1543,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     getSrvStat4() {
       let statPath = 'url(/assets/img/s';
       if ( this.sStat4 && (this.sStat4 != '' ) ) {
-        statPath += this.sStat4 + '.png';
+        statPath += this.sStat4 + '.png)';
       } else {
         statPath = 'url(/assets/img/sbg.png)';
       }
@@ -1550,7 +1552,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     getSrvStat5() {
       let statPath = 'url(/assets/img/s';
       if ( this.sStat5 && (this.sStat5 != '' ) ) {
-        statPath += this.sStat5 + '.png';
+        statPath += this.sStat5 + '.png)';
       } else {
         statPath = 'url(/assets/img/sbg.png)';
       }
@@ -1559,7 +1561,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     getSrvStat6() {
       let statPath = 'url(/assets/img/s';
       if ( this.sStat6 && (this.sStat6 != '' ) ) {
-        statPath += this.sStat6 + '.png';
+        statPath += this.sStat6 + '.png)';
       } else {
         statPath = 'url(/assets/img/sbg.png)';
       }
@@ -1568,7 +1570,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     getSrvStat7() {
       let statPath = 'url(/assets/img/s';
       if ( this.sStat7 && (this.sStat7 != '' ) ) {
-        statPath += this.sStat7 + '.png';
+        statPath += this.sStat7 + '.png)';
       } else {
         statPath = 'url(/assets/img/sbg.png)';
       }
