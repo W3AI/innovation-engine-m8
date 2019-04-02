@@ -4,7 +4,7 @@
 
   <div class="mission">
     <h4 id="leaders">
-agile &nbsp; innovation &nbsp; matching
+algorithmic &nbsp; innovation &nbsp; engine
 <!--      t e a m &nbsp; p r i o r i t i e s &nbsp; 2 4 / 7 -->
     </h4>
   </div>
@@ -888,7 +888,7 @@ agile &nbsp; innovation &nbsp; matching
     <p>PayTM - Meetups hosting Toronto</p>
     <p>Thomson-Reuters - Meetup hosting</p>
     <p>HBC - Meetups hosting Toronto & NYC</p>
-    <p>Facebook Developers Circles</p>
+    <p>Facebook Developer Circles - FaceMash</p>
     <p>Dalhausie - Meetups hosting Halifax</p>
     <p>Toronto TCP1P Meetup Innovators</p>
     <p>New York Manhattan AIR Innovators</p>
@@ -935,5 +935,197 @@ agile &nbsp; innovation &nbsp; matching
     <li>dna os PoC 0.8</li>
     <li>© Ianta Labs / MIT License</li>
   </ul>
+
+  <hr>
+
+  <h1>Interests Loop</h1>
+
+  <section class="process-table" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="0px">
+    <table id="loop">
+      <tr>
+        <td style="width:3px"></td>
+        <td style="width:7px"></td>
+        <td style="width:105px"></td>
+        <td style="width:20px"></td>
+        <td style="width:10px"></td>
+        <td style="width:85px"></td>
+        <td style="width:10px"></td>
+        <td style="width:20px"></td>
+        <td style="width:105px"></td>
+        <td style="width:7px"></td>
+        <td style="width:3px"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td contenteditable="true"><b>&nbsp;Projects - PMO&nbsp;</b></td>
+        <td></td>
+        <td></td>
+        <td contenteditable="true"><b>Interests</b></td>
+        <td></td>
+        <td></td>
+        <td contenteditable="true"><b>&nbsp;COE - Services&nbsp;</b></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>Tasks {{ nrProblems }} </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>#</td>
+        <td>My Interests</td>
+        <td>#</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>Services {{nrServices}}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getPrjStat1()}"></td>
+        <td>{{nProject1 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getPrjFlag1()}"></td>
+        <td>{{pT1}}</td>
+        <td>{{link1 | slice:0:8}}</td>
+        <td>{{sT1}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getSrvFlag1()}"></td>
+        <td>{{nService1 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getSrvStat1()}"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getPrjStat2()}"></td>
+        <td>{{nProject2 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getPrjFlag2()}"></td>
+        <td>{{pT2}}</td>
+        <td>{{link2 | slice:0:8}}</td>
+        <td>{{sT2}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getSrvFlag2()}"></td>
+        <td>{{nService2 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getSrvStat2()}"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getPrjStat3()}"></td>
+        <td>{{nProject3 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getPrjFlag3()}"></td>
+        <td>{{pT3}}</td>
+        <td>{{link3 | slice:0:8}}</td>
+        <td>{{sT3}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getSrvFlag3()}"></td>
+        <td>{{nService3 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getSrvStat3()}"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getPrjStat4()}"></td>
+        <td>{{nProject4 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getPrjFlag4()}"></td>
+        <td>{{pT4}}</td>
+        <td id="link4">{{link4 | slice:0:8}}</td>
+        <td>{{sT4}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getSrvFlag4()}"></td>
+        <td>{{nService4 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getSrvStat4()}"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getPrjStat5()}"></td>
+        <td>{{nProject5 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getPrjFlag5()}"></td>
+        <td>{{pT5}}</td>
+        <td>{{link5 | slice:0:8}}</td>
+        <td>{{sT5}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getSrvFlag5()}"></td>
+        <td>{{nService5 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getSrvStat5()}"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getPrjStat6()}"></td>
+        <td>{{nProject6 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getPrjFlag6()}"></td>
+        <td>{{pT6}}</td>
+        <td>{{link6 | slice:0:8}}</td>
+        <td>{{sT6}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getSrvFlag6()}"></td>
+        <td>{{nService6 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getSrvStat6()}"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getPrjStat7()}"></td>
+        <td>{{nProject7 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getPrjFlag7()}"></td>
+        <td>{{pT7}}</td>
+        <td>{{link7 | slice:0:8}}</td>
+        <td>{{sT7}}</td>
+        <td [ngStyle]="{'background-size':'100% 100%','background-image': getSrvFlag7()}"></td>
+        <td>{{nService7 | slice:0:10}}</td>
+        <td [ngStyle]="{'background-size': '100% 100%','background-image': getSrvStat7()}"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="wall-1-projects"><b>BID Σ: </b>{{this.tag[(i+2)%this.nrLinks][3]}}</td>
+        <td></td>
+        <td></td>
+        <td class="wall-3-market" [ngStyle]="{color: getDeltaColor()}"><b>MΔ: {{ this.tag[(i+2)%this.nrLinks][5] }}</b>
+        </td>
+        <td></td>
+        <td></td>
+        <td class="wall-2-services"><b>ASK Σ: </b>{{this.tag[(i+2)%this.nrLinks][4]}}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="wall-1-projects" colspan="3">&nbsp;service demand</td>
+        <td></td>
+        <td (click)="onPrev()"><b>
+            <</b> </td> <td class="wall-3-market">market loop</td>
+        <td (click)="onNext()"><b>></b></td>
+        <td></td>
+        <td class="wall-2-services" colspan="3">service offer</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <h1>Completely Fair Scheduler<br>DNAjs Process Table</h1>
 
 </section>
