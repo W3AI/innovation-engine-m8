@@ -17,6 +17,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "w3aios": [
+        "dist/w3aios"
+      ],
+      "w3aios/*": [
+        "dist/w3aios/*"
+      ]
+    }
   }
 }

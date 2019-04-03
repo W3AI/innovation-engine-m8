@@ -123,6 +123,41 @@
           }
         }
       }
+    },
+    "w3aios": {
+      "root": "projects/w3aios",
+      "sourceRoot": "projects/w3aios/src",
+      "projectType": "library",
+      "prefix": "wos",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/w3aios/tsconfig.lib.json",
+            "project": "projects/w3aios/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/w3aios/src/test.ts",
+            "tsConfig": "projects/w3aios/tsconfig.spec.json",
+            "karmaConfig": "projects/w3aios/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/w3aios/tsconfig.lib.json",
+              "projects/w3aios/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "teamhub"
