@@ -35,7 +35,7 @@ import { SetupComponent } from './setup/setup.component';
 import { HelpComponent } from './help/help.component';
 import { SetupService } from './setup.service';
 import { LoggingService } from './logging.service';
-import { W3aiosModule } from 'w3aios';
+// import { W3aiosModule } from 'w3aios';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,6 @@ import { W3aiosModule } from 'w3aios';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    W3aiosModule,
     MaterialModule,
     AppRoutingModule,
     FlexLayoutModule,

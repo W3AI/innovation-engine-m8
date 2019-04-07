@@ -6,7 +6,7 @@ import { trigger, state, style, transition, animate, group } from '@angular/anim
 
 import * as fromRoot from '../app.reducer';
 import { AuthService } from '../auth/auth.service';
-import { Show, W3aiosService } from 'w3aios';
+// import { Show, W3aiosService } from 'w3aios';
 
 // import * as h from "../logic/helper";
 // ToDo [ ] - Do we need both Queue files?
@@ -259,7 +259,7 @@ export interface Tile {
 })
 export class WelcomeComponent implements OnInit, AfterContentInit {
 
-  show$: Observable<Show>;
+  // show$: Observable<Show>;
 
   // [ ToDo ] - Switch queueUpdated to false after implementing some update functions for 
   // + reading from cloud spreadsheets or from a realtime db / Firestore
@@ -915,10 +915,9 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.startDnaLoop();
   }
 
-  constructor(private store: Store<fromRoot.State>, private authService: AuthService,
-    private w3aios: W3aiosService) {
+  constructor(private store: Store<fromRoot.State>, private authService: AuthService) {
 
-      this.show$ = this.w3aios.getShow(336);
+    // this.show$ = this.w3aios.getShow(336);
 
     // To detach ChangeDetector in order to eliminate ExpressionChangedAfterItHasBeenCheckedError
     //  as we loop through projects / services continually and change the background images
