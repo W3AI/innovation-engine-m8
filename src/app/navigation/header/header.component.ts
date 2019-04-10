@@ -16,7 +16,7 @@ import { SetupService } from '../../setup.service';
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth$: Observable<boolean>;
-  appTitle = 'recombinant Agile';
+  appTitle = 'recombinant AI teams';
 
   constructor(private store: Store<fromRoot.State>, 
               private authService: AuthService,
