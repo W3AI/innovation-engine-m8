@@ -760,52 +760,52 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
   // Continuation callbacks for Project Owner / Governance
   animPoInDone() {
-    this.po_script_in = 'status ✔';
+    this.po_script_in = 'g1 status ✔';
     this.po_in_state = 'off';
     this.po_mid_state = 'on';
     this.prjStateImgPath = 'url(/assets/img/dna/';
     this.prjStateImg[0] = 'gtt';
   }
   animPoMidDone() {
-    this.po_script_mid = 'rate ✔';
+    this.po_script_mid = 'g2 rate ✔';
     this.po_mid_state = 'off';
     this.po_out_state = 'on';
     this.prjStateImg[0] = 'gnt';
   }
   animPoOutDone() {
-    this.po_script_out = 'terms ✔';
+    this.po_script_out = 'g3 terms ✔';
     this.po_out_state = 'off';
     this.po_deal_state = 'on';
     this.prjStateImg[0] = 'ggn';
   }
   animPoDealDone() {
-    this.po_script_deal = 'booked ✔';
+    this.po_script_deal = 'g4 booked ✔';
     this.po_deal_state = 'off';
     this.ps_in_state = 'on';    // 'on' - if there is a deal to plan execution
     this.prjStateImg[0] = 'ggg';
   }
   // Continuation callbacks for Project Status / Execution
   animPsInDone() {
-    this.ps_script_in = 'input ✔';
+    this.ps_script_in = 'g5 input ✔';
     this.ps_in_state = 'off';
     this.ps_mid_state = 'on';
     this.prjStateImgPath = 'url(/assets/img/dna/';
     this.prjStateImg[0] = 'tgt_ttg_tnt';
   }
   animPsMidDone() {
-    this.ps_script_mid = 'results ✔';
+    this.ps_script_mid = 'g6 results ✔';
     this.ps_mid_state = 'off';
     this.ps_out_state = 'on';
     this.prjStateImg[0] = 'ttg_tgt_ntt';
   }
   animPsOutDone() {
-    this.ps_script_out = 'tests ✔';
+    this.ps_script_out = 'g7 tests ✔';
     this.ps_out_state = 'off';
     this.ps_deal_state = 'on';
     this.prjStateImg[0] = 'tgt_gtt_ttt';
   }
   animPsDealDone() {
-    this.ps_script_deal = 'paid ✔';
+    this.ps_script_deal = 'G8 paid ✔';
     this.ps_deal_state = 'off';
     // Task was executed and Project Manager to schedule/approve payment
     this.prjStateImg[0] = 'ntt';
@@ -813,52 +813,52 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
 
   // Continuation callbacks for Service Owner / Governance
   animSoInDone() {
-    this.so_script_in = '✔ status';
+    this.so_script_in = '✔ status g1';
     this.so_in_state = 'off';
     this.so_mid_state = 'on';
     this.srvStateImgPath = 'url(/assets/img/rna/';
     this.srvStateImg[0] = 'gtt';
   }
   animSoMidDone() {
-    this.so_script_mid = '✔ rate';
+    this.so_script_mid = '✔ rate g2';
     this.so_mid_state = 'off';
     this.so_out_state = 'on';
     this.srvStateImg[0] = 'gnt';
   }
   animSoOutDone() {
-    this.so_script_out = '✔ terms';
+    this.so_script_out = '✔ terms g3';
     this.so_out_state = 'off';
     this.so_deal_state = 'on';
     this.srvStateImg[0] = 'ggn';
   }
   animSoDealDone() {
-    this.so_script_deal = '✔ booked';
+    this.so_script_deal = '✔ booked g4';
     this.so_deal_state = 'off';
     this.ts_in_state = 'on';    // 'on' - if there is a deal to plan task execution
     this.srvStateImg[0] = 'ggg';
   }
   // Continuation callbacks for Task Status / Execution
   animTsInDone() {
-    this.ts_script_in = '✔ input';
+    this.ts_script_in = '✔ input g5';
     this.ts_in_state = 'off';
     this.ts_mid_state = 'on';
     this.srvStateImgPath = 'url(/assets/img/rna/';
     this.srvStateImg[0] = 'tgt_ttg_tnt';
   }
   animTsMidDone() {
-    this.ts_script_mid = '✔ results';
+    this.ts_script_mid = '✔ results g6';
     this.ts_mid_state = 'off';
     this.ts_out_state = 'on';
     this.srvStateImg[0] = 'ttg_tgt_ntt';
   }
   animTsOutDone() {
-    this.ts_script_out = '✔ tests';
+    this.ts_script_out = '✔ tests g7';
     this.ts_out_state = 'off';
     this.ts_deal_state = 'on';
     this.srvStateImg[0] = 'tgt_gtt_ttt';
   }
   animTsDealDone() {
-    this.ts_script_deal = '✔ paid';
+    this.ts_script_deal = '✔ paid G8';
     this.ts_deal_state = 'off';
     this.srvStateImg[0] = 'gtt';
     // Task was executed and Project Manager to schedule/approve payment
