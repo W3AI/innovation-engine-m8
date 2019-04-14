@@ -211,11 +211,12 @@ a.ppt-links {
 
 
 .po-step {
-    font-size: 24px;
+    font-family: monospace;
+    font-size: 14px;
     color: #888;
-    padding: 0px;
+    padding-top: 10px;
     text-align: right;
-    height: 37.5px;
+    height: 27.5px;
     width: 139px;
     position: relative;
     z-index: 50;
@@ -224,11 +225,12 @@ a.ppt-links {
 
 
 .ps-step {
-    font-size: 24px;
+    font-family: monospace;
+    font-size: 14px;
     color: #888;
-    padding: 0px;
+    padding-top: 10px;
     text-align: right;
-    height: 37.5px;
+    height: 27.5px;
     width: 139px;
     position: relative;
     z-index: 50;
@@ -252,10 +254,11 @@ a.ppt-links {
 }
 
 .so-step {
-    font-size: 24px;
+    font-family: monospace;
+    font-size: 14px;
     color: #888;
-    padding: 0px;
-    height: 37.5px;
+    padding-top: 10px;
+    height: 27.5px;
     width: 139px;
     position: relative;
     z-index: 50;
@@ -263,10 +266,11 @@ a.ppt-links {
 }
 
 .ts-step {
-    font-size: 24px;
+    font-family: monospace;
+    font-size: 14px;
     color: #888;
-    padding: 0px;
-    height: 37.5px;
+    padding-top: 10px;
+    height: 27.5px;
     width: 139px;
     position: relative;
     z-index: 50;
