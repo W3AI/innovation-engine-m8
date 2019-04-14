@@ -805,7 +805,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.prjStateImg[0] = 'tgt_gtt_ttt';
   }
   animPsDealDone() {
-    this.ps_script_deal = 'G8 paid ✔';
+    this.ps_script_deal = 'g8 paid ✔';
     this.ps_deal_state = 'off';
     // Task was executed and Project Manager to schedule/approve payment
     this.prjStateImg[0] = 'ntt';
@@ -858,7 +858,7 @@ export class WelcomeComponent implements OnInit, AfterContentInit {
     this.srvStateImg[0] = 'tgt_gtt_ttt';
   }
   animTsDealDone() {
-    this.ts_script_deal = '✔ paid G8';
+    this.ts_script_deal = '✔ paid g8';
     this.ts_deal_state = 'off';
     this.srvStateImg[0] = 'gtt';
     // Task was executed and Project Manager to schedule/approve payment
