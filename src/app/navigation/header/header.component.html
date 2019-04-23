@@ -20,7 +20,7 @@
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.gt-xs="20px" class="navigation-items">
             <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent">todo</span></a></li>            
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">vote</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">code</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span class="alternate-theme" matBadge="6" matBadgeColor="primary">done</span></a></li>
         </ul>
     </div>
@@ -29,7 +29,7 @@
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.gt-xs="20px" class="navigation-items">
 
             <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent" matBadgeOverlap="true">todo</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">vote</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">code</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" class="alternate-theme" matBadgeColor="primary" matBadgeOverlap="true">done</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" class="bot-theme" matBadgeColor="primary" matBadgeOverlap="true">ai.js</span></a></li>
 
