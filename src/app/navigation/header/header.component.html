@@ -10,11 +10,11 @@
 <section class="toolbar-text" fxFlex>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/"><span class="green-ai">aiCells</span></a>
+        <a routerLink="/"><span class="green-ai">aiDevHub</span></a>
     </div>
 
     <div xFlex fxLayout fxLayoutAlign="flex-start" fxHide.lt-md>
-        <a class="desktop" routerLink="/"><span class="green-ai">{{ appTitle }} </span><span class="dev">devOps</span></a>
+        <a class="desktop" routerLink="/"><span class="green-ai">{{ appTitle }} </span><span class="dev"> </span></a>
     </div>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
@@ -31,7 +31,7 @@
             <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent" matBadgeOverlap="true">todo</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="7" matBadgeColor="warn">vote</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" class="alternate-theme" matBadgeColor="primary" matBadgeOverlap="true">done</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" class="bot-theme" matBadgeColor="primary" matBadgeOverlap="true">aiGenes</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" class="bot-theme" matBadgeColor="primary" matBadgeOverlap="true">ai.js</span></a></li>
 
             <li *ngIf="!(isAuth$ | async)"><a routerLink="/signup">signup</a></li>
             <li *ngIf="!(isAuth$ | async)"><a routerLink="/login">login</a></li>
