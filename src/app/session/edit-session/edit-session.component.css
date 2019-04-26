@@ -16,6 +16,11 @@ h6 {
   margin: 5px;
 }
 
+.mat-raised-button {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 #w3ai-org {
   width: 100%;
   background-image: url('/assets/img/W3AINET.png');
