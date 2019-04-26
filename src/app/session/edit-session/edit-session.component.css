@@ -1,6 +1,6 @@
 .venture {
   width: 100%;
-  padding: 5px;
+  padding: 3px;
   text-align: center;
 }
 
@@ -17,6 +17,7 @@ h6 {
 }
 
 .mat-raised-button {
+  background-color: #8cc152;
   padding-left: 0px;
   padding-right: 0px;
 }

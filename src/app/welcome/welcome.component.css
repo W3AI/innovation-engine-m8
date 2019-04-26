@@ -519,12 +519,12 @@ table {
     font-family: arial, sans-serif;
     font-size: medium;
     font-weight: bold;
-    color: #333;
+    color: white;
     margin-top: 8px;
     margin-bottom: 8px;
     padding: 0px;
     border: 0px;
-    background-color: rgba(217, 190, 190, 1);
+    background-color: #8cc152;
     border-radius: 8px;
 }
 

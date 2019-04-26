@@ -1,12 +1,12 @@
 <section id="session" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="0px">
-    <h1>live aiDev mash</h1>
+    <h3>GIT8 engine</h3>
     <div >
       <canvas id="w3ai-org" width="400px" height="200px"></canvas>
     </div>
 <!--    <div fxHide.lt-md>
       <canvas id="w3ai-org" width="800px" height="400px"></canvas>
-    </div> -->
-    <h3>GIT8 engine</h3>
+    </div>
+    <h3>GIT8 engine</h3> -->
   <section class="venture">
     <section id="control" class="venture" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
       <app-dna-control (intervalFired)="onIntervalFired($event)">
@@ -51,8 +51,57 @@
     </div>
   </section>
 
-  <section id="reactor" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+  <section id="reactor" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
   
+    <section id="log">
+      <h3>GIT8 commits => solutions</h3>
+    
+      <div id="logTx" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+        <div id="Contexts" fxLayout="column">
+          <app-dna-problem *ngFor="let oddNumber of oddNumbers" [number]="oddNumber">
+          </app-dna-problem>
+        </div>
+        <div id="Transformations" fxLayout="column">
+          <app-dna-operation *ngFor="let evenNumber of evenNumbers" [number]="evenNumber">
+          </app-dna-operation>
+        </div>
+      </div>
+    
+      <!-- From Memory Tables Headers From Flipper main.html  -->
+    
+      <table id="memory">
+        <tr>
+          <td style="width:50%">
+            <h3 align="right">States & Paths - <span id="nodeIndex"></span></h3>
+          </td>
+          <td style="width:50%">
+            <h3 align="left"><span id="txIndex"></span> - Tasks | Steps | Transformations</h3>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:50%">
+            <table id="nodes"></table>
+          </td>
+          <td style="vertical-align:top">
+            <table id="transformations"></table>
+          </td>
+        </tr>
+      </table>
+
+      <table id="workingMemory">
+        <tr>
+          <td>
+            <h2 align="center">Working Memory</h2>
+            <p align="center">Memory usage Bytes: <span id="memoryUsed">{{ nodesMemSize }}</span></p>
+          </td>
+        </tr>
+      </table>
+
+      <!-- END Memory Tables Headers From Flipper main.html  -->
+    
+    </section>
+  
+
     <section class="editors" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
   
       <section id="problem">
@@ -116,48 +165,6 @@
       </section>
   
     </section>
-  
-    <section id="log">
-        <h3>GIT8 engine</h3>
-    
-        <!-- From Memory Tables Headers From Flipper main.html  -->
-        <table id="workingMemory">
-          <tr><td>
-            <h2 align="center">Working Memory</h2>
-            <p align="center">Memory usage Bytes: <span id="memoryUsed">{{ nodesMemSize }}</span></p>
-          </td></tr>
-        </table>
-        
-        <table id="memory">
-          <tr>
-            <td style="width:50%"><h3 align="right">Contexts and Entities Nodes - <span id="nodeIndex"></span></h3></td>
-            <td style="width:50%"><h3 align="left"><span id="txIndex"></span> - Tasks | Steps | Transformations</h3></td>
-          </tr>
-          <tr>
-            <td style="width:50%"><table id="nodes"></table></td>
-            <td style="vertical-align:top"><table id="transformations"></table></td>
-          </tr>
-        </table>
-        <!-- END Memory Tables Headers From Flipper main.html  -->
-    
-        <div id="logHeader">
-        </div>
-    
-        <div id="logTx" fxLayout="row">
-          <div id="Contexts" fxLayout="column">
-            <app-dna-problem
-            *ngFor="let oddNumber of oddNumbers" 
-            [number]="oddNumber">
-            </app-dna-problem>
-          </div>
-          <div id="Transformations" fxLayout="column">
-            <app-dna-operation
-            *ngFor="let evenNumber of evenNumbers" 
-            [number]="evenNumber">
-            </app-dna-operation>
-          </div>
-        </div>
-      </section>    
   
   </section>
 
