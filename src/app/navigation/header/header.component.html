@@ -19,18 +19,18 @@
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.gt-xs="20px" class="navigation-items">
-            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent">todo</span></a></li>            
-            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" matBadgeColor="warn">code</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span class="alternate-theme" matBadge="6" matBadgeColor="primary">fund</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="3" matBadgeColor="accent">todo</span></a></li>            
+            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" matBadgeColor="warn">code</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span class="alternate-theme" matBadge="5" matBadgeColor="primary">vote</span></a></li>
         </ul>
     </div>
     
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-md>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.gt-xs="20px" class="navigation-items">
 
-            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="9" matBadgeColor="accent" matBadgeOverlap="true">todo</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="7" matBadgeColor="warn">code</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="6" class="alternate-theme" matBadgeColor="primary" matBadgeOverlap="true">fund</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="3" matBadgeColor="accent" matBadgeOverlap="true">todo</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" matBadgeColor="warn">code</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="5" class="alternate-theme" matBadgeColor="primary" matBadgeOverlap="true">fund</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" class="bot-theme" matBadgeColor="primary" matBadgeOverlap="true">ai</span></a></li>
 
             <li *ngIf="!(isAuth$ | async)"><a routerLink="/signup">signup</a></li>
