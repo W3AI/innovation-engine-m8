@@ -12,6 +12,12 @@ h3 {
   margin: 5px;
 }
 
+h5 {
+  border: 0px;
+  margin: 0px;
+  padding: 0px 0px 5px 0px;
+}
+
 h6 {
   margin: 5px;
 }
