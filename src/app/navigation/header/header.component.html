@@ -15,7 +15,7 @@
     </div>
 
     <div *ngIf="isAuth$ | async" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/">ai<span class="green-ai">Eco</span></a>
+        <a routerLink="/"><span class="green-ai">match</span></a>
     </div>
 
     <div xFlex fxLayout fxLayoutAlign="flex-start" fxHide.lt-md>
@@ -25,8 +25,8 @@
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.gt-xs="20px" class="navigation-items">
             <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="3" matBadgeColor="accent">todo</span></a></li>            
-            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" matBadgeColor="warn">code</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span class="alternate-theme" matBadge="5" matBadgeColor="primary">fund</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" matBadgeColor="warn">match</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span class="alternate-theme" matBadge="5" matBadgeColor="primary">done</span></a></li>
         </ul>
     </div>
     
