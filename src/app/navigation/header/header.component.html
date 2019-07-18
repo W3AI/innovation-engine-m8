@@ -11,15 +11,15 @@
 
 
     <div *ngIf="!(isAuth$ | async)" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/">smart<span class="green-ai">web app</span></a>
+        <a routerLink="/">ai/rb&#0162;<span class="green-ai"> </span></a>
     </div>
 
     <div *ngIf="isAuth$ | async" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/"><span class="green-ai">smart</span></a>
+        <a routerLink="/"><span class="green-ai">ai/rb&#0162;</span></a>
     </div>
 
     <div xFlex fxLayout fxLayoutAlign="flex-start" fxHide.lt-md>
-        <a class="desktop" routerLink="/"><span class="green-ai">{{ appTitle }}</span> web app<span class="dev"></span></a>
+        <a class="desktop" routerLink="/"><span class="green-ai">{{ appTitle }}/rb&#0162;</span> <span class="dev"></span></a>
     </div>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
