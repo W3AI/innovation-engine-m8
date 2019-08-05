@@ -11,22 +11,22 @@
 
 
     <div *ngIf="!(isAuth$ | async)" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/">ai/rb&#0162;<span class="green-ai"> </span></a>
+        <a routerLink="/">progress<span class="green-ai"> </span></a>
     </div>
 
     <div *ngIf="isAuth$ | async" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/"><span class="green-ai">ai/rb&#0162;</span></a>
+        <a routerLink="/"><span class="green-ai">progress</span></a>
     </div>
 
     <div xFlex fxLayout fxLayoutAlign="flex-start" fxHide.lt-md>
-        <a class="desktop" routerLink="/"><span class="green-ai">{{ appTitle }}/rb&#0162;</span> <span class="dev"></span></a>
+        <a class="desktop" routerLink="/"><span class="green-ai">{{ appTitle }}</span> <span class="dev"></span></a>
     </div>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-sm>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.gt-xs="20px" class="navigation-items">
-            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="3" matBadgeColor="accent">ops</span></a></li>            
+            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="3" matBadgeColor="accent">jobs</span></a></li>            
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" matBadgeColor="warn">plans</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span class="alternate-theme" matBadge="5" matBadgeColor="primary">funds</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span class="alternate-theme" matBadge="5" matBadgeColor="primary">ops</span></a></li>
         </ul>
     </div>
     
