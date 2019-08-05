@@ -1,6 +1,6 @@
 {
-  "name": "teamhub",
-  "version": "0.0.0",
+  "name": "uProgress OS",
+  "version": "0.0.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
