@@ -11,11 +11,11 @@
 
 
     <div *ngIf="!(isAuth$ | async)" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/">progress<span class="green-ai"> </span></a>
+        <a routerLink="/">uProgress<span class="green-ai"> </span></a>
     </div>
 
     <div *ngIf="isAuth$ | async" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/"><span class="green-ai">progress</span></a>
+        <a routerLink="/"><span class="green-ai">uProgress</span></a>
     </div>
 
     <div xFlex fxLayout fxLayoutAlign="flex-start" fxHide.lt-md>
