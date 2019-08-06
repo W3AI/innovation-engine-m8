@@ -6,15 +6,15 @@
     </a>
     <a mat-list-item routerLink="/venture" (click)="onClose()" *ngIf="isAuth$ | async">
         <mat-icon>group_add</mat-icon>
-        <span class="nav-caption">market</span>            
+        <span class="nav-caption">jobs</span>            
     </a>
     <a mat-list-item routerLink="/project" (click)="onClose()" *ngIf="isAuth$ | async">
         <mat-icon>group_add</mat-icon>
-        <span class="nav-caption">projects</span>            
+        <span class="nav-caption">ops</span>            
     </a>
     <a mat-list-item routerLink="/session" (click)="onClose()" *ngIf="isAuth$ | async">
         <mat-icon>code</mat-icon>
-        <span class="nav-caption">plan</span>            
+        <span class="nav-caption">plans</span>            
     </a>
     <a mat-list-item routerLink="/signup" (click)="onClose()" *ngIf="!(isAuth$ | async)">
         <mat-icon>face</mat-icon>
