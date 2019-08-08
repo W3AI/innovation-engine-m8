@@ -11,11 +11,11 @@
 
 
     <div *ngIf="!(isAuth$ | async)" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/">uProgress<span class="green-ai"> </span></a>
+        <a routerLink="/">Progress<span class="green-ai"> </span></a>
     </div>
 
     <div *ngIf="isAuth$ | async" fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.gt-sm>
-        <a routerLink="/"><span class="green-ai">uProgress</span></a>
+        <a routerLink="/"><span class="green-ai">Progress</span></a>
     </div>
 
     <div xFlex fxLayout fxLayoutAlign="flex-start" fxHide.lt-md>
@@ -33,9 +33,9 @@
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-md>
         <ul fxLayout fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.gt-xs="20px" class="navigation-items">
 
-            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="3" matBadgeColor="accent" matBadgeOverlap="true">ops</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/project"><span matBadge="3" matBadgeColor="accent" matBadgeOverlap="true">jobs</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="6" matBadgeColor="warn">plans</span></a></li>
-            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="5" class="alternate-theme" matBadgeColor="primary" matBadgeOverlap="true">funds</span></a></li>
+            <li *ngIf="isAuth$ | async"><a routerLink="/venture"><span matBadge="5" class="alternate-theme" matBadgeColor="primary" matBadgeOverlap="true">ops</span></a></li>
             <li *ngIf="isAuth$ | async"><a routerLink="/session"><span matBadge="8" class="bot-theme" matBadgeColor="primary" matBadgeOverlap="true">skills</span></a></li>
 
             <li *ngIf="!(isAuth$ | async)"><a routerLink="/signup">signup</a></li>
